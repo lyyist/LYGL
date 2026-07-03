@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>北疆+伊犁乌鲁木齐闭环10日（8.1乌鲁木齐集结-8.10乌鲁木齐返程） - 旅行攻略</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+  :root {
+    --primary: #1e3a5f;
+    --primary-light: #2d5a8a;
+    --accent: #e8956d;
+    --accent-light: #f4b896;
+    --gold: #f0a868;
+    --dark: #142e4a;
+    --light-bg: #f0f4f8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans SC', sans-serif; color: #333; background: #fff; }
+  .font-serif { font-family: 'Noto Serif SC', serif; }
+  .hero-section {
+    background: linear-gradient(135deg, rgba(20,46,74,0.72) 0%, rgba(30,58,95,0.5) 50%, rgba(0,0,0,0.35) 100%),
+                url('images/hero-xinjiang.png') center/cover no-repeat;
+    min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;
+  }
+  .hero-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.3) 100%); }
+  .tag { display: inline-block; padding: 6px 16px; border-radius: 9999px; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: #fff; font-size: 14px; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s; }
+  .tag:hover { background: rgba(255,255,255,0.35); transform: translateY(-2px); }
+  .section-title { font-family: 'Noto Serif SC', serif; font-size: 2rem; font-weight: 900; text-align: center; background: linear-gradient(135deg, var(--primary), var(--primary-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.4rem; }
+  .section-divider { width: 50px; height: 3px; background: linear-gradient(90deg, var(--accent), var(--gold)); margin: 0 auto 1.1rem; border-radius: 2px; }
+  .card { background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.35s ease; overflow: hidden; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.12); }
+  /* 逐日行程卡片：整卡渐变遮罩 + 6个纯文档流分区，杜绝任何绝对定位造成的重叠 */
+  .day-card-hero { position: relative; border-radius: 20px; overflow: hidden; min-height: 400px; background-size: cover; background-position: center; transition: all 0.4s ease; }
+  .day-card-hero::before { content:''; position:absolute; inset:0; background: linear-gradient(180deg, rgba(8,16,28,0.60) 0%, rgba(8,16,28,0.18) 26%, rgba(8,16,28,0.30) 55%, rgba(5,10,20,0.90) 100%); z-index:1; }
+  .day-card-hero:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+  .day-card-body { position: relative; z-index: 2; padding: 24px 26px; }
+  .day-sec { padding: 15px 0; border-top: 1px solid rgba(255,255,255,0.14); }
+  .day-sec:first-child { padding-top: 0; border-top: none; }
+  /* 分区1：头部——编号徽章 + 分段/时长标签 + 大标题 + 强调下划线，全部平铺不重叠 */
+  .day-header-badges { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-bottom:16px; }
+  .day-header-badges .left-group { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .day-num-badge { width: 50px; height: 50px; border-radius: 14px; background: linear-gradient(150deg, var(--accent), var(--gold)); border: 1px solid rgba(255,255,255,0.4); color: #fff; font-weight: 900; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 14px rgba(0,0,0,0.35); }
+  .playtime-badge { display:inline-flex; align-items:center; gap:5px; padding:5px 14px; border-radius:9999px; font-size:11.5px; font-weight:700; background:rgba(255,255,255,0.16); color:#fff; border:1px solid rgba(255,255,255,0.28); }
+  .segment-badge-hero { display:inline-flex; align-items:center; gap:6px; padding:5px 14px; border-radius:9999px; font-size:11.5px; font-weight:700; border:1px solid rgba(255,255,255,0.28); }
+  .seg-north-hero { background: rgba(59,130,246,0.3); color:#e0edff; }
+  .seg-south-hero { background: rgba(232,149,109,0.34); color:#ffedde; }
+  .day-title-hero { color: #fff; font-family: 'Noto Serif SC', serif; font-size: 1.55rem; font-weight: 900; line-height: 1.45; text-shadow: 0 3px 14px rgba(0,0,0,0.6); }
+  .day-title-underline { width: 46px; height: 3px; background: linear-gradient(90deg, var(--accent), var(--gold)); border-radius: 2px; margin-top: 12px; }
+  .day-tight-banner { background: rgba(220,38,38,0.92); color:#fff; padding:10px 16px; border-radius:10px; font-size:12.5px; font-weight:700; margin-top:14px; display:flex; align-items:center; gap:8px; text-shadow:0 1px 3px rgba(0,0,0,0.35); }
+  /* 分区2：今日概述 */
+  .day-sec-desc p { color: rgba(255,255,255,0.95); font-size: 0.92rem; line-height: 1.8; text-shadow: 0 1px 8px rgba(0,0,0,0.7); max-width: 820px; }
+  /* 分区3：亮点标签 */
+  .day-sec-tags { display:flex; flex-wrap:wrap; gap:9px; }
+  .day-hl-tag { display: inline-flex; align-items:center; gap:5px; padding: 5px 14px; border-radius: 9999px; background: rgba(255,255,255,0.14); color: #fff; font-size: 12px; font-weight:600; border: 1px solid rgba(255,255,255,0.26); text-shadow: 0 1px 4px rgba(0,0,0,0.6); }
+  .day-hl-tag i { color: var(--gold); font-size:10px; }
+  /* 分区4：当日时间线（含航班信息） */
+  .day-timeline-box { background: rgba(0,0,0,0.26); border-radius: 12px; padding: 15px 18px; }
+  .day-flight-list { display:flex; flex-direction:column; gap:6px; margin-bottom:12px; padding-bottom:12px; border-bottom:1px dashed rgba(255,255,255,0.22); }
+  .day-flight-item { font-size:12px; color:rgba(255,255,255,0.88); display:flex; align-items:center; gap:7px; }
+  .day-flight-item i { color: var(--gold); }
+  .day-timeline-title { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.7); margin-bottom: 10px; display:flex; align-items:center; gap:6px; }
+  .day-timeline-list { display:flex; flex-direction:column; gap:7px; }
+  .day-timeline-item { display:flex; gap:12px; font-size:12.5px; line-height:1.6; }
+  .day-timeline-item .t { flex-shrink:0; min-width:88px; color: var(--gold); font-weight:800; text-shadow:0 1px 4px rgba(0,0,0,0.5); }
+  .day-timeline-item .x { color: rgba(255,255,255,0.92); text-shadow:0 1px 4px rgba(0,0,0,0.5); }
+  /* 分区5：关键信息栏（路段/住宿/门票/海拔气温） */
+  .day-sec-infobar { display:flex; flex-direction:column; gap:10px; }
+  .day-infobar-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 12.5px; color: rgba(255,255,255,0.95); text-shadow: 0 1px 4px rgba(0,0,0,0.6); }
+  .day-infobar-row i { color: var(--gold); width:14px; text-align:center; flex-shrink:0; }
+  .day-infobar-row .sep { color: rgba(255,255,255,0.28); }
+  /* 分区6：体感提示 */
+  .day-sec-feel { display:flex; align-items:center; gap:7px; font-size: 12px; color: rgba(255,255,255,0.75); text-shadow:0 1px 4px rgba(0,0,0,0.5); }
+  @media (max-width: 768px) { .day-card-hero { min-height: 360px; } .day-card-body { padding: 20px 18px; } .day-title-hero { font-size: 1.2rem; } .day-num-badge { width:42px; height:42px; font-size:1.05rem; border-radius:12px; } }
+  .budget-card { border: 2px solid transparent; transition: all 0.4s ease; }
+  .plan-badge { display: inline-block; padding: 4px 14px; border-radius: 9999px; font-size: 13px; font-weight: 500; background: #e9ecef; color: #666; transition: all 0.3s; }
+  .nav-sticky { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .nav-link { transition: color 0.25s; }
+  .nav-link:hover { color: var(--primary); }
+  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .flight-badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; background: var(--accent); color: #fff; animation: badgePulse 2s infinite; }
+  @keyframes badgePulse { 0%,100% { box-shadow: 0 0 0 0 rgba(232,149,109,0.4); } 50% { box-shadow: 0 0 0 6px rgba(232,149,109,0); } }
+  .segment-badge { display: inline-block; padding: 4px 14px; border-radius: 9999px; font-size: 12px; font-weight: 600; }
+  .seg-north { background: rgba(30,58,95,0.1); color: var(--primary); border: 1px solid rgba(30,58,95,0.2); }
+  .seg-south { background: rgba(232,149,109,0.12); color: var(--accent); border: 1px solid rgba(232,149,109,0.2); }
+  /* 酒店卡片 - 头图+评分+选择理由+对比分析 */
+  .hotel-card-v2 { background: #fff; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.35s ease; border: 1px solid rgba(30,58,95,0.06); }
+  .hotel-card-v2:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(30,58,95,0.14); }
+  .hotel-img-wrap { position: relative; height: 220px; }
+  .hotel-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .hotel-day-tag { position: absolute; top: 14px; left: 14px; background: var(--primary); color: #fff; font-weight: 800; font-size: 12.5px; padding: 5px 14px; border-radius: 10px; }
+  .hotel-price-tag { position: absolute; top: 14px; right: 14px; background: rgba(255,255,255,0.94); color: var(--accent); font-weight: 800; font-size: 12.5px; padding: 5px 14px; border-radius: 999px; }
+  .hotel-name-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 18px 14px; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); color: #fff; font-size: 1.2rem; font-weight: 800; font-family: 'Noto Serif SC', serif; text-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+  .hotel-phone-line { display: flex; align-items: center; gap: 8px; padding: 11px 20px; background: #fdf6ee; font-size: 12.5px; color: #a6621f; border-bottom: 1px solid rgba(0,0,0,0.04); }
+  .hotel-phone-line b { color: var(--dark); font-weight: 800; }
+  .hotel-ratings { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; padding: 16px 20px; }
+  .hotel-rating-item { text-align: center; }
+  .hotel-rating-label { font-size: 11px; color: #999; margin-bottom: 6px; }
+  .hotel-rating-bar { height: 4px; border-radius: 2px; background: #eee; margin-bottom: 6px; overflow: hidden; }
+  .hotel-rating-fill { height: 100%; background: linear-gradient(90deg,var(--primary),var(--accent)); border-radius: 2px; }
+  .hotel-rating-score { font-size: 14px; font-weight: 800; color: var(--dark); }
+  .hotel-reason-block { padding: 2px 20px 14px; }
+  .hotel-reason-title { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800; color: var(--dark); margin-bottom: 6px; }
+  .hotel-reason-text { font-size: 12.5px; line-height: 1.75; color: #666; }
+  .hotel-addr-line { display: flex; align-items: flex-start; gap: 6px; padding: 0 20px 12px; font-size: 12px; color: #888; }
+  .hotel-addr-line i { color: var(--accent); margin-top: 2px; }
+  .hotel-compare-block { padding: 0 20px 16px; }
+  .hotel-compare-title { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+  .hotel-compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .hotel-compare-item { background: #fdf2f2; border-radius: 10px; padding: 10px 12px; }
+  .hotel-compare-item .name { display: flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 800; color: #d92d20; margin-bottom: 4px; }
+  .hotel-compare-item .desc { font-size: 11.5px; color: #999; line-height: 1.55; }
+  .hotel-actions { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 20px 20px; }
+  .hotel-action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px; font-size: 12.5px; font-weight: 700; cursor: pointer; border: none; text-decoration: none; transition: all 0.25s; white-space: nowrap; }
+  .hotel-action-btn.call { background: var(--primary); color: #fff; }
+  .hotel-action-btn.call:hover { background: var(--primary-light); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(30,58,95,0.25); }
+  .hotel-action-btn.nav { background: rgba(30,58,95,0.08); color: var(--primary); }
+  .hotel-action-btn.nav:hover { background: rgba(30,58,95,0.15); transform: translateY(-2px); }
+  .hotel-action-btn.copy { background: #eee; color: #666; }
+  .hotel-action-btn.copy:hover { background: #ddd; transform: translateY(-2px); }
+  .hotel-action-btn.copy.copied { background: rgba(30,58,95,0.12); color: var(--primary); }
+  @media (max-width: 768px) { .hotel-compare-grid { grid-template-columns: 1fr; } .hotel-ratings { grid-template-columns: repeat(2,1fr); gap: 14px 10px; } }
+  /* 酒店卡片 - 品质核验区块（回应甲醛/噪音/老旧关切） */
+  .hotel-brand-tag { position: absolute; top: 14px; left: 130px; background: rgba(240,168,104,0.95); color: #fff; font-weight: 800; font-size: 11.5px; padding: 5px 12px; border-radius: 999px; }
+  .hotel-standard-block { margin: 0 20px 14px; background: linear-gradient(135deg,#eef6f0,#f5faf6); border: 1px solid rgba(34,139,90,0.18); border-radius: 12px; padding: 12px 14px; }
+  .hotel-standard-title { display: flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 800; color: #1e6b45; margin-bottom: 6px; }
+  .hotel-standard-text { font-size: 12px; line-height: 1.7; color: #3a6b52; }
+  .hotel-standard-block.warn { background: linear-gradient(135deg,#fff8ec,#fffbf2); border-color: rgba(217,144,32,0.22); }
+  .hotel-standard-block.warn .hotel-standard-title { color: #a6621f; }
+  .hotel-standard-block.warn .hotel-standard-text { color: #8a5a24; }
+  /* 出行贴士 - 独库预约警示横幅 + 分类卡片 */
+  .tips-alert-banner { background: linear-gradient(135deg,#dc2626,#b91c1c); color:#fff; border-radius:16px; padding:22px 26px; box-shadow:0 10px 28px rgba(220,38,38,0.25); }
+  .tips-alert-banner .badge { display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.22); padding:4px 14px; border-radius:9999px; font-size:12px; font-weight:800; margin-bottom:12px; }
+  .tips-alert-banner h4 { font-size:1.2rem; font-weight:900; margin-bottom:12px; font-family:'Noto Serif SC',serif; }
+  .tips-alert-banner ul { display:grid; gap:8px; }
+  .tips-alert-banner li { font-size:13px; line-height:1.75; display:flex; gap:8px; }
+  .tips-alert-banner li i { margin-top:3px; flex-shrink:0; opacity:0.85; }
+  .tip-card-title-row { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+  .tip-card.critical { border:2px solid #fca5a5; background:linear-gradient(180deg,#fef2f2,#ffffff); }
+  .tip-card.critical .tip-icon-box { background:#fee2e2; color:#dc2626; }
+  .tip-icon-box { width:44px; height:44px; border-radius:12px; background:#eef4fb; color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
+  /* ===== 租车方案 详尽版 ===== */
+  .rc-intro { background: linear-gradient(135deg,#eef6f1,#f4f9fb); border:1px solid rgba(34,139,90,0.16); border-radius:16px; padding:20px 24px; display:flex; gap:14px; }
+  .rc-intro .rc-intro-icon { width:34px; height:34px; border-radius:10px; background:var(--primary); color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.95rem; }
+  .rc-intro p { font-size:13.5px; line-height:1.85; color:#40566b; }
+  .rc-step-card { position:relative; background:#fff; border-radius:16px; box-shadow:0 4px 18px rgba(0,0,0,0.06); padding:22px 20px 20px; border-top:3px solid var(--accent); transition:all 0.35s ease; height:100%; }
+  .rc-step-card:hover { transform:translateY(-4px); box-shadow:0 14px 34px rgba(0,0,0,0.12); }
+  .rc-step-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
+  .rc-step-icon { width:46px; height:46px; border-radius:12px; background:#f0f4f8; color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.3rem; }
+  .rc-step-no { font-size:12px; font-weight:800; color:var(--accent); background:rgba(232,149,109,0.12); padding:4px 12px; border-radius:9999px; }
+  .rc-step-card h4 { font-family:'Noto Serif SC',serif; font-weight:900; font-size:1.05rem; color:var(--primary); margin-bottom:8px; line-height:1.4; }
+  .rc-step-card .rc-step-desc { font-size:12.5px; color:#6b7684; line-height:1.7; margin-bottom:12px; }
+  .rc-step-card ul { display:flex; flex-direction:column; gap:7px; border-top:1px dashed #e5e9ef; padding-top:12px; }
+  .rc-step-card li { font-size:12px; color:#5b6672; line-height:1.6; display:flex; gap:7px; align-items:flex-start; }
+  .rc-step-card li i { color:var(--primary); margin-top:3px; font-size:11px; flex-shrink:0; }
+  /* 车型 hero 卡 */
+  .rc-car-card { background:#fff; border-radius:20px; box-shadow:0 6px 26px rgba(0,0,0,0.08); overflow:hidden; }
+  .rc-car-top { display:grid; grid-template-columns:400px 1fr; gap:0; }
+  .rc-car-img { position:relative; min-height:290px; background-size:cover; background-position:center; }
+  .rc-car-badge { position:absolute; top:16px; left:16px; background:rgba(20,30,45,0.82); color:#fff; font-size:12.5px; font-weight:800; padding:6px 16px; border-radius:9999px; display:inline-flex; align-items:center; gap:6px; }
+  .rc-car-info { padding:26px 28px; }
+  .rc-car-title-row { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; gap:12px; }
+  .rc-car-title-row h3 { font-family:'Noto Serif SC',serif; font-weight:900; font-size:1.7rem; color:var(--primary); }
+  .rc-car-price { text-align:right; }
+  .rc-car-price .p1 { font-size:1.6rem; font-weight:900; color:var(--accent); }
+  .rc-car-price .p2 { font-size:12px; color:#9aa4af; }
+  .rc-car-meta { display:flex; flex-wrap:wrap; gap:16px; align-items:center; color:#6b7684; font-size:13px; margin:12px 0; padding-bottom:14px; border-bottom:1px dashed #e5e9ef; }
+  .rc-car-meta b { color:var(--primary); font-weight:700; }
+  .rc-car-quote { font-size:13px; line-height:1.85; color:#5b6672; display:flex; gap:8px; margin-bottom:14px; }
+  .rc-car-quote i { color:var(--accent); font-size:1.1rem; flex-shrink:0; }
+  .rc-tags { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+  .rc-tag-ok { background:#eaf7ef; color:#1e8a54; font-size:12.5px; font-weight:600; padding:6px 14px; border-radius:9px; display:inline-flex; align-items:center; gap:6px; }
+  .rc-car-warn { background:#fff8ee; border:1px solid rgba(217,144,32,0.18); color:#a6621f; font-size:12.5px; padding:11px 16px; border-radius:11px; display:flex; align-items:center; gap:8px; }
+  /* 推荐平台 */
+  .rc-plat-card { background:#fff; border-radius:14px; box-shadow:0 4px 16px rgba(0,0,0,0.05); padding:18px 20px; transition:all 0.3s; height:100%; border:1px solid rgba(30,58,95,0.05); }
+  .rc-plat-card:hover { transform:translateY(-3px); box-shadow:0 12px 28px rgba(0,0,0,0.1); }
+  .rc-plat-head { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px; }
+  .rc-plat-head h4 { font-family:'Noto Serif SC',serif; font-weight:900; font-size:1.1rem; color:var(--primary); }
+  .rc-plat-tag { font-size:11px; font-weight:700; color:var(--accent); background:rgba(232,149,109,0.12); padding:3px 10px; border-radius:9999px; white-space:nowrap; }
+  .rc-plat-card p { font-size:12.5px; line-height:1.8; color:#6b7684; }
+  /* 费用/保险/验车/避坑 面板 */
+  .rc-panel { background:#fff; border-radius:18px; box-shadow:0 4px 20px rgba(0,0,0,0.06); padding:24px 26px; height:100%; }
+  .rc-panel-title { display:flex; align-items:center; gap:10px; font-family:'Noto Serif SC',serif; font-weight:900; font-size:1.25rem; color:var(--primary); margin-bottom:18px; }
+  .rc-panel-title i { color:var(--accent); }
+  .rc-fee-item { padding:12px 0; border-bottom:1px solid #f0f3f6; }
+  .rc-fee-item:last-child { border-bottom:none; }
+  .rc-fee-item .k { font-size:13.5px; font-weight:800; color:var(--dark); margin-bottom:3px; display:flex; align-items:center; gap:7px; }
+  .rc-fee-item .v { font-size:12.5px; color:#7a8590; line-height:1.6; }
+  .rc-ins-item { display:flex; gap:12px; padding:11px 0; border-bottom:1px solid #f0f3f6; }
+  .rc-ins-item:last-child { border-bottom:none; }
+  .rc-ins-lv { flex-shrink:0; font-size:11px; font-weight:800; padding:4px 10px; border-radius:8px; height:fit-content; }
+  .rc-ins-lv.must { background:#e9f5ef; color:#1e8a54; }
+  .rc-ins-lv.opt { background:#eef1f5; color:#7a8590; }
+  .rc-ins-item h5 { font-size:13.5px; font-weight:800; color:var(--dark); margin-bottom:3px; }
+  .rc-ins-item p { font-size:12px; color:#7a8590; line-height:1.65; }
+  .rc-check-item { display:flex; gap:10px; align-items:flex-start; padding:9px 0; font-size:13px; color:#5b6672; line-height:1.6; }
+  .rc-check-item i { color:var(--primary); margin-top:3px; flex-shrink:0; }
+  .rc-avoid-item { display:flex; gap:10px; align-items:flex-start; padding:11px 14px; border-radius:11px; margin-bottom:9px; font-size:12.5px; line-height:1.6; }
+  .rc-avoid-item:last-child { margin-bottom:0; }
+  .rc-avoid-item.bad { background:#fdf2f2; color:#9a3b3b; }
+  .rc-avoid-item.bad i { color:#dc2626; }
+  .rc-avoid-item.good { background:#f0f5fb; color:#3a5470; }
+  .rc-avoid-item.good i { color:var(--primary); }
+  .rc-avoid-item i { margin-top:2px; flex-shrink:0; }
+  .rc-avoid-item b { font-weight:800; }
+  @media (max-width: 900px) { .rc-car-top { grid-template-columns:1fr; } .rc-car-img { min-height:220px; } }
+  @media (max-width: 768px) { .section-title { font-size: 1.5rem; } .rc-car-title-row h3 { font-size:1.35rem; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-sticky">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <i class="fa-solid fa-route text-blue-800 text-xl"></i>
+      <span class="font-serif font-bold text-lg text-blue-900">北疆+伊犁乌鲁木齐闭环</span>
+    </div>
+    <div class="hidden md:flex items-center gap-5 text-sm font-medium text-gray-600">
+      <a href="#budget" class="nav-link">费用预算</a>
+      <a href="#overview" class="nav-link">路线概览</a>
+      <a href="#itinerary" class="nav-link">逐日行程</a>
+      <a href="#rentcar" class="nav-link">租车方案</a>
+      <a href="#food" class="nav-link">美食图鉴</a>
+      <a href="#hotel" class="nav-link">住宿甄选</a>
+      <a href="#tips" class="nav-link">出行贴士</a>
+    </div>
+    <div class="md:hidden flex items-center gap-2">
+      <button id="mobileMenuBtn" class="text-gray-600 p-2"><i class="fa-solid fa-bars text-xl"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden px-4 pb-3 flex flex-col gap-2 text-sm font-medium text-gray-600">
+    <a href="#budget" class="py-1">费用预算</a>
+    <a href="#overview" class="py-1">路线概览</a>
+    <a href="#itinerary" class="py-1">逐日行程</a>
+    <a href="#rentcar" class="py-1">租车方案</a>
+    <a href="#food" class="py-1">美食图鉴</a>
+    <a href="#hotel" class="py-1">住宿甄选</a>
+    <a href="#tips" class="py-1">出行贴士</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section relative">
+  <div class="relative z-10 text-center px-4 max-w-4xl">
+    <div class="fade-up" style="transition-delay:0.1s">
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md rounded-full px-5 py-2 mb-6 border border-white/20">
+        <i class="fa-solid fa-location-dot text-orange-300"></i>
+        <span class="text-white/90 text-sm">乌鲁木齐进出 · 阿勒泰禾木喀纳斯五彩滩 → 克拉玛依 → 赛里木湖伊犁 → 独库公路 · 全程自驾闭环</span>
+      </div>
+      <h1 class="font-serif text-5xl md:text-7xl font-black text-white mb-8 leading-tight drop-shadow-lg">北疆+伊犁乌鲁木齐自驾闭环10日</h1>
+      <div class="flex flex-wrap justify-center gap-3 mb-4">
+        <span class="tag"><i class="fa-solid fa-calendar-day mr-1"></i> 8月1日乌鲁木齐集结</span>
+        <span class="tag"><i class="fa-solid fa-tree mr-1"></i> 北疆森林湖泊</span>
+        <span class="tag"><i class="fa-solid fa-mountain-sun mr-1"></i> 伊犁草原花海</span>
+        <span class="tag"><i class="fa-solid fa-road mr-1"></i> 独库公路收尾</span>
+        <span class="tag"><i class="fa-solid fa-plane-departure mr-1"></i> 8月10日乌鲁木齐返程</span>
+        <span class="tag"><i class="fa-solid fa-child mr-1"></i> 10大2小友好</span>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <a href="#budget" class="text-white/60 hover:text-white/90 transition-colors text-2xl"><i class="fa-solid fa-chevron-down"></i></a>
+  </div>
+</section>
+
+<!-- BUDGET -->
+<section id="budget" class="py-12 bg-[var(--light-bg)]">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="section-title">费用预算</h2>
+    <div class="section-divider"></div>
+    <p class="text-center text-gray-500 mb-5">乌鲁木齐进出新疆 · 全程自驾到底 · 偏豪华型标准</p>
+    <div class="card p-5 mb-5 max-w-2xl mx-auto">
+      <h3 class="font-serif font-bold text-xl text-blue-800 mb-3">🚗 全程自驾方案</h3>
+      <table class="w-full text-sm">
+        <tbody>
+          <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">🚗 租车（10天，乌鲁木齐取还）</td><td class="py-2 font-semibold text-right">2×普拉多</td><td class="py-2 text-blue-700 font-bold text-right">¥8,000</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">⛽ 油费</td><td class="py-2 font-semibold text-right">全程约3,055km × 1.0元</td><td class="py-2 text-blue-700 font-bold text-right">¥3,060</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">🛣️ 高速费</td><td class="py-2 font-semibold text-right">2辆车全程（含G30段）</td><td class="py-2 text-blue-700 font-bold text-right">¥1,350</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">✈️ 大交通（往返/人）</td><td class="py-2 font-semibold text-right">武汉/上海/深圳直飞乌鲁木齐</td><td class="py-2 text-blue-700 font-bold text-right">¥4,200</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">🏨 住宿（9晚/人）</td><td class="py-2 font-semibold text-right">2晚国际连锁五星+7晚当地最高标准</td><td class="py-2 text-blue-700 font-bold text-right">¥3,875</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-1.5 pl-5 text-xs text-gray-400" colspan="2">└ 含 D3 禾木山庄（村内·图瓦木屋）¥900-1,200/间 · 2人/间</td><td class="py-1.5 text-xs text-gray-500 font-semibold text-right">人均 ¥450-600/晚</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">🍜 餐饮（10天/人）</td><td class="py-2 font-semibold text-right">200元/天</td><td class="py-2 text-blue-700 font-bold text-right">¥2,000</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">🎫 门票（/人）</td><td class="py-2 font-semibold text-right">北疆+伊犁全部景点</td><td class="py-2 text-blue-700 font-bold text-right">¥1,210</td></tr>
+          <tr><td colspan="3" class="pt-2"></td></tr>
+          <tr class="bg-blue-50"><td class="py-2.5 px-2 rounded-l-lg font-bold text-blue-900">💰 人均总费用</td><td class="py-2.5 text-xs text-gray-400 text-right">含大交通+分摊</td><td class="py-2.5 px-2 rounded-r-lg font-black text-blue-700 text-xl text-right">~¥12,500</td></tr>
+        </tbody>
+      </table>
+      <div class="mt-3 text-xs text-gray-400">* 按10人出行计算：住宿2人/间×9晚，租车/油费/高速人均分摊；乌鲁木齐取还车闭环设计，省去中途换车/异地还车费用。住宿已按真实核实标准精选，非随意选择的经济型酒店</div>
+    </div>
+
+    <!-- Flight Info -->
+    <div class="card p-5 mb-5">
+      <h3 class="font-serif font-bold text-lg text-blue-900 mb-3"><i class="fa-solid fa-plane mr-2"></i>大交通：8/1三地统一飞乌鲁木齐 → 8/10乌鲁木齐三地返程</h3>
+      <div class="grid md:grid-cols-2 gap-3">
+        <div class="bg-blue-50 rounded-xl p-3 text-center">
+          <div class="font-bold text-blue-800 mb-1">✈️ 第一段：8/1 三地直飞乌鲁木齐</div>
+          <div class="text-sm text-gray-600">武汉CZ8403 / 上海MU2501 / 深圳CZ6871，均为直飞</div>
+          <div class="text-xs text-gray-400 mt-1">武汉08:00起飞12:40到达；上海09:20起飞15:10到达；深圳10:40起飞16:20到达</div>
+          <div class="font-bold text-blue-700 mt-1">¥2,200-2,800/人</div>
+        </div>
+        <div class="bg-rose-50 rounded-xl p-3 text-center">
+          <div class="font-bold text-rose-800 mb-1">✈️ 第二段：8/10 三地返程</div>
+          <div class="text-sm text-gray-600">乌鲁木齐 → 武汉CZ3912/深圳CZ8498/上海9C6496</div>
+          <div class="text-xs text-gray-400 mt-1">15:45-16:55起飞，20:50-21:30陆续到达</div>
+          <div class="font-bold text-rose-700 mt-1">¥1,800-2,600/人</div>
+        </div>
+      </div>
+      <div class="mt-3 p-3 bg-amber-50 rounded-lg text-xs text-amber-700"><i class="fa-solid fa-circle-info mr-1"></i>大交通人均约 ¥4,000-5,400（两段合计，均为直飞无需转机）。以上航班号及时刻仅供参考，务必以出发前实际购票时刻表为准。乌鲁木齐进出闭环设计，全程自驾一辆车到底，中途无需办理还车/取车手续。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ROUTE OVERVIEW -->
+<section id="overview" class="py-12 bg-[var(--light-bg)]">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="section-title">路线概览</h2>
+    <div class="section-divider"></div>
+    <p class="text-center text-gray-500 mb-6">8/1乌鲁木齐集结 → 8/10乌鲁木齐三地返程 · 全程约 3,055 公里 · 全程自驾一辆车到底 · 10大人2小孩</p>
+    <!-- Route Flow -->
+    <div class="hidden md:flex flex-wrap items-center justify-center gap-2 mb-6 text-xs md:text-sm">
+      <span class="bg-slate-700 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🛫 武汉/上海/深圳直飞乌鲁木齐</span>
+      <span class="flight-badge mx-1"><i class="fa-solid fa-plane"></i> 三地统一集合</span>
+      <span class="bg-blue-800 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🏁 乌鲁木齐机场取车</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
+      <span class="bg-cyan-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">阿勒泰 660km</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
+      <span class="bg-green-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">禾木 290km</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
+      <span class="bg-teal-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">喀纳斯 70km</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
+      <span class="bg-cyan-700 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">布尔津·五彩滩 130km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
+      <span class="bg-indigo-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">克拉玛依·魔鬼城 320km</span><i class="fa-solid fa-arrow-right text-red-400 text-xs"></i>
+      <span class="bg-red-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">⚠️赛里木湖 450km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
+      <span class="bg-purple-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">伊宁·喀赞其 165km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
+      <span class="bg-amber-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">特克斯·喀拉峻 175km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
+      <span class="bg-orange-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">巴音布鲁克 355km</span><i class="fa-solid fa-arrow-right text-emerald-500 text-xs"></i>
+      <span class="bg-emerald-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">⚠️独库·独山子 320km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
+      <span class="bg-rose-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🏁 乌鲁木齐还车 260km</span>
+      <span class="flight-badge mx-1"><i class="fa-solid fa-plane"></i> 分三地返程</span>
+    </div>
+    <!-- 自驾行程简要文字介绍（北疆段+伊犁段合并为一段完整叙述） -->
+    <div class="card p-5 mb-5 border-l-4 border-blue-700">
+      <div class="flex items-center gap-3 mb-3 flex-wrap">
+        <span class="segment-badge seg-north"><i class="fa-solid fa-tree mr-1"></i>北疆段 · Day1-6</span>
+        <span class="text-sm text-gray-400">戈壁·森林·湖泊</span>
+        <span class="text-gray-300">|</span>
+        <span class="segment-badge seg-south"><i class="fa-solid fa-mountain-sun mr-1"></i>伊犁段 · Day7-10</span>
+        <span class="text-sm text-gray-400">草原·花海·雪山</span>
+      </div>
+      <p class="text-sm text-gray-600 leading-relaxed mb-3">
+        <span class="text-blue-700 font-semibold">北疆段：</span>8/1三地直飞乌鲁木齐集合，机场取车 → Day2长途660km赶往阿勒泰 → 禾木木屋村 → 喀纳斯三湾+当天返布尔津看五彩滩日落 → 克拉玛依（途经乌尔禾魔鬼城）→ Day6克拉玛依直冲赛里木湖畔450km，全程一辆车到底，Day2/Day6为两大长途驾驶日；
+        <span class="text-orange-700 font-semibold">伊犁段：</span>赛里木湖畔早退出发 → 当天串起伊宁（午餐+车观喀赞其蓝色小镇）→ 特克斯八卦城 → 喀拉峻人体草原，晚餐后登八卦观光塔看亮灯夜景 → 途经那拉提草原（不进景区）走独库中段至巴音布鲁克，傍晚看九曲十八弯日落 → 独库中段+北段翻天山至独山子 → 乌鲁木齐还车分三地返程。
+      </p>
+      <div class="flex flex-wrap items-center gap-4 text-xs font-semibold">
+        <span class="text-blue-700">🚗 北疆段自驾约 1,730km</span>
+        <span class="text-orange-700">🚗 伊犁段自驾约 1,325km</span>
+        <span class="text-gray-500">合计约 3,055km</span>
+        <span class="text-rose-600">🏁 乌鲁木齐还车分三地返程</span>
+      </div>
+    </div>
+    <!-- Distance Cards -->
+    <div class="flex items-center justify-center gap-5 mb-3 text-xs text-gray-500">
+      <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-blue-600 inline-block"></span>北疆段</span>
+      <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-orange-500 inline-block"></span>伊犁段</span>
+      <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-emerald-600 inline-block"></span>独库公路段</span>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">乌鲁木齐→阿勒泰</div><div class="font-bold text-blue-700">660km / 8h</div></div>
+      <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">阿勒泰→禾木</div><div class="font-bold text-blue-700">290km / 4h</div></div>
+      <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">禾木→喀纳斯→布尔津</div><div class="font-bold text-blue-700">70+130km / 4.5h</div></div>
+      <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">布尔津→克拉玛依</div><div class="font-bold text-blue-700">320km / 4-5h</div></div>
+      <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">克拉玛依→赛里木湖⚠️最长</div><div class="font-bold text-red-600">约450km / 6-7h</div></div>
+      <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">赛里木湖→伊宁</div><div class="font-bold text-orange-700">165km / 2.5h</div></div>
+      <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">伊宁→特克斯</div><div class="font-bold text-orange-700">130km / 2h</div></div>
+      <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">特克斯→喀拉峻</div><div class="font-bold text-orange-700">45km / 1h</div></div>
+      <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">特克斯→巴音布鲁克（途经那拉提）</div><div class="font-bold text-orange-700">355km / 7h</div></div>
+      <div class="card p-3 text-center border-l-4 border-emerald-600 bg-emerald-50/50"><div class="text-xs text-gray-400">巴音布鲁克→独山子（独库中段+北段）<span class="text-red-500 font-bold">需预约</span></div><div class="font-bold text-emerald-700">320km / 7.5h</div></div>
+      <div class="card p-3 text-center border-l-4 border-emerald-600 bg-emerald-50/50"><div class="text-xs text-gray-400">独山子→乌鲁木齐（次日还车）</div><div class="font-bold text-emerald-700">260km / 3h</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section id="itinerary" class="py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="section-title">逐日行程</h2>
+    <div class="section-divider"></div>
+    <p class="text-center text-amber-600 text-sm mb-5"><i class="fa-solid fa-triangle-exclamation mr-1"></i>10天满档，标红⚠️的节点最紧，全程自驾，仍需留足提前量</p>
+    <div id="itineraryContainer" class="space-y-3"></div>
+  </div>
+</section>
+
+<!-- RENTCAR 租车方案 -->
+<section id="rentcar" class="py-12 bg-[var(--light-bg)]">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="section-title">租车方案</h2>
+    <div class="section-divider"></div>
+    <p class="text-center text-gray-500 mb-2">乌鲁木齐机场取还 · 全程两辆7座油车 · 含全流程避坑指南</p>
+    <p class="text-center text-blue-700 font-bold mb-6">🔥 当前：推荐 2 辆7座丰田普拉多越野车</p>
+    <div id="rentcarContainer"></div>
+  </div>
+</section>
+
+<!-- FOOD 美食图鉴 -->
+<section id="food" class="py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="section-title">美食图鉴</h2>
+    <div class="section-divider"></div>
+    <p class="text-center text-gray-500 mb-5">北疆伊犁必吃6大美味 · 从大盘鸡到手抓饭，每一口都是丝路味道</p>
+    <div id="foodContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </div>
+</section>
+
+<!-- HOTEL 住宿甄选 -->
+<section id="hotel" class="py-12 bg-[var(--light-bg)]">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="section-title">住宿甄选</h2>
+    <div class="section-divider"></div>
+    <p class="text-center text-orange-700 font-medium mb-2">9晚真实酒店，逐一核实品牌背书与开业时间 · 2晚国际连锁五星（希尔顿/万达）+ 7晚当地已核实的最高标准（含禾木村内民宿）</p>
+    <p class="text-center text-gray-400 text-sm mb-5">绿色"品质核验"=国际品牌零异味/防噪音/卫生有保障；黄色"诚实说明"=该地暂无国际连锁，已选当地口碑与硬件最优解 · 点击"拨打电话"直接呼叫前台，"导航"直接跳转地图</p>
+    <div id="hotelContainer" class="space-y-4"></div>
+  </div>
+</section>
+
+<!-- TIPS 出行贴士 -->
+<section id="tips" class="py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="section-title">出行贴士</h2>
+    <div class="section-divider"></div>
+    <p class="text-center text-gray-500 mb-5">10大2小团队出行 · 北疆森林湖泊 + 两大长途驾驶日 + 独库公路预约通行 三段注意事项全覆盖</p>
+    <div id="tipsAlertContainer" class="mb-6"></div>
+    <div id="tipsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-8 bg-gray-900 text-center">
+  <p class="text-gray-400 text-sm mb-2">北疆+伊犁乌鲁木齐自驾闭环10日 · 三种地貌告别视觉疲劳</p>
+  <p>由 <a href="https://with.woa.com/" style="color: #8A2BE2;" target="_blank">With</a> 通过自然语言生成</p>
+</footer>
+
+<script>
+// Mobile Menu
+document.getElementById('mobileMenuBtn').addEventListener('click', () => { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+// Scroll Animation（先创建 observer，实际观察需等所有动态卡片渲染完成后再执行，见脚本末尾）
+const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.15 });
+
+// ===== 10天完整行程数据（乌鲁木齐进出闭环，新增克拉玛依中转站）=====
+const ITINERARY_DATA = [
+  { day:1, title:'三地集结乌鲁木齐 → 机场取车 → 市区休整', segment:'north', tight:'⚠️ 三地统一直飞集合：武汉最早12:40到，深圳最晚16:20到',
+    image:'images/day11-urumqi-bazaar.png',
+    desc:'武汉、上海、深圳三队均直飞乌鲁木齐，最迟16:20全员到齐。机场取车后前往市区入住，先到的队伍不用干等——建议就近前往新疆国际大巴扎自由活动，逛民族手工艺、干果巴扎，感受丝路风情，晚餐直接在大巴扎美食街解决。当晚不安排长途驾驶，简单休整、检查车况、规划次日660km的长途路线，为明天的大长途做好准备。',
+    highlight:'三地直飞集合 | 乌鲁木齐机场取车 | 国际大巴扎自由活动 | 市区休整', playTime:'半天', drive:'乌鲁木齐机场→市区 25km/0.5h',
+    flightInfo:[
+      { seg:'武汉 → 乌鲁木齐（直飞）', no:'南方航空 CZ8403', time:'08:00 起飞 → 12:40 到达' },
+      { seg:'上海 → 乌鲁木齐（直飞）', no:'东方航空 MU2501', time:'09:20 起飞 → 15:10 到达' },
+      { seg:'深圳 → 乌鲁木齐（直飞）', no:'南方航空 CZ6871', time:'10:40 起飞 → 16:20 到达' },
+    ],
+    timeline:[
+      { time:'08:00', text:'武汉CZ8403起飞（直飞乌鲁木齐）' },
+      { time:'09:20', text:'上海MU2501起飞（直飞乌鲁木齐）' },
+      { time:'10:40', text:'深圳CZ6871起飞（直飞乌鲁木齐）' },
+      { time:'12:40', text:'武汉队伍抵达乌鲁木齐（三队中最早到，可先取车办理手续）' },
+      { time:'15:10', text:'上海队伍抵达乌鲁木齐' },
+      { time:'16:20', text:'深圳队伍抵达乌鲁木齐，三队全部集合完毕' },
+      { time:'17:00', text:'机场租车网点取车，全员集结完毕' },
+      { time:'17:30', text:'驱车前往市区入住（25km/0.5h）' },
+      { time:'18:30', text:'入住酒店，检查车况、加满油、规划次日路线' },
+      { time:'19:00', text:'前往新疆国际大巴扎自由活动，逛民族手工艺、干果巴扎（先到队伍可更早前往）' },
+      { time:'20:00', text:'大巴扎美食街晚餐，早点休息，为明天660km长途做准备' },
+    ],
+    hotelDay:1, tickets:'无', ticketsPrice:0, altitude:800, temperature:'20°C ~ 33°C', feel:'温暖干燥，早晚微凉，正常夏装即可' },
+
+  { day:2, title:'乌鲁木齐 → 阿勒泰⚠️长途660km', segment:'north', tight:'⚠️ 全程最长驾驶日之一：660km/8h，沿G3014/G216穿越准噶尔盆地',
+    image:'images/day2-junggar-gobi-road.png',
+    desc:'今天是全程两大长途日之一，沿G3014/G216穿越准噶尔盆地戈壁公路前往阿勒泰，途中服务区较少，务必在克拉玛依/北屯等节点加油、休整，两位司机轮换驾驶，避免疲劳驾驶，傍晚抵达阿勒泰市区。',
+    highlight:'准噶尔盆地戈壁公路 | 长途穿越 | 阿勒泰市区休整', playTime:'全天（以驾驶为主）', drive:'乌鲁木齐→阿勒泰 660km/8h',
+    timeline:[
+      { time:'08:30', text:'乌鲁木齐出发，吃完早餐再上路，提前检查油量和车况' },
+      { time:'11:00', text:'途经克拉玛依方向服务区，第一次休整加油' },
+      { time:'13:00', text:'沿途服务区午餐（自带干粮更灵活）' },
+      { time:'15:30', text:'途经北屯服务区，第二次休整' },
+      { time:'18:30', text:'抵达阿勒泰市区，入住酒店' },
+      { time:'19:30', text:'市区晚餐，早点休息' },
+    ],
+    hotelDay:2, tickets:'无', ticketsPrice:0, altitude:735, temperature:'16°C ~ 30°C', feel:'戈壁昼夜温差大，白天暴晒需重防晒，早晚薄外套' },
+
+  { day:3, title:'阿勒泰 → 禾木·童话木屋村', segment:'north',
+    image:'images/day3-hemu-village.png',
+    desc:'上午自驾前往禾木，私家车须停在禾木门票站停车场（6-7月旺季景区禁止私家车驶入），换乘景区区间车进村。本晚住在禾木村核心的禾木山庄（图瓦木屋、独立卫浴），紧邻换乘中心，村内电瓶车可代运人和行李。下午漫步禾木桥、白桦林、图瓦人木屋村落，晚上到禾木草原参加图瓦人篝火晚会，在阿尔泰山几乎无光污染的夜空下看满天繁星——篝火与观星点距民宿步行可达，散场直接走回，无需赶接驳车，全家轻松收尾。',
+    highlight:'禾木村漫步 | 图瓦人木屋 | 禾木桥 | 篝火星空', playTime:'全天（轻松节奏）', drive:'阿勒泰→禾木 290km/4h',
+    timeline:[
+      { time:'08:30', text:'阿勒泰出发，自驾前往禾木门票站（290km/4h，途中服务区休整）' },
+      { time:'12:30', text:'抵达禾木门票站，私家车停入游客中心停车场（旺季景区禁止私家车驶入）' },
+      { time:'13:00', text:'换乘景区区间车进村（约1h，票价含在门票内）' },
+      { time:'14:00', text:'抵达禾木村，民宿管家用村内电瓶车接人和行李入住（村内核心）' },
+      { time:'14:30', text:'民宿办理入住、午餐、稍作休整' },
+      { time:'16:00', text:'村内漫步，禾木桥拍照、白桦林徒步、图瓦人木屋村落' },
+      { time:'18:30', text:'村内晚餐，品尝图瓦人家常菜' },
+      { time:'20:00', text:'禾木草原图瓦人篝火晚会 · 星空下欢聚（至21:30）' },
+      { time:'21:30', text:'篝火散场，步行返回村内民宿（观星点、篝火场步行可达，无需接驳）' },
+    ],
+    hotelDay:3, tickets:'禾木¥50+区间车¥52', ticketsPrice:102, altitude:1124, temperature:'8°C ~ 24°C', feel:'山间清凉舒适，早晚需薄外套，白天短袖足够' },
+
+  { day:4, title:'禾木 → 喀纳斯三湾 → 布尔津·五彩滩日落', segment:'north', tight:'⚠️ 一天串两景：喀纳斯游览后当天赶到布尔津看日落',
+    image:'images/day4-kanas-moonbay.png',
+    desc:'早上从禾木出发前往喀纳斯景区（贾登峪门票站换乘区间车），游览神仙湾、月亮湾、卧龙湾三湾，登观鱼台俯瞰喀纳斯湖全貌，午后驱车前往布尔津县城，赶在日落前抵达五彩滩——额尔齐斯河畔的彩色丘陵在夕阳下如打翻的调色盘。',
+    highlight:'三湾徒步 | 观鱼台全景 | 五彩滩日落 | 额尔齐斯河', playTime:'全天', drive:'禾木→喀纳斯 70km/1.5h + 喀纳斯→布尔津 130km/3h',
+    timeline:[
+      { time:'08:30', text:'禾木出发前往喀纳斯（含换乘）' },
+      { time:'10:30-12:30', text:'游览神仙湾、月亮湾、卧龙湾三湾，木栈道徒步（较原方案节奏略紧凑）' },
+      { time:'12:30-13:15', text:'游客中心午餐（简餐快吃，为赶日落留出机动）' },
+      { time:'13:15-14:15', text:'登观鱼台俯瞰喀纳斯湖全貌' },
+      { time:'14:30', text:'驱车前往布尔津县城（130km/3h），赶在日落前抵达' },
+      { time:'17:30', text:'抵达布尔津，入住+简单洗漱' },
+      { time:'20:30', text:'驱车前往五彩滩景区' },
+      { time:'21:00-21:30', text:'五彩滩日落观赏（当日日落约21:30）' },
+      { time:'22:00', text:'返回县城河堤夜市晚餐、休息' },
+    ],
+    hotelDay:4, photoTime:'日落前1小时（五彩滩光线最佳）', tickets:'喀纳斯¥160+区间车¥70+观鱼台¥20+五彩滩¥50', ticketsPrice:300, altitude:480, temperature:'15°C ~ 30°C', feel:'河谷午后炎热，傍晚看日落风大需薄外套' },
+
+  { day:5, title:'布尔津 → 克拉玛依·世界魔鬼城', segment:'north',
+    image:'images/day5-devil-city.png',
+    desc:'沿G217国道南下，途经乌尔禾魔鬼城（世界魔鬼城）——典型的雅丹地貌，方圆约10平方公里的戈壁台地上林立着形态各异的风蚀土墩，傍晚光影效果最佳。游览后驱车抵达克拉玛依市区入住，为明天450km的长途冲赛里木湖做准备。',
+    highlight:'乌尔禾魔鬼城 | 雅丹地貌 | 石油城印象', playTime:'全天', drive:'布尔津→克拉玛依 320km/4-5h（途经魔鬼城）',
+    timeline:[
+      { time:'08:30', text:'布尔津出发，沿G217南下（早半小时上路，全天节奏更从容）' },
+      { time:'12:30', text:'抵达乌尔禾魔鬼城景区' },
+      { time:'12:30-15:30', text:'游览魔鬼城雅丹地貌，乘观光车深入景区（比原计划多留半小时慢逛）' },
+      { time:'16:00', text:'驱车前往克拉玛依市区（约106km/1.5h）' },
+      { time:'17:30', text:'抵达克拉玛依，入住酒店' },
+      { time:'18:30', text:'市区晚餐（可尝试大盘鸡、椒麻鸡），早点休息' },
+    ],
+    hotelDay:5, tickets:'魔鬼城¥60+观光车¥30', ticketsPrice:90, altitude:450, temperature:'20°C ~ 34°C', feel:'戈壁干热少雨，正常夏装，注意防晒防风' },
+
+  { day:6, title:'克拉玛依 → 赛里木湖畔⚠️长途450km', segment:'south', tight:'⚠️ 全程另一大长途日：约450km/6-7h，沿G30连霍高速',
+    image:'images/day6-sayram-lake.png',
+    desc:'今天是全程另一大长途驾驶日，沿G30连霍高速一路向西，途经奎屯、精河可加油休整，全程约450km，不用摸黑早起，8点半从容出发、两位司机轮换即可。抵达赛里木湖（大西洋最后一滴眼泪）后，直接入住湖畔，傍晚湖边看日落，日落时间较晚（21:20左右）时间完全充裕，是全程最值得放慢的一晚。',
+    highlight:'G30连霍高速 | 赛里木湖畔住宿 | 雪山倒影 | 慢享日落', playTime:'全天', drive:'克拉玛依→赛里木湖 约450km/6-7h',
+    timeline:[
+      { time:'08:30', text:'克拉玛依出发，早餐后从容上路，沿G30连霍高速西行' },
+      { time:'11:00', text:'途经奎屯服务区，第一次休整加油' },
+      { time:'13:00', text:'途经精河服务区午餐+休整（午餐略紧凑，吸收晚出发的半小时）' },
+      { time:'14:00', text:'继续西行，沿途注意山区路况变化' },
+      { time:'17:30', text:'抵达赛里木湖景区，入住湖畔酒店' },
+      { time:'18:00-19:30', text:'环湖游览，月亮湾、三台海子等观景点' },
+      { time:'19:30-21:20', text:'湖边等待日落（当日日落约21:20，时间依然充裕）' },
+      { time:'22:00', text:'返回房间休息' },
+    ],
+    hotelDay:6, photoTime:'傍晚19:30-21:20湖畔金色光线+日落', tickets:'赛里木湖¥145', ticketsPrice:145, altitude:2073, temperature:'12°C ~ 24°C', feel:'湖畔风大偏凉，需薄外套/防风衣' },
+
+  { day:7, title:'赛里木湖 → 伊宁（路过）→ 特克斯 → 喀拉峻草原', segment:'south', tight:'⚠️ 合并日：赛湖早退+三段约340km驾驶，伊宁仅午餐路过、下午主玩喀拉峻，晚餐后可登塔看特克斯八卦城夜景',
+    image:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/86a1600a-f81c-4eb3-8ee4-0319ef479849/image_1782977875_3_1.jpg',
+    desc:'今天把原来分两天的伊犁段压成一天：清晨在赛里木湖畔简单吃口早餐就退房出发，趁早赶路返回伊宁。中午在伊宁吃顿正宗伊犁菜，饭后不进景区、只沿喀赞其蓝色小镇与伊犁河边开车绕看一圈感受河谷烟火气，随后驱车前往世界唯一的八卦城——特克斯，登观景台俯瞰全城如易经八卦布局。下午重头戏是喀拉峻大草原（今日主角），欣赏"人体草原"独特曲线、漫步五花草甸，草原区间车末班20:30、天黑晚，傍晚时间充裕。晚上入住八卦城中心旁的颐爻酒店，晚餐后可步行登50余米高的八卦观光塔，俯瞰64条街巷灯火交织如悬浮罗盘的夜景。',
+    highlight:'赛湖晨光 | 伊宁·喀赞其(车观路过) | 八卦城全景 | 喀拉峻人体草原 | 饭后登塔看八卦城夜景', playTime:'全天（合并日）', drive:'赛里木湖→伊宁 165km/2.5h →特克斯 130km/2h →喀拉峻 45km/1h（全天约340km）',
+    timeline:[
+      { time:'08:30', text:'赛里木湖畔酒店早餐后退房出发，趁早返回伊宁（165km/2.5h）' },
+      { time:'11:00', text:'抵达伊宁，午餐（正宗伊犁菜，从容用餐约40min）' },
+      { time:'11:40', text:'饭后沿喀赞其蓝色小镇、伊犁河边开车绕看一圈（不进景区、车观路过约20min）' },
+      { time:'12:00', text:'伊宁出发前往特克斯（130km/2h）' },
+      { time:'14:00', text:'抵达特克斯，登八卦城观景台俯瞰全城布局（约0.5h）' },
+      { time:'14:30', text:'驱车前往喀拉峻草原（45km/1h）' },
+      { time:'15:30-19:00', text:'喀拉峻人体草原、五花草甸、猎鹰台游览（今日主角，末班车20:30兜底）' },
+      { time:'19:30', text:'返回特克斯入住颐爻酒店，晚餐' },
+      { time:'21:30-22:30', text:'饭后步行登八卦观光塔，俯瞰八卦城亮灯夜景（8月天黑晚，此时华灯初上·可选加项）' },
+    ],
+    hotelDay:7, photoTime:'傍晚喀拉峻草原光线+夜晚22:00后八卦城亮灯', tickets:'喀拉峻¥275（全域游）+八卦观光塔¥30', ticketsPrice:305, altitude:2000, temperature:'11°C ~ 27°C', feel:'草原早晚清凉，中午日晒强，需薄外套+防晒；夜登观光塔更凉，加件外套' },
+
+  { day:8, title:'特克斯 → 途经那拉提 → 巴音布鲁克', segment:'south', tight:'⚠️ 全天355km/7h长途转场，且需确认独库中段（那拉提↔巴音布鲁克）已在预约通行范围内',
+    image:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/88c9c664-230a-4668-ba04-e0714d509b06/image_1783065841_3_1.png',
+    desc:'今天从特克斯长途转场至巴音布鲁克。上午先赶275km到那拉提镇，一路车窗即可饱览那拉提空中草原的雪山与绿毯风光（不进景区、不骑马，只经过）；午后从那拉提上独库公路最精华的中段，翻越拉尔墩达坂（约80km/2h）进入海拔约2500m的巴音布鲁克高山湿地草原。傍晚重点是开都河"九曲十八弯"落日——运气好可在蜿蜒河面拍到多个太阳倒影，是与前几日森林湖泊、绿毯草原截然不同的湿地水景。',
+    highlight:'途经那拉提草原（车观不进景区）| 独库中段·拉尔墩达坂 | 九曲十八弯日落 | 高山湿地草原', playTime:'长途转场+傍晚看日落', drive:'特克斯→那拉提 275km/5h（途经）→巴音布鲁克 80km/2h',
+    timeline:[
+      { time:'08:30', text:'特克斯出发，沿独库中段方向前往巴音布鲁克（全天355km）' },
+      { time:'13:30', text:'抵那拉提镇（275km/5h），午餐；车窗已饱览那拉提草原雪山，不进景区' },
+      { time:'14:30', text:'那拉提出发，上独库最精华中段，翻拉尔墩达坂（80km/2h）' },
+      { time:'16:30', text:'抵巴音布鲁克镇，入住休整（距进景区看日落仍有充裕缓冲）' },
+      { time:'18:00', text:'进景区换乘区间车赴九曲十八弯（景区大，车程约0.5h）' },
+      { time:'19:00-21:30', text:'九曲十八弯观落日（8月中旬日落约21:00，可拍河面多个太阳）' },
+      { time:'22:00', text:'返镇晚餐，注意保暖早点休息' },
+    ],
+    hotelDay:8, photoTime:'傍晚19:00-21:00九曲十八弯落日最佳', tickets:'巴音布鲁克¥65+区间车¥90', ticketsPrice:155, altitude:2500, temperature:'6°C ~ 22°C', feel:'高山湿地海拔高、早晚很冷温差大，务必备厚外套，儿童老人防高反' },
+
+  { day:9, title:'巴音布鲁克 → 独库中段+北段 → 独山子', segment:'south', tight:'⚠️ 全程最累的一天！独库中段+北段320km山路、翻3个达坂，两段均需预约，未预约车辆禁止通行',
+    image:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/6e789b6b-6f98-4dde-bb06-991d897c485e/image_1783054701_3_1.jpg',
+    desc:'今天是全程最壮阔也最硬核的一天！清晨先在巴音布鲁克看草原/天鹅湖方向的晨景（错峰避开昨晚日落人潮），随后走独库中段折返那拉提岔口（80km/2h），再从那拉提上独库北段（那拉提-乔尔玛-独山子约230km）。中段+北段两段均实行网上预约制通行，出发前必须已在相应入口预约成功、且车辆为7座以下（2辆普拉多符合要求）。一路穿越天山——雪山达坂、高山草甸、峡谷河流一日历四季，途经乔尔玛烈士陵园，翻哈希勒根达坂，最终抵达独山子大峡谷打卡独库零公里纪念碑，当晚入住独山子。',
+    highlight:'巴音布鲁克草原晨景 | 独库中段+北段全穿越 | 乔尔玛烈士陵园 | 独山子大峡谷 | 独库零公里纪念碑', playTime:'全天（320km山路）', drive:'巴音布鲁克→那拉提岔口 80km/2h（独库中段）→独山子 230km/5h（独库北段·需预约）',
+    timeline:[
+      { time:'07:00', text:'巴音布鲁克草原/天鹅湖方向看晨景（约1h，错峰避开昨晚日落人潮）' },
+      { time:'08:00', text:'早餐后出发，走独库中段折返那拉提岔口（80km/2h）' },
+      { time:'10:00', text:'抵那拉提岔口，再次核对独库北段预约凭证（入口/车牌/日期），上北段' },
+      { time:'11:30', text:'途经乔尔玛烈士陵园' },
+      { time:'13:00', text:'哈希勒根达坂路段（海拔约3300m，注意保暖），服务区简餐/干粮' },
+      { time:'15:00', text:'抵达独山子大峡谷，游览+独库公路零公里纪念碑打卡' },
+      { time:'16:30', text:'入住独山子，休整' },
+      { time:'18:00', text:'晚餐，早点休息' },
+    ],
+    hotelDay:9, photoTime:'全天（独库公路光影变化万千）', tickets:'独库公路 免费，独山子大峡谷¥60', ticketsPrice:60, altitude:3300, temperature:'5°C ~ 20°C（达坂更冷）', feel:'达坂路段寒冷需厚外套，下山后转暖' },
+
+  { day:10, title:'独山子 → 乌鲁木齐还车 → 三地分头返程', segment:'south', tight:'⚠️ 还车+三地分批登机：上午务必留足时间，不能拖延',
+    image:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/5d288a37-3388-4376-8f8c-7d46e6569769/image_1783055203_1_1.jpg',
+    desc:'上午从独山子出发前往乌鲁木齐还车，中午在机场附近简单午餐后，武汉/深圳/上海三队伍分别搭乘各自的直飞返程航班，结束这场跨越北疆与伊犁两大地貌的10天旅程。',
+    highlight:'乌鲁木齐还车 | 三地分头返程', playTime:'半天+登机', drive:'独山子→乌鲁木齐 260km/3h',
+    flightInfo:[
+      { seg:'乌鲁木齐 → 武汉', no:'南方航空 CZ3912', time:'16:55 起飞' },
+      { seg:'乌鲁木齐 → 深圳', no:'南方航空 CZ8498', time:'15:45 起飞' },
+      { seg:'乌鲁木齐 → 上海', no:'吉祥航空 9C6496', time:'16:30 起飞' },
+    ],
+    timeline:[
+      { time:'08:00', text:'独山子出发前往乌鲁木齐（260km/3h）' },
+      { time:'11:00', text:'抵达乌鲁木齐机场附近还车网点' },
+      { time:'11:00-12:00', text:'办理还车验车手续' },
+      { time:'12:00-13:00', text:'机场简单午餐' },
+      { time:'13:30', text:'各队分头前往值机柜台' },
+      { time:'15:45', text:'深圳CZ8498起飞' },
+      { time:'16:30', text:'上海9C6496起飞' },
+      { time:'16:55', text:'武汉CZ3912起飞' },
+    ],
+    hotelDay:0, tickets:'无', ticketsPrice:0, altitude:800, temperature:'22°C ~ 34°C', feel:'平原炎热干燥，正常夏装，注意防晒' },
+];
+
+// ===== 9晚真实酒店数据（真正高星/度假村标准，逐一核实品牌背书+开业时间，回应甲醛/噪音/老旧关切）=====
+const HOTEL_DATA = [
+  { day:1, city:'乌鲁木齐', name:'乌鲁木齐希尔顿酒店', brand:'希尔顿·国际连锁五星', phone:'0991-2345558', addr:'新疆乌鲁木齐市沙依巴克区西北路8号', price:'¥750-1200/晚',
+    img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/8761c21c-7b4d-4748-ac2d-e673a567af99/image_1783021427_1_1.jpg',
+    rating:{ hygiene:4.8, service:4.8, location:4.6, feature:4.7 },
+    standard:'非新开：希尔顿全球连锁标准运营多年，装修早已通风完毕零异味风险；隔音按国际五星标准建造，实测静音；每日专业保洁+第三方质检，卫生有国际品牌背书兜底。',
+    reason:'国际五星连锁，服务和硬件是全程起点的最高标准，让长途出发前先把状态调到最好；三队分批抵达（跨度近4小时）也能随到随办理入住，大堂空间大方便三队行李分批暂放。',
+    compare:[
+      { name:'机场附近快捷酒店', desc:'价格低但隔音一般、装修参差不齐，作为10天旅程的开场体验感太差' },
+      { name:'国际大巴扎附近民宿', desc:'文化氛围好但房源分散、卫生标准不统一，10人团难以同时保证品质' },
+    ] },
+  { day:2, city:'阿勒泰', name:'阿勒泰锦江国际酒店', brand:'锦江国际·连锁集团品牌', phone:'以携程/官方平台预订为准（2025年新开业）', addr:'新疆阿勒泰市金山路街道桦林西路16号（原桦林大酒店，毗邻桦林公园）', price:'¥800-1200/晚',
+    img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/150d7575-8345-4d5b-8579-9282e3e64a68/image_1783070508_5_1.png',
+    rating:{ hygiene:4.7, service:4.7, location:4.7, feature:4.7 },
+    standard:'升级说明：原吉域合精品酒店已替换为2025年5月10日正式开业的阿勒泰锦江国际酒店——由锦江酒店集团加盟运营，是阿勒泰市区规格最高的连锁品牌酒店之一。全新开业硬件最新、196间客房315张床位规模大，配行政酒廊、400㎡全日餐厅及多间包厢，卫生与服务有连锁集团标准兜底；因是新店，隔音与通风均按现行标准建造。（市区希尔顿2026年6月才刚开工、尚未开业。）',
+    reason:'660km长途驾驶后抵达已是傍晚，选它是当前阿勒泰市区品牌背书与硬件综合最优解：毗邻4A级桦林公园、临克兰河，环境好且房型规模大，10人团可同时分房、次日出发前也能在全日餐厅从容用早餐。',
+    compare:[
+      { name:'吉域合等本地精品酒店', desc:'口碑好但为运营多年的单体酒店，无连锁集团的统一品控，硬件也不如锦江国际新' },
+      { name:'将军山滑雪场度假村', desc:'硬件不错但夏季非雪季配套利用率低，且离市区补给远，10人团往返不便' },
+    ] },
+  { day:3, city:'禾木', name:'禾木山庄（村内·图瓦木屋）', brand:'喀纳斯旅游股份运营·村内正规民宿', phone:'0906-6528399', addr:'阿勒泰地区布尔津县禾木景区禾木村（近换乘中心）', price:'¥900-1200/晚',
+    img:'images/day3-hemu-village.png',
+    rating:{ hygiene:4.6, service:4.6, location:4.8, feature:4.7 },
+    standard:'诚实说明：禾木山庄由景区平台"新疆喀纳斯旅游发展股份有限公司"运营，是禾木村内的正规经营民宿（非村外吉克普林片区）。原木图瓦木屋风格，客房配独立卫浴+24h热水，是村内900-1200价位里口碑与卫生较稳定的选择，比多数公共卫浴的图瓦人家庭客栈更适合带老人小孩的10人团。',
+    reason:'就住禾木村内，推窗即是雪山白桦晨雾，篝火晚会、夜观星空步行可达，无需每天往返吉克普林8km接驳；紧邻换乘中心、行李搬运方便，价位控制在人均可接受范围，性价比高于村外国际五星。',
+    compare:[
+      { name:'吉克普林希尔顿（村外8km）', desc:'国际五星更贵（¥1200-1800起），且不在村内，篝火/星空/晨雾都要每天往返8km接驳，折腾' },
+      { name:'普通图瓦人家庭客栈', desc:'价格更低但多为公共卫浴、隔音一般，带老人小孩夜间体验风险高' },
+    ] },
+  { day:4, city:'布尔津', name:'布尔津国际酒店', brand:'当地最高标准·升临河高级房', phone:'0906-6512999', addr:'新疆阿勒泰地区布尔津县神湖路44号', price:'¥800-1100/晚（临河高级房）',
+    img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/0212f105-8e8c-40a5-a2af-67967babea8b/image_1783018278_1_1.jpg',
+    rating:{ hygiene:4.6, service:4.6, location:4.7, feature:4.4 },
+    standard:'诚实说明：布尔津作为县城，目前暂无已开业的国际连锁高星酒店（喀纳斯禾木假日/英迪格均在禾木吉克普林片区，不在布尔津县城内），此为县城内接待规格最高、口碑最稳定的酒店，已是本地封顶、无法再换更高酒店。本次为团队升级预订其高楼层临河高级房：面积更大、正对额尔齐斯河景，把“提标”落在房型与河景上。非新开无装修异味风险，客房定期翻新。',
+    reason:'紧邻额尔齐斯河，升级的临河高级房推窗即是河景；前台熟悉五彩滩最佳观景机位和日落时间，看完日落返程车程最短，是当前布尔津县城内能核实到的最好选择。',
+    compare:[
+      { name:'河堤附近经济型酒店', desc:'价格便宜但房间陈旧、隔音效果差，10人团休息质量一般' },
+      { name:'贾登峪方向直接入住', desc:'当天赶路时间太紧，会错过五彩滩最佳日落时段' },
+    ] },
+  { day:5, city:'克拉玛依', name:'克拉玛依博达银都酒店', brand:'当地准五星·市区规格最高', phone:'0990-6666628', addr:'新疆克拉玛依市友谊路16号', price:'¥600-900/晚',
+    img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/4ec4c52d-50b6-4e51-8c8f-dd40cc230009/image_1783018281_3_3.jpg',
+    rating:{ hygiene:4.6, service:4.5, location:4.6, feature:4.3 },
+    standard:'诚实说明：克拉玛依市区已核实过一圈——恒隆国际（135间/7层）、云上云端、蓝湾等均为四星或精品商务级别，规格都低于博达银都；真正的五星（玛依塔柯、万达锦华）都在独山子区（属Day9路线）。博达银都是准五星、17层153间、配行政酒廊，就是克拉玛依市区当前能订到的最高标准，无法在本地再换更好的。2007年开业运营多年、非新装修无甲醛风险。',
+    reason:'市区准五星规模最大的酒店，游览完乌尔禾魔鬼城后车程最短即可入住，为次日450km冲赛里木湖蓄力休整；客房数量充足，10人团可同时分房，不用拆队入住。',
+    compare:[
+      { name:'乌尔禾景区附近民宿', desc:'离魔鬼城近但县城餐饮补给和设施有限，长途后不方便' },
+      { name:'市区普通商务酒店', desc:'价格更低但规模小、行政配套不足，10人团分房紧张' },
+    ] },
+  { day:6, city:'赛里木湖', name:'霍城县赛里木湖大酒店', brand:'当地最高标准·非国际连锁', phone:'0999-7851888', addr:'伊犁哈萨克自治州霍城县赛里木湖风景区', price:'¥750-1100/晚',
+    img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/4f0083a0-4048-40ab-af58-6126d0fa22d3/image_1783018283_1_1.jpg',
+    rating:{ hygiene:4.7, service:4.6, location:4.9, feature:4.8 },
+    standard:'诚实说明：赛里木湖畔的JW万豪/艾美酒店集群计划2027年才建成开业，AC欧轩预计2025年底后陆续开业但尚未覆盖全部房态；此为湖区现有可预订中规格最高、正对湖面的酒店，非新开无异味风险。待国际品牌陆续开业后这里会是升级首选。',
+    reason:'客房正对湖面，落地窗即可躺着看雪山倒影和日落，比450km长途后再折返伊宁多出整晚的湖畔时光，是这一晚"值得为风景多花一点"的选择。',
+    compare:[
+      { name:'当天直冲伊宁不留宿', desc:'长途后再多赶165km太赶，且完全错过湖边最美的黄昏与晨雾时段' },
+      { name:'博乐市区高星酒店', desc:'离湖还有近1小时车程，清晨看晨雾需早起赶路，体验打折扣' },
+    ] },
+  { day:7, city:'特克斯', name:'特克斯颐爻酒店', brand:'当地四钻高端精品·非国际连锁', phone:'0999-6522999', addr:'伊犁州特克斯县阔克阿尕什街二环周易小镇', price:'¥650-950/晚',
+    img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/62dbd9bb-d22c-4535-aa2a-48042003c3c0/image_1783021154_1_3.jpg',
+    rating:{ hygiene:4.7, service:4.7, location:4.8, feature:4.6 },
+    standard:'2025年伊犁热门酒店必住榜上榜精品度假酒店，128间客房、全屋智能系统，卫生间干湿分离、双洗手盆设计，非老旧建筑无甲醛风险；特克斯目前暂无国际连锁品牌，此为县城内公认最高标准。',
+    reason:'距八卦城太极坛仅数步之遥，游览完喀拉峻返回车程最短；干湿分离卫浴+每间小冰箱的配置在伊犁段民宿化住宿里少见，能满足对卫生和舒适度的高要求。',
+    compare:[
+      { name:'喀拉峻景区内住宿', desc:'离草原近但游客设施和补给有限，10人团夜间应急不便' },
+      { name:'特克斯普通民宿', desc:'价格更低但房间数量有限、卫浴多为共用，舒适度不足' },
+    ] },
+  { day:8, city:'巴音布鲁克', name:'和静龙兴国际大酒店', brand:'草原小镇最高标准·非国际连锁', phone:'0996-5350333', addr:'和静县巴音布鲁克景区游客中心正门西南130米（独库公路旁）', price:'¥500-800/晚',
+    img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/866494ce-3cde-4f71-a540-adad7a358bf8/image_1783066385_1_1.jpg',
+    rating:{ hygiene:4.4, service:4.5, location:4.8, feature:4.3 },
+    standard:'诚实说明：巴音布鲁克是海拔约2500m的草原小镇，全镇暂无国际连锁品牌，住宿整体是"草原度假"水准而非五星标准，请对硬件降低预期。龙兴国际大酒店是镇上接待规格与口碑较高的一家，就在景区游客中心旁、独库公路边，配大型停车场，是当前能核实到的当地较优选择。',
+    reason:'紧邻景区游客中心正门（步行即到），看完九曲十八弯落日返回车程最短、次日一早看晨景也方便；镇上餐饮补给集中、停车充足，适合10大2小团队集中入住，不用分散在偏远牧家。',
+    compare:[
+      { name:'景区内蒙古包/星空营地', desc:'体验新奇但多为简易卫浴、夜间高原寒冷，带老人小孩不便' },
+      { name:'那拉提度假酒店（不过夜）', desc:'硬件更好但在80km外，为看九曲十八弯日落必须住镇上，折返不现实' },
+    ] },
+  { day:9, city:'独山子/奎屯', name:'独山子慧洋万达锦华酒店', brand:'万达·国际标准高端品牌', phone:'0992-3888999', addr:'新疆克拉玛依市独山子区大庆东路（独库公路零起点旁）', price:'¥800-1200/晚',
+    img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/f7099d66-59ab-4568-a308-14b76affad57/image_1783021430_1_1.jpg',
+    rating:{ hygiene:4.8, service:4.7, location:4.9, feature:4.7 },
+    standard:'2024年9月30日万达酒店及度假村官方开业，开业已近2年，装修异味期早过；245间客房含高级豪华房、家庭房等多种房型，700㎡宴会及会议设施，万达统一标准的隔音和卫生管理体系。',
+    reason:'就在独库公路零起点旁，独库北段收官当晚直接下榻，不用再多开30km去奎屯；用万达国际标准结束整个10天行程的最后一晚住宿，前后呼应乌鲁木齐希尔顿的开局标准。',
+    compare:[
+      { name:'继续开车去奎屯普通酒店', desc:'徒增30km车程且标准不确定，独山子当地已有国际品牌没必要舍近求远' },
+      { name:'连夜直赶乌鲁木齐', desc:'当天已长途驾驶，连夜赶路存在疲劳驾驶风险，与不硬赶路原则冲突' },
+    ] },
+];
+
+// ===== 渲染：逐日行程 =====
+function renderItinerary() {
+  const container = document.getElementById('itineraryContainer');
+  container.innerHTML = ITINERARY_DATA.map((d) => {
+    const hotel = HOTEL_DATA.find(h => h.day === d.hotelDay);
+    const hotelText = hotel ? `${hotel.name}${hotel.price ? ' ' + hotel.price : ''}` : '无住宿安排（当日已在途中/已返程）';
+    const mainHighlight = (d.highlight || '').split('|')[0].trim();
+    return `
+    <div class="day-card-hero fade-up" style="background-image:url('${d.image}')">
+      <div class="day-card-body">
+        <!-- 1. 头部：编号徽章 + 分段/时长标签 + 大标题 + 强调下划线（视觉焦点区） -->
+        <div class="day-sec">
+          <div class="day-header-badges">
+            <div class="left-group">
+              <div class="day-num-badge">D${d.day}</div>
+              <span class="segment-badge-hero ${d.segment==='north'?'seg-north-hero':'seg-south-hero'}"><i class="fa-solid ${d.segment==='north'?'fa-tree':'fa-mountain-sun'}"></i>${d.segment==='north'?'北疆段':'伊犁段'}</span>
+            </div>
+            ${d.playTime ? `<span class="playtime-badge"><i class="fa-regular fa-clock"></i>${d.playTime}</span>` : ''}
+          </div>
+          <h3 class="day-title-hero">${d.title}</h3>
+          <div class="day-title-underline"></div>
+          ${d.tight ? `<div class="day-tight-banner"><i class="fa-solid fa-triangle-exclamation"></i>${d.tight.replace('⚠️ ','')}</div>` : ''}
+        </div>
+        <!-- 2. 今日概述 -->
+        <div class="day-sec day-sec-desc"><p>${d.desc}</p></div>
+        <!-- 3. 亮点标签 -->
+        <div class="day-sec day-sec-tags">${(d.highlight||'').split('|').map(h=>`<span class="day-hl-tag"><i class="fa-solid fa-star"></i>${h.trim()}</span>`).join('')}</div>
+        <!-- 4. 精确到半小时的当日时间线（含航班信息） -->
+        <div class="day-sec">
+          <div class="day-timeline-box">
+            <div class="day-timeline-title"><i class="fa-regular fa-clock"></i> 精确到半小时的当日时间线</div>
+            ${d.flightInfo ? `<div class="day-flight-list">${d.flightInfo.map(f => `<div class="day-flight-item"><i class="fa-solid fa-plane"></i>${f.seg} · ${f.no} · ${f.time}</div>`).join('')}</div>` : ''}
+            <div class="day-timeline-list">${(d.timeline||[]).map(t => `<div class="day-timeline-item"><span class="t">${t.time}</span><span class="x">${t.text}</span></div>`).join('')}</div>
+          </div>
+        </div>
+        <!-- 5. 关键信息栏：路段住宿 / 亮点门票 / 海拔气温 -->
+        <div class="day-sec day-sec-infobar">
+          <div class="day-infobar-row"><i class="fa-solid fa-car"></i>${d.drive}<span class="sep">|</span><i class="fa-solid fa-hotel"></i>${hotelText}</div>
+          <div class="day-infobar-row"><i class="fa-solid fa-star"></i>${mainHighlight}<span class="sep">|</span><i class="fa-solid fa-ticket"></i>门票：${d.tickets||'无'}${d.ticketsPrice ? `<span class="sep">|</span><i class="fa-solid fa-sack-dollar"></i>门票合计¥${d.ticketsPrice}/人` : ''}</div>
+          <div class="day-infobar-row"><i class="fa-solid fa-mountain"></i>海拔${d.altitude}m<span class="sep">|</span><i class="fa-solid fa-temperature-half"></i>${d.temperature}${d.photoTime ? `<span class="sep">|</span><i class="fa-solid fa-camera"></i>${d.photoTime}` : ''}</div>
+        </div>
+        <!-- 6. 体感提示 -->
+        <div class="day-sec day-sec-feel"><i class="fa-solid fa-circle-info"></i><span>体感：${d.feel||'暂无数据'}</span></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ===== 渲染：住宿甄选（头图+评分+选择理由+对比分析，一键拨号/导航/复制） =====
+function renderHotel() {
+  const container = document.getElementById('hotelContainer');
+  const dims = [
+    { key:'hygiene', label:'卫生' },
+    { key:'service', label:'服务' },
+    { key:'location', label:'位置' },
+    { key:'feature', label:'特色' },
+  ];
+  container.innerHTML = HOTEL_DATA.map((h) => {
+    const mapUrl = 'https://uri.amap.com/search?keyword=' + encodeURIComponent(h.name) + '&radius=1000';
+    const ratingBlock = dims.map(d => {
+      const score = h.rating[d.key];
+      return `
+        <div class="hotel-rating-item">
+          <div class="hotel-rating-label">${d.label}</div>
+          <div class="hotel-rating-bar"><div class="hotel-rating-fill" style="width:${score/5*100}%"></div></div>
+          <div class="hotel-rating-score">${score.toFixed(1)}</div>
+        </div>`;
+    }).join('');
+    const compareBlock = (h.compare||[]).map(c => `
+        <div class="hotel-compare-item">
+          <div class="name"><i class="fa-solid fa-circle-xmark"></i>${c.name}</div>
+          <div class="desc">${c.desc}</div>
+        </div>`).join('');
+    const isInternational = (h.brand||'').includes('国际连锁');
+    const standardBlock = h.standard ? `
+      <div class="hotel-standard-block${isInternational ? '' : ' warn'}">
+        <div class="hotel-standard-title"><i class="fa-solid ${isInternational ? 'fa-shield-heart' : 'fa-circle-info'}"></i>品质核验（非新开/非老旧说明）</div>
+        <div class="hotel-standard-text">${h.standard}</div>
+      </div>` : '';
+    return `
+    <div class="hotel-card-v2 fade-up">
+      <div class="hotel-img-wrap">
+        <img src="${h.img}" alt="${h.name}">
+        <span class="hotel-day-tag">Day ${h.day} · ${h.city}</span>
+        <span class="hotel-price-tag">${h.price}</span>
+        <div class="hotel-name-overlay">${h.name}</div>
+      </div>
+      <div class="hotel-phone-line"><i class="fa-solid fa-phone-volume"></i>订房/咨询电话：<b>${h.phone}</b>${h.brand ? ` <span class="sep" style="color:#d9c3a3;margin:0 4px;">|</span> <i class="fa-solid fa-award"></i> ${h.brand}` : ''}</div>
+      <div class="hotel-ratings">${ratingBlock}</div>
+      ${standardBlock}
+      <div class="hotel-reason-block">
+        <div class="hotel-reason-title"><i class="fa-solid fa-pen-nib text-blue-700"></i>选择理由</div>
+        <p class="hotel-reason-text">${h.reason}</p>
+      </div>
+      <div class="hotel-addr-line"><i class="fa-solid fa-location-dot"></i><span>${h.addr}</span></div>
+      <div class="hotel-compare-block">
+        <div class="hotel-compare-title"><i class="fa-solid fa-bolt text-amber-500"></i>对比分析（为什么没选它）</div>
+        <div class="hotel-compare-grid">${compareBlock}</div>
+      </div>
+      <div class="hotel-actions">
+        <a class="hotel-action-btn call" href="tel:${h.phone}"><i class="fa-solid fa-phone"></i>拨打电话</a>
+        <a class="hotel-action-btn nav" href="${mapUrl}" target="_blank"><i class="fa-solid fa-diamond-turn-right"></i>导航前往</a>
+        <button class="hotel-action-btn copy" onclick="copyHotelPhone(this,'${h.phone}')"><i class="fa-solid fa-copy"></i>复制号码</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+function copyHotelPhone(btn, phone) {
+  navigator.clipboard.writeText(phone).then(() => {
+    const old = btn.innerHTML;
+    btn.innerHTML = '<i class="fa-solid fa-check"></i>已复制';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.innerHTML = old; btn.classList.remove('copied'); }, 1800);
+  });
+}
+
+// ===== 美食图鉴数据 =====
+const FOOD_DATA = [
+  { name:'大盘鸡', price:'¥80-120/份', desc:'新疆代表菜，鸡肉土豆红烧后拌宽面，克拉玛依、奎屯一带尤为出名。', highlight:'克拉玛依/奎屯必吃', where:'克拉玛依市区、奎屯市区餐馆均有', img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/c9f54672-738f-4456-8bfc-be93a0938f18/image_1783022575_2_1.jpg' },
+  { name:'手抓饭', price:'¥30-50/份', desc:'胡萝卜、羊肉、洋葱与大米同焖，油润香甜，伊犁地区家常主食。', highlight:'伊宁/特克斯必吃', where:'伊宁喀赞其、特克斯八卦城周边', img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/e7c075d5-118d-48ba-8be1-7d57fb9f256f/image_1783022579_1_1.jpg' },
+  { name:'烤羊肉串', price:'¥8-15/串', desc:'新疆烤肉标配，肥瘦相间、孜然浓郁，夜市摊头最地道。', highlight:'夜市必点', where:'布尔津河堤夜市、伊宁夜市', img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/14dd9c27-fcff-4765-b417-77105426a3b4/image_1783022582_2_1.jpg' },
+  { name:'巴音布鲁克烤全羊', price:'¥400-600/只', desc:'蒙古族草原特色，整羊炭烤外脆里嫩，适合10人团队分享，是Day8巴音布鲁克过夜当晚聚餐的首选，需提前预定。', highlight:'团队聚餐首选', where:'巴音布鲁克镇餐厅（Day8过夜地）', img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/0682e93d-75ad-45a0-be26-7a5b2b546e01/image_1783044037_1_1.jpg' },
+  { name:'椒麻鸡', price:'¥60-90/份', desc:'克拉玛依特色凉拌菜，鸡肉配花椒麻香与青椒的清爽，解腻开胃。', highlight:'克拉玛依限定', where:'克拉玛依市区特色餐馆', img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/b539555c-e1e1-4679-91c7-78c33a8645b5/image_1783022588_2_1.jpg' },
+  { name:'赛里木湖高白鲑鱼', price:'¥150-250/份', desc:'赛里木湖特产冷水鱼，肉质细嫩，清蒸或红烧均适宜，湖畔餐厅特供。', highlight:'赛里木湖特产', where:'赛里木湖景区周边餐厅', img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/1c9f4f07-00ec-4a68-b85d-ff7a8774255b/image_1783022605_1_1.jpg' },
+];
+function renderFood() {
+  const container = document.getElementById('foodContainer');
+  container.innerHTML = FOOD_DATA.map(f => `
+    <div class="card fade-up">
+      <img src="${f.img}" alt="${f.name}" class="w-full h-44 object-cover">
+      <div class="p-4">
+        <div class="flex items-center justify-between mb-1">
+          <h4 class="font-serif font-bold text-lg text-blue-900">${f.name}</h4>
+          <span class="text-orange-600 text-sm font-bold">${f.price}</span>
+        </div>
+        <p class="text-sm text-gray-500 mb-2">${f.desc}</p>
+        <div class="text-xs text-orange-600 font-semibold mb-1">${f.highlight}</div>
+        <div class="text-xs text-gray-400"><i class="fa-solid fa-location-dot mr-1"></i>${f.where}</div>
+      </div>
+    </div>`).join('');
+}
+
+// ===== 出行贴士数据（独库预约红色警示 + 11大详细分类，成人/儿童双重覆盖）=====
+const TIPS_ALERT = {
+  items:[
+    '预约路段：G217独库公路中段（那拉提↔巴音布鲁克，Day8必经）+ 北段（那拉提↔乔尔玛↔独山子，Day9必经）均实行预约制通行，未预约车辆禁止通行，两段都要确认在预约范围内',
+    '车辆要求：仅限7座及以下小型客车预约通行，2辆普拉多符合条件；7座以上客车、大巴、危化品车、挂车等均不允许通行',
+    '预约方式：提前通过"新疆路网"公众号/小程序或自治区交通运输厅官方渠道网上预约，Day8选那拉提/巴音布鲁克入口、Day9选那拉提/乔尔玛/独山子入口，分别锁定当天名额',
+    '预约时机：务必在出发前3-7天完成预约，7-8月旺季名额紧张，建议出行前1周内多刷新几次，Day8、Day9两天名额都要提前锁定',
+    '通行时段：独库公路全线早9点开放、晚8点起交通管制禁止通行；那拉提-巴音布鲁克段不限时间',
+    '备用方案：如遇预约未成功、施工封路或降雪等临时管制，提前查好绕行方向的备用路线，行程中预留1天弹性以便改签',
+  ]
+};
+const TIPS_DATA = [
+  { icon:'fa-suitcase-rolling', title:'行前证件与装备（全程通用）', items:[
+    '身份证、驾驶证（建议满1年驾龄）：喀纳斯周边为边境管理区，如计划前往白哈巴等边境点需提前办理边防证',
+    '三地（武汉/上海/深圳）往返航班号仅供参考，出发前1周务必在各订票平台核对实际时刻并锁票',
+    '现金准备：喀纳斯、禾木、独库公路沿线部分收费点/小卖部信号差，建议备2000-3000元现金',
+    '充电宝2-3个：北疆山区、独库达坂段信号弱耗电快，飞机托运充电宝需≤20000mAh',
+    '常用药品：感冒药、肠胃药、晕车药、儿童专用药、高原反应药（独库达坂段海拔3300m备用）',
+    '团队通讯：建立微信群共享实时位置和路况，三地集合、两大长途日、返程三个节点都需群内报到确认',
+  ] },
+  { icon:'fa-road', title:'长途驾驶与独库路况提醒', items:[
+    'Day2乌鲁木齐→阿勒泰660km、Day6克拉玛依→赛里木湖450km是两大长途日，务必两位司机轮换驾驶',
+    '独库公路弯道多、坠石路段多，保持车距，切勿疲劳驾驶，雨雪天气建议延后出发或改签预约',
+    '戈壁路段（G3014/G216/G30）服务区较少，出发前务必加满油，沿途见加油站及时补给',
+    '独库公路及唐布拉沿线信号弱，出发前下载好离线地图（高德/百度离线包）',
+    '喀拉峻、特克斯部分观景台路段为土路，普通轿车底盘低易托底，已选普拉多可放心通行',
+    '全程限速严格，非景区路段有流动测速，独库公路全程限速40-60km/h，切勿超速',
+  ] },
+  { icon:'fa-tree', title:'喀纳斯禾木森林湖泊专属贴士', items:[
+    '喀纳斯、禾木景区内均需换乘区间车，私家车/租车不能直接开入核心景区，需在贾登峪门票站换乘',
+    '木栈道潮湿易滑，三湾徒步、观鱼台阶梯较陡，建议穿防滑登山鞋，雨后更需小心',
+    '禾木木屋区夜间气温低、蚊虫较多，晚上外出散步备好长袖和驱蚊液',
+    '森林湖泊区蚊虫（俗称"小咬"）较多，务必备驱蚊液，傍晚河边、林间尤其严重',
+    '严格禁止在木屋、林区吸烟或明火，喀纳斯森林防火等级高，违规处罚严重',
+  ] },
+  { icon:'fa-signal', title:'通讯与网络', items:[
+    '喀纳斯、禾木、独库公路达坂等深山区域信号较弱，提前下载离线地图',
+    '建议办理新疆当地流量包或漫游包，微信实时位置共享需要蜂窝数据支持',
+    '车队之间建议使用对讲机或车载互联App，避免山路弯道多导致的走散',
+  ] },
+  { icon:'fa-mountain', title:'高原与气候提醒', items:[
+    '赛里木湖海拔2073m、喀拉峻2000m，早晚需薄外套；Day9过夜的巴音布鲁克海拔约2500m，是全程住宿海拔最高的一晚，入夜很冷、温差大，儿童老人需重点防高反',
+    '独库公路达坂海拔约3300m，气温可低至5°C，务必备厚衣物，儿童更易高反需重点关注',
+    '夏季新疆昼夜温差大，白天30°C+，夜间可降至10°C左右，戈壁路段紫外线强',
+    '克拉玛依魔鬼城雅丹地貌风大，注意防风防沙；草原景区风大，帐篷/野餐用品需固定牢',
+  ] },
+  { icon:'fa-shirt', title:'成人衣物清单（戈壁酷热+独库达坂极寒双重温差）', items:[
+    '上衣：速干T恤5-7件、长袖防晒衣2件、抓绒衣1件、冲锋衣/薄羽绒服1件（独库达坂必备）',
+    '下装：速干长裤3条、运动短裤2条、瑜伽裤/打底裤1条（女士）',
+    '鞋袜：防滑登山鞋1双（北疆木栈道用）、运动鞋1双、速干袜7双',
+    '配件：遮阳帽/防晒帽、太阳镜（戈壁+雪山紫外线强）、围巾/魔术头巾（防风沙）、驱蚊手环',
+    '分层穿搭原则：内层速干+中层保暖+外层防风防水，独库达坂段哪怕盛夏也要备厚外套',
+  ] },
+  { icon:'fa-child-reaching', title:'儿童衣物清单（2个小孩专属准备）', items:[
+    '上衣：长袖防晒衣3件、抓绒衣2件、薄羽绒服1件（独库达坂备用）、速干T恤5件',
+    '下装：速干长裤4条、打底裤2条（女孩）',
+    '鞋袜：防滑登山鞋1双（北疆木栈道防湿滑路段）、雨鞋1双、袜子10双',
+    '配件：儿童防晒帽2顶、太阳镜2副、防走失手环（景区人多易走散）',
+    '备用：多带2套换洗衣物（北疆湖边、伊犁草原都容易弄脏）',
+  ] },
+  { icon:'fa-heart-pulse', title:'儿童健康注意事项（分段风险提示）', items:[
+    '北疆段：喀纳斯森林湿滑路段防跌倒，蚊虫叮咬涂止痒膏，避免在河边水域独自玩耍',
+    '长途驾驶段：注意小儿颠簸晕眩，提前给孩子准备晕车药或口香糖缓解耳压不适',
+    '独库高反：达坂海拔3300m，儿童比成人更敏感，出现头晕嗜睡应立即下车缓行观察',
+    '饮食安全：避免生冷食物，新疆美食偏油腻，注意适量，多补充温水',
+    '温差适应：北疆早晚凉、独库达坂骤冷，及时增减衣物防感冒',
+    '紧急联系：伊宁市人民医院 0999-8021120，阿勒泰地区医院 0906-2122114，克拉玛依市中心医院 0990-6222401',
+  ] },
+  { icon:'fa-briefcase-medical', title:'儿童专用药品与物资（十岁以下必带）', items:[
+    '退烧药：布洛芬混悬液（美林）或对乙酰氨基酚混悬液（泰诺林）',
+    '其他药品：感冒药、茶苯海明片/晕车贴（儿童用量）、蒙脱石散（思密达）、口服补液盐Ⅲ',
+    '驱蚊产品：儿童专用驱蚊液、蚊虫叮咬止痒膏（北疆森林湖泊段重点携带）',
+    '防晒霜：儿童专用SPF50+防晒霜（戈壁/雪山紫外线强，每2小时补涂）',
+    '高原相关：如对高反敏感可咨询医生备便携血氧仪、抗高反口服液（独库达坂备用）',
+    '体温计：电子体温计（腋下或耳温枪）',
+  ] },
+  { icon:'fa-gamepad', title:'儿童生活物资与娱乐用品', items:[
+    '娱乐用品：绘本、涂色本、平板电脑（下载动画片）、耳机（应对长途自驾）',
+    '零食：儿童饼干、果泥、坚果（长途车程安抚用）',
+    '保温杯：新疆气候干燥，建议每个孩子配保温杯勤补水',
+    '安全用品：儿童安全座椅（自驾必备）、防走失手环（景区人多）',
+    '睡眠用品：熟悉的枕头、小毯子（9晚更换多次住宿，帮助适应新环境）',
+  ] },
+  { icon:'fa-ticket', title:'门票、餐饮与住宿建议', items:[
+    '喀纳斯、禾木、喀拉峻等景区门票+区间车需分开购买，建议提前在官方渠道或携程等平台预订',
+    '伊宁为合并日午餐+车观路过，不安排喀赞其马车；八卦城夜景需登观光塔俯瞰（约¥30），8月约22:00后亮灯最佳，独库公路本身免费通行（预约不收费）',
+    '团队人数较多，建议提前联系餐厅预留桌位（尤其巴音布鲁克镇烤全羊、手抓肉等需预定的团队菜品）',
+    '旅游旺季（7-8月）酒店紧张，务必提前锁定房间，本攻略已提供9晚酒店电话可直接确认',
+    '入住前电话确认停车位是否充足，2辆普拉多需提前沟通车位',
+  ] },
+];
+function renderTips() {
+  const alertEl = document.getElementById('tipsAlertContainer');
+  if (alertEl) {
+    alertEl.innerHTML = `
+      <div class="tips-alert-banner fade-up">
+        <span class="badge"><i class="fa-solid fa-triangle-exclamation"></i>Day9-10 独库中段+北段必读</span>
+        <h4><i class="fa-solid fa-road mr-1"></i>独库公路中段+北段现已实行预约制通行，未预约车辆禁止通行！</h4>
+        <ul>
+          ${TIPS_ALERT.items.map(i => `<li><i class="fa-solid fa-circle-exclamation"></i><span>${i}</span></li>`).join('')}
+        </ul>
+      </div>`;
+  }
+  const container = document.getElementById('tipsContainer');
+  container.innerHTML = TIPS_DATA.map(t => `
+    <div class="card p-5 fade-up">
+      <div class="tip-card-title-row">
+        <div class="tip-icon-box"><i class="fa-solid ${t.icon}"></i></div>
+        <h4 class="font-serif font-bold text-base text-blue-900 leading-snug">${t.title}</h4>
+      </div>
+      <ul class="space-y-2">
+        ${t.items.map(i => `<li class="text-sm text-gray-600 flex items-start gap-2"><i class="fa-solid fa-circle-check text-orange-400 mt-1 text-xs"></i><span>${i}</span></li>`).join('')}
+      </ul>
+    </div>`).join('');
+}
+
+// ===== 租车方案数据（详尽版：介绍+四步流程+车型卡+推荐平台+费用保险验车避坑，全程统一油车）=====
+const RENTCAR_DATA = {
+  intro:'伊犁+北疆环线全程自驾，租车是大头也是最容易踩坑的一环。乌鲁木齐天山国际机场有神州、一嗨等连锁门店，本地租车行也很多，车源以油车为主（GL8、普拉多、哈弗、汉兰达等常见），新疆长途路段加油站网络成熟、补能省心，草原/独库/戈壁全程无补能焦虑，统一选油车更稳妥。10大2小团队需 2 辆车同行，具体车型和库存以你下单时 App 或门店实时显示为准。下面把流程拆成"提前订 → 机场取 → 全程开 → 原地还"四步，照着做就行，零经验也不慌。',
+  steps: [
+    { icon:'fa-mobile-screen-button', title:'出发前 7-10 天网上预订', desc:'在租车 App 上选「乌鲁木齐天山国际机场取车 + 乌鲁木齐天山国际机场还车」，按下方推荐车型下单 2 辆。旺季（7-8月）车少，越早订越便宜，到店没车才是最大的坑。', tips:['取/还车地点都选「乌鲁木齐天山国际机场」最省心','2 辆车尽量同一门店下单，方便统一验车/还车','下单时把「不计免赔」「轮胎挡风险」一起勾上','截图保存两张订单号和门店电话'] },
+    { icon:'fa-plane-arrival', title:'下飞机 → 门店取车 → 拍视频验车', desc:'乌鲁木齐天山国际机场出口就有租车门店班车。带好身份证 + 驾驶证（满1年），刷信用卡冻结押金即可提车。提车前务必两辆车都绕车一圈拍完整视频。', tips:['取车只需「身份证 + 驾驶证」，两位主驾各自到场','绕车拍 360° 视频：车身、轮毂、前后杠、挡风玻璃','确认油量指针位置（满油取就满油还）','三队分批抵达，可先到的队伍先办取车手续'] },
+    { icon:'fa-binoculars', title:'全程自驾，加油看好里程', desc:'闭环全程约 3,055km（北疆段约 1,730km + 伊犁段约 1,325km），加 92# 汽油即可。新疆加油站需「人车分离」实名登记，进站排队稍久。山区加油站少，城镇见到加油站先加满。', tips:['进城镇见加油站先加满，别赌下一个','加油站需身份证实名登记，司机本人到场','Day2/Day6 两大长途日两辆车结伴同行、司机轮换','独库中段+北段山区无油站，Day8务必在那拉提镇加满再上山，Day9从巴音布鲁克出发前也需备足油'] },
+    { icon:'fa-circle-check', title:'原地满油还车，秒退押金', desc:'Day10 还车前在机场旁加油站把两辆车都加满油，门店验车无新增划痕即可。当面确认无误后，押金一般 1-7 个工作日原路退回。', tips:['还车前 1 公里内加满油，留好加油小票','当面验车，让店员确认「无新增剐蹭」','清空车内私人物品，别落东西','违章押金会在 15-30 天后无违章自动退'] },
+  ],
+  car: {
+    badge:'豪华型推荐',
+    model:'丰田普拉多 越野车',
+    priceDay:'约 ¥800/天',
+    priceTotal:'10天×2辆 ≈ ¥16,000（单车约¥8,000）',
+    img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/524836d4-900e-4365-875b-b0c6c50f31fa/image_1783046621_1_1.jpg',
+    seat:'7 座',
+    trunk:'后备厢规整，越野通过性强',
+    quote:'高底盘四驱，喀纳斯林区土路、独库达坂盘山路、喀拉峻草原土路如履平地；戈壁高速稳、烂路猛，颜值在线，拍照出片率高。',
+    oks:['高底盘四驱通过性强','烂路砂石路毫无压力','车身高视野好更安全'],
+    cons:'油耗偏高，7 座单车行李空间相对紧凑（10大2小需 2 辆分装行李），租金较贵',
+  },
+  platforms:[
+    { name:'神州租车', tag:'连锁·省心', desc:'乌鲁木齐天山国际机场有直营店，车况新、流程规范，押金退得快，新手首选。' },
+    { name:'一嗨租车', tag:'连锁·门店多', desc:'乌鲁木齐市区 + 机场均有取还点，车型选择多，常有早鸟折扣。' },
+    { name:'携程/飞猪租车', tag:'聚合·比价', desc:'一键比价多家门店，可看真实评价，认准「闪租」「免押」标签更稳。' },
+    { name:'本地车行', tag:'灵活·性价比', desc:'价格可谈、车型多（普拉多、汉兰达、哈弗等常见），但务必签正规合同、查保险，别图便宜踩坑。' },
+  ],
+  fees:[
+    { icon:'fa-car-side', k:'车辆押金', v:'¥5,000-20,000 / 辆（信用卡预授权冻结，不实扣，2 辆分别冻结）' },
+    { icon:'fa-file-invoice', k:'违章押金', v:'¥2,000 左右 / 辆（无违章 15-30 天后退）' },
+    { icon:'fa-gas-pump', k:'油费预估', v:'单车约 ¥3,060（3,055km × 约 1.0 元/km，92# 汽油），2 辆合计约 ¥6,120' },
+    { icon:'fa-triangle-exclamation', k:'其它费用', v:'异地还车费、超时费按门店标准，建议「同点取还」规避（本方案乌鲁木齐同点取还）' },
+  ],
+  insurance:[
+    { lv:'必买', lvClass:'must', title:'基础全险（车损+三者）', desc:'租车默认包含，保障车辆碰撞和第三方损失，必备底线。' },
+    { lv:'必买', lvClass:'must', title:'不计免赔险', desc:'强烈建议买！否则出险要自付 20%-30% 维修费，几十块换安心。' },
+    { lv:'必买', lvClass:'must', title:'轮胎 + 挡风玻璃险', desc:'新疆戈壁砂石路多，崩裂玻璃、扎胎概率高，单独不保，必加。' },
+    { lv:'可选', lvClass:'opt', title:'驾乘人员意外险', desc:'保障车上同伴（10大2小），预算充足可加，几十元/天。' },
+  ],
+  checklist:[
+    '车身四周划痕、凹陷（重点：保险杠、车门下沿）',
+    '四条轮胎 + 备胎花纹、有无鼓包',
+    '前后挡风玻璃有无裂纹、崩点',
+    '油量指针位置（拍照存证，满取满还）',
+    '随车工具：千斤顶、三角警示牌、灭火器',
+    '内饰座椅、中控屏、空调是否正常',
+  ],
+  avoid:[
+    { type:'bad', k:'低价钓鱼', v:'报价奇低的多半强制搭售保险或还车扣费，认准明码标价。' },
+    { type:'bad', k:'油量陷阱', v:'满油取车却被要求满油还，取车时一定拍清油表。' },
+    { type:'bad', k:'异地还车', v:'A 地取 B 地还会收高额费用，乌鲁木齐天山国际机场同点取还最划算。' },
+    { type:'bad', k:'超时计费', v:'晚还几小时可能按天收费，规划好返程航班和还车时间。' },
+    { type:'good', k:'正规渠道', v:'优先连锁直营或携程认证门店，合同 + 保险 + 发票齐全。' },
+    { type:'good', k:'提前预订', v:'旺季 7-8 月车源紧张，提前 7-10 天锁定 2 辆车型最稳妥。' },
+  ],
+};
+function renderRentcar() {
+  const container = document.getElementById('rentcarContainer');
+  const D = RENTCAR_DATA;
+  const c = D.car;
+  container.innerHTML = `
+    <!-- 介绍横幅 -->
+    <div class="rc-intro fade-up mb-6">
+      <div class="rc-intro-icon"><i class="fa-solid fa-circle-info"></i></div>
+      <p>${D.intro}</p>
+    </div>
+    <!-- 四步流程 -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      ${D.steps.map((s,i) => `
+        <div class="rc-step-card fade-up">
+          <div class="rc-step-head">
+            <div class="rc-step-icon"><i class="fa-solid ${s.icon}"></i></div>
+            <span class="rc-step-no">第 ${i+1} 步</span>
+          </div>
+          <h4>${s.title}</h4>
+          <p class="rc-step-desc">${s.desc}</p>
+          <ul>${s.tips.map(t=>`<li><i class="fa-solid fa-check"></i><span>${t}</span></li>`).join('')}</ul>
+        </div>`).join('')}
+    </div>
+    <!-- 推荐车型 普拉多 hero 卡 -->
+    <div class="rc-car-card fade-up mb-8">
+      <div class="rc-car-top">
+        <div class="rc-car-img" style="background-image:url('${c.img}')">
+          <span class="rc-car-badge"><i class="fa-solid fa-award"></i>${c.badge}</span>
+        </div>
+        <div class="rc-car-info">
+          <div class="rc-car-title-row">
+            <h3>${c.model}</h3>
+            <div class="rc-car-price"><div class="p1">${c.priceDay}</div><div class="p2">${c.priceTotal}</div></div>
+          </div>
+          <div class="rc-car-meta"><span><i class="fa-solid fa-users mr-1"></i><b>${c.seat}</b></span><span><i class="fa-solid fa-suitcase mr-1"></i>${c.trunk}</span></div>
+          <div class="rc-car-quote"><i class="fa-solid fa-quote-left"></i><span>${c.quote}</span></div>
+          <div class="rc-tags">${c.oks.map(o=>`<span class="rc-tag-ok"><i class="fa-solid fa-circle-check"></i>${o}</span>`).join('')}</div>
+          <div class="rc-car-warn"><i class="fa-solid fa-triangle-exclamation"></i><span>${c.cons}</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- 推荐平台 -->
+    <h3 class="font-serif font-black text-xl text-blue-900 mb-4 flex items-center gap-2"><i class="fa-solid fa-store text-orange-500"></i>去哪儿租：推荐平台</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      ${D.platforms.map(p=>`
+        <div class="rc-plat-card fade-up">
+          <div class="rc-plat-head"><h4>${p.name}</h4><span class="rc-plat-tag">${p.tag}</span></div>
+          <p>${p.desc}</p>
+        </div>`).join('')}
+    </div>
+    <!-- 费用 / 保险 / 验车 / 避坑 四面板 -->
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="rc-panel fade-up">
+        <div class="rc-panel-title"><i class="fa-solid fa-wallet"></i>费用与押金</div>
+        ${D.fees.map(f=>`<div class="rc-fee-item"><div class="k"><i class="fa-solid ${f.icon} text-blue-700"></i>${f.k}</div><div class="v">${f.v}</div></div>`).join('')}
+      </div>
+      <div class="rc-panel fade-up">
+        <div class="rc-panel-title"><i class="fa-solid fa-shield-halved"></i>保险这样买（照着勾）</div>
+        ${D.insurance.map(ins=>`<div class="rc-ins-item"><span class="rc-ins-lv ${ins.lvClass}">${ins.lv}</span><div><h5>${ins.title}</h5><p>${ins.desc}</p></div></div>`).join('')}
+      </div>
+      <div class="rc-panel fade-up">
+        <div class="rc-panel-title"><i class="fa-solid fa-clipboard-check"></i>提车 30 秒验车清单</div>
+        ${D.checklist.map(ck=>`<div class="rc-check-item"><i class="fa-regular fa-square-check"></i><span>${ck}</span></div>`).join('')}
+      </div>
+      <div class="rc-panel fade-up">
+        <div class="rc-panel-title"><i class="fa-solid fa-triangle-exclamation"></i>避坑红黑榜</div>
+        ${D.avoid.map(a=>`<div class="rc-avoid-item ${a.type}"><i class="fa-solid ${a.type==='bad'?'fa-circle-xmark':'fa-circle-check'}"></i><span><b>${a.k}：</b>${a.v}</span></div>`).join('')}
+      </div>
+    </div>`;
+}
+
+// ===== 初始化渲染（带错误捕获，渲染失败时直接在页面对应区块显示原因）=====
+function safeRender(fn, containerId, label) {
+  try {
+    fn();
+  } catch (err) {
+    console.error(`[${label}] 渲染失败：`, err);
+    const el = document.getElementById(containerId);
+    if (el) {
+      el.innerHTML = `<div class="text-center text-red-500 text-sm py-6 border-2 border-dashed border-red-300 rounded-xl">⚠️ ${label}渲染出错：${err.message}</div>`;
+    }
+  }
+}
+safeRender(renderItinerary, 'itineraryContainer', '逐日行程');
+safeRender(renderHotel, 'hotelContainer', '住宿甄选');
+safeRender(renderFood, 'foodContainer', '美食图鉴');
+safeRender(renderTips, 'tipsContainer', '出行贴士');
+safeRender(renderRentcar, 'rentcarContainer', '租车方案');
+
+// 所有动态内容渲染完成后，统一扫描并观察全部 .fade-up 元素（包含刚注入的卡片），
+// 避免因卡片在 observer 初始化时还不存在于 DOM 中而永远停留在 opacity:0 不可见的状态
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
