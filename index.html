@@ -144,8 +144,10 @@
   .tip-card.critical .tip-icon-box { background:#fee2e2; color:#dc2626; }
   .tip-icon-box { width:44px; height:44px; border-radius:12px; background:#eef4fb; color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
   /* ===== 租车方案 详尽版 ===== */
-  .rc-intro { background: linear-gradient(135deg,#eef6f1,#f4f9fb); border:1px solid rgba(34,139,90,0.16); border-radius:16px; padding:20px 24px; display:flex; gap:14px; }
-  .rc-intro .rc-intro-icon { width:34px; height:34px; border-radius:10px; background:var(--primary); color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.95rem; }
+  .rc-intro { background: linear-gradient(135deg,#eef6f1,#f4f9fb); border:1px solid rgba(34,139,90,0.16); border-radius:16px; padding:24px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px; }
+  .rc-intro .rc-intro-icon { width:34px; height:34px; border-radius:10px; background:var(--primary); color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.95rem; margin-bottom:4px; }
+  .rc-intro .rc-intro-sub { font-size:14px; color:#6b7a8a; }
+  .rc-intro .rc-intro-booked { font-size:15px; font-weight:700; color:var(--primary); }
   .rc-intro p { font-size:13.5px; line-height:1.85; color:#40566b; }
   .rc-step-card { position:relative; background:#fff; border-radius:16px; box-shadow:0 4px 18px rgba(0,0,0,0.06); padding:22px 20px 20px; border-top:3px solid var(--accent); transition:all 0.35s ease; height:100%; }
   .rc-step-card:hover { transform:translateY(-4px); box-shadow:0 14px 34px rgba(0,0,0,0.12); }
@@ -269,7 +271,7 @@
 </section>
 
 <!-- BUDGET -->
-<section id="budget" class="py-12 bg-[var(--light-bg)]">
+<section id="budget" class="pt-12 pb-6 bg-[var(--light-bg)]">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="section-title">费用预算</h2>
     <div class="section-divider"></div>
@@ -278,53 +280,56 @@
       <h3 class="font-serif font-bold text-xl text-blue-800 mb-3">🚗 全程自驾方案</h3>
       <table class="w-full text-sm">
         <tbody>
-          <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">🚗 租车（10天，乌鲁木齐取还）</td><td class="py-2 font-semibold text-right">2×普拉多</td><td class="py-2 text-blue-700 font-bold text-right">¥8,000</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">🚗 租车（10天，乌鲁木齐取还）</td><td class="py-2 font-semibold text-right">2×别克GL8（神州）</td><td class="py-2 text-blue-700 font-bold text-right">¥8,000</td></tr>
           <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">⛽ 油费</td><td class="py-2 font-semibold text-right">全程约3,055km × 1.0元</td><td class="py-2 text-blue-700 font-bold text-right">¥3,060</td></tr>
-          <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">🛣️ 高速费</td><td class="py-2 font-semibold text-right">2辆车全程（含G30段）</td><td class="py-2 text-blue-700 font-bold text-right">¥1,350</td></tr>
-          <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">✈️ 大交通（往返/人）</td><td class="py-2 font-semibold text-right">武汉/上海/深圳直飞乌鲁木齐</td><td class="py-2 text-blue-700 font-bold text-right">¥4,200</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">🛣️ 高速费</td><td class="py-2 font-semibold text-right">2辆车全程</td><td class="py-2 text-blue-700 font-bold text-right">¥1,350</td></tr>
           <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">🏨 住宿（9晚/人）</td><td class="py-2 font-semibold text-right">2晚国际连锁五星+7晚当地最高标准</td><td class="py-2 text-blue-700 font-bold text-right">¥3,875</td></tr>
-          <tr class="border-b border-gray-100"><td class="py-1.5 pl-5 text-xs text-gray-400" colspan="2">└ 含 D3 禾木山庄（村内·图瓦木屋）¥900-1,200/间 · 2人/间</td><td class="py-1.5 text-xs text-gray-500 font-semibold text-right">人均 ¥450-600/晚</td></tr>
           <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">🍜 餐饮（10天/人）</td><td class="py-2 font-semibold text-right">200元/天</td><td class="py-2 text-blue-700 font-bold text-right">¥2,000</td></tr>
           <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">🎫 门票（/人）</td><td class="py-2 font-semibold text-right">北疆+伊犁全部景点</td><td class="py-2 text-blue-700 font-bold text-right">¥1,210</td></tr>
           <tr><td colspan="3" class="pt-2"></td></tr>
-          <tr class="bg-blue-50"><td class="py-2.5 px-2 rounded-l-lg font-bold text-blue-900">💰 人均总费用</td><td class="py-2.5 text-xs text-gray-400 text-right">含大交通+分摊</td><td class="py-2.5 px-2 rounded-r-lg font-black text-blue-700 text-xl text-right">~¥12,500</td></tr>
+          <tr class="bg-blue-50"><td class="py-2.5 px-2 rounded-l-lg font-bold text-blue-900">💰 人均总费用</td><td class="py-2.5 text-xs text-gray-400 text-right">不含大交通·人均分摊</td><td class="py-2.5 px-2 rounded-r-lg font-black text-blue-700 text-xl text-right">~¥8,300</td></tr>
         </tbody>
       </table>
       <div class="mt-3 text-xs text-gray-400">* 按10人出行计算：住宿2人/间×9晚，租车/油费/高速人均分摊；乌鲁木齐取还车闭环设计，省去中途换车/异地还车费用。住宿已按真实核实标准精选，非随意选择的经济型酒店</div>
     </div>
 
     <!-- Flight Info -->
-    <div class="card p-5 mb-5">
-      <h3 class="font-serif font-bold text-lg text-blue-900 mb-3"><i class="fa-solid fa-plane mr-2"></i>大交通：8/1三地统一飞乌鲁木齐 → 8/10乌鲁木齐三地返程</h3>
+    <div class="card p-5">
+      <h3 class="font-serif font-bold text-lg text-blue-900 mb-3"><i class="fa-solid fa-plane mr-2"></i>大交通（已预订）：8/1 飞乌鲁木齐 → 8/10 返程</h3>
       <div class="grid md:grid-cols-2 gap-3">
-        <div class="bg-blue-50 rounded-xl p-3 text-center">
-          <div class="font-bold text-blue-800 mb-1">✈️ 第一段：8/1 三地直飞乌鲁木齐</div>
-          <div class="text-sm text-gray-600">武汉CZ8403 / 上海MU2501 / 深圳CZ6871，均为直飞</div>
-          <div class="text-xs text-gray-400 mt-1">武汉08:00起飞12:40到达；上海09:20起飞15:10到达；深圳10:40起飞16:20到达</div>
-          <div class="font-bold text-blue-700 mt-1">¥2,200-2,800/人</div>
+        <div class="bg-blue-50 rounded-xl p-3 text-left">
+          <div class="font-bold text-blue-800 mb-2 text-center">✈️ 去程：8/1 飞乌鲁木齐</div>
+          <div class="text-sm text-gray-700 space-y-1">
+            <div>· 武汉→乌鲁木齐 <b>CZ8203</b> 11:10~15:50</div>
+            <div>· 深圳→乌鲁木齐 <b>SC2326</b> 12:55~18:35</div>
+            <div>· 深圳→乌鲁木齐 <b>CZ8924</b> 16:15~21:45</div>
+            <div>· 上海→乌鲁木齐 <b>CZ6996</b> 16:15~21:35</div>
+          </div>
         </div>
-        <div class="bg-rose-50 rounded-xl p-3 text-center">
-          <div class="font-bold text-rose-800 mb-1">✈️ 第二段：8/10 三地返程</div>
-          <div class="text-sm text-gray-600">乌鲁木齐 → 武汉CZ3912/深圳CZ8498/上海9C6496</div>
-          <div class="text-xs text-gray-400 mt-1">15:45-16:55起飞，20:50-21:30陆续到达</div>
-          <div class="font-bold text-rose-700 mt-1">¥1,800-2,600/人</div>
+        <div class="bg-rose-50 rounded-xl p-3 text-left">
+          <div class="font-bold text-rose-800 mb-2 text-center">✈️ 返程：8/10 离乌鲁木齐</div>
+          <div class="text-sm text-gray-700 space-y-1">
+            <div>· 乌鲁木齐→深圳 <b>ZH9246</b> 15:55~21:25</div>
+            <div>· 乌鲁木齐→深圳 <b>CZ5796</b> 16:05~21:25</div>
+            <div>· 乌鲁木齐→上海 <b>CZ6997</b> 16:10~21:15</div>
+            <div>· 乌鲁木齐→武汉 <b>CZ8204</b> 18:00~22:20</div>
+          </div>
         </div>
       </div>
-      <div class="mt-3 p-3 bg-amber-50 rounded-lg text-xs text-amber-700"><i class="fa-solid fa-circle-info mr-1"></i>大交通人均约 ¥4,000-5,400（两段合计，均为直飞无需转机）。以上航班号及时刻仅供参考，务必以出发前实际购票时刻表为准。乌鲁木齐进出闭环设计，全程自驾一辆车到底，中途无需办理还车/取车手续。</div>
     </div>
   </div>
 </section>
 
 <!-- ROUTE OVERVIEW -->
-<section id="overview" class="py-12 bg-[var(--light-bg)]">
+<section id="overview" class="pt-6 pb-12 bg-[var(--light-bg)]">
   <div class="max-w-7xl mx-auto px-4">
     <h2 class="section-title">路线概览</h2>
     <div class="section-divider"></div>
-    <p class="text-center text-gray-500 mb-6">8/1乌鲁木齐集结 → 8/10乌鲁木齐三地返程 · 全程约 3,055 公里 · 全程自驾一辆车到底 · 10大人2小孩</p>
+    <p class="text-center text-gray-500 mb-6">8/1乌鲁木齐集结 → 8/10乌鲁木齐返程 · 全程约 3,055 公里 · 全程两辆别克GL8自驾 · 10大人2小孩</p>
     <!-- Route Flow -->
     <div class="hidden md:flex flex-wrap items-center justify-center gap-2 mb-6 text-xs md:text-sm">
-      <span class="bg-slate-700 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🛫 武汉/上海/深圳直飞乌鲁木齐</span>
-      <span class="flight-badge mx-1"><i class="fa-solid fa-plane"></i> 三地统一集合</span>
+      <span class="bg-slate-700 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🛫 武汉/上海/深圳飞乌鲁木齐</span>
+      <span class="flight-badge mx-1"><i class="fa-solid fa-plane"></i> 各地集结乌鲁木齐</span>
       <span class="bg-blue-800 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🏁 乌鲁木齐机场取车</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
       <span class="bg-cyan-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">阿勒泰 660km</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
       <span class="bg-green-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">禾木 290km</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
@@ -337,7 +342,7 @@
       <span class="bg-orange-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">巴音布鲁克 355km</span><i class="fa-solid fa-arrow-right text-emerald-500 text-xs"></i>
       <span class="bg-emerald-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">⚠️独库·独山子 320km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
       <span class="bg-rose-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🏁 乌鲁木齐还车 260km</span>
-      <span class="flight-badge mx-1"><i class="fa-solid fa-plane"></i> 分三地返程</span>
+      <span class="flight-badge mx-1"><i class="fa-solid fa-plane"></i> 分头返程</span>
     </div>
     <!-- 自驾行程简要文字介绍（北疆段+伊犁段合并为一段完整叙述） -->
     <div class="card p-5 mb-5 border-l-4 border-blue-700">
@@ -349,14 +354,14 @@
         <span class="text-sm text-gray-400">草原·花海·雪山</span>
       </div>
       <p class="text-sm text-gray-600 leading-relaxed mb-3">
-        <span class="text-blue-700 font-semibold">北疆段：</span>8/1三地直飞乌鲁木齐集合，机场取车 → Day2长途660km赶往阿勒泰 → 禾木木屋村 → 喀纳斯三湾+当天返布尔津看五彩滩日落 → 克拉玛依（途经乌尔禾魔鬼城）→ Day6克拉玛依直冲赛里木湖畔450km，全程一辆车到底，Day2/Day6为两大长途驾驶日；
-        <span class="text-orange-700 font-semibold">伊犁段：</span>赛里木湖畔早退出发 → 当天串起伊宁（午餐+车观喀赞其蓝色小镇）→ 特克斯八卦城 → 喀拉峻人体草原，晚餐后登八卦观光塔看亮灯夜景 → 途经那拉提草原（不进景区）走独库中段至巴音布鲁克，傍晚看九曲十八弯日落 → 独库中段+北段翻天山至独山子 → 乌鲁木齐还车分三地返程。
+        <span class="text-blue-700 font-semibold">北疆段：</span>8/1各地直飞乌鲁木齐集合，机场取车 → Day2长途660km赶往阿勒泰 → 禾木木屋村 → 喀纳斯三湾+当天返布尔津看五彩滩日落 → 克拉玛依（途经乌尔禾魔鬼城）→ Day6克拉玛依直冲赛里木湖畔450km，全程两辆别克GL8结伴同行，Day2/Day6为两大长途驾驶日；
+        <span class="text-orange-700 font-semibold">伊犁段：</span>赛里木湖畔早退出发 → 当天串起伊宁（午餐+车观喀赞其蓝色小镇）→ 特克斯八卦城 → 喀拉峻人体草原，晚餐后登八卦观光塔看亮灯夜景 → 途经那拉提草原（不进景区）走独库中段至巴音布鲁克，傍晚看九曲十八弯日落 → 独库中段+北段翻天山至独山子 → 乌鲁木齐还车后分头返程。
       </p>
       <div class="flex flex-wrap items-center gap-4 text-xs font-semibold">
         <span class="text-blue-700">🚗 北疆段自驾约 1,730km</span>
         <span class="text-orange-700">🚗 伊犁段自驾约 1,325km</span>
         <span class="text-gray-500">合计约 3,055km</span>
-        <span class="text-rose-600">🏁 乌鲁木齐还车分三地返程</span>
+        <span class="text-rose-600">🏁 乌鲁木齐还车后分头返程</span>
       </div>
     </div>
     <!-- Distance Cards -->
@@ -374,9 +379,9 @@
       <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">赛里木湖→伊宁</div><div class="font-bold text-orange-700">165km / 2.5h</div></div>
       <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">伊宁→特克斯</div><div class="font-bold text-orange-700">130km / 2h</div></div>
       <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">特克斯→喀拉峻</div><div class="font-bold text-orange-700">45km / 1h</div></div>
-      <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">特克斯→巴音布鲁克（途经那拉提）</div><div class="font-bold text-orange-700">355km / 7h</div></div>
+      <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">特克斯→巴音布鲁克（途经那拉提）<span class="text-red-500 font-bold">那拉提后独库中段·需预约</span></div><div class="font-bold text-orange-700">355km / 7h</div></div>
       <div class="card p-3 text-center border-l-4 border-emerald-600 bg-emerald-50/50"><div class="text-xs text-gray-400">巴音布鲁克→独山子（独库中段+北段）<span class="text-red-500 font-bold">需预约</span></div><div class="font-bold text-emerald-700">320km / 7.5h</div></div>
-      <div class="card p-3 text-center border-l-4 border-emerald-600 bg-emerald-50/50"><div class="text-xs text-gray-400">独山子→乌鲁木齐（次日还车）</div><div class="font-bold text-emerald-700">260km / 3h</div></div>
+      <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">独山子→乌鲁木齐（走G30高速·当天还车）<span class="text-emerald-600 font-bold">无需预约</span></div><div class="font-bold text-blue-700">260km / 3h</div></div>
     </div>
   </div>
 </section>
@@ -396,8 +401,6 @@
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="section-title">租车方案</h2>
     <div class="section-divider"></div>
-    <p class="text-center text-gray-500 mb-2">乌鲁木齐机场取还 · 全程两辆7座油车 · 含全流程避坑指南</p>
-    <p class="text-center text-blue-700 font-bold mb-6">🔥 当前：推荐 2 辆7座丰田普拉多越野车</p>
     <div id="rentcarContainer"></div>
   </div>
 </section>
@@ -448,31 +451,26 @@ const observer = new IntersectionObserver((entries) => { entries.forEach(e => { 
 
 // ===== 10天完整行程数据（乌鲁木齐进出闭环，新增克拉玛依中转站）=====
 const ITINERARY_DATA = [
-  { day:1, title:'三地集结乌鲁木齐 → 机场取车 → 市区休整', segment:'north', tight:'⚠️ 三地统一直飞集合：武汉最早12:40到，深圳最晚16:20到',
+  { day:1, title:'各队集结乌鲁木齐 → 机场取车 → 市区休整', segment:'north',
     image:'images/day11-urumqi-bazaar.png',
-    desc:'武汉、上海、深圳三队均直飞乌鲁木齐，最迟16:20全员到齐。机场取车后前往市区入住，先到的队伍不用干等——建议就近前往新疆国际大巴扎自由活动，逛民族手工艺、干果巴扎，感受丝路风情，晚餐直接在大巴扎美食街解决。当晚不安排长途驾驶，简单休整、检查车况、规划次日660km的长途路线，为明天的大长途做好准备。',
-    highlight:'三地直飞集合 | 乌鲁木齐机场取车 | 国际大巴扎自由活动 | 市区休整', playTime:'半天', drive:'乌鲁木齐机场→市区 25km/0.5h',
+    desc:'武汉、深圳、上海三地直飞乌鲁木齐，先到的武汉CZ8203队和深圳SC2326两队在神州租车乌鲁木齐天山机场门店取一辆GL8先进市区大巴扎自由活动，逛民族手工艺、干果巴扎；另一辆车由深圳CZ8924队、上海CZ6996队提取。睡觉前，检查车况，备齐干粮，为明天的大长途做好准备。',
+    highlight:'各队分批集合 | 神州机场取车 | 国际大巴扎自由活动 | 市区休整', playTime:'半天', drive:'乌鲁木齐机场→市区 25km/0.5h',
     flightInfo:[
-      { seg:'武汉 → 乌鲁木齐（直飞）', no:'南方航空 CZ8403', time:'08:00 起飞 → 12:40 到达' },
-      { seg:'上海 → 乌鲁木齐（直飞）', no:'东方航空 MU2501', time:'09:20 起飞 → 15:10 到达' },
-      { seg:'深圳 → 乌鲁木齐（直飞）', no:'南方航空 CZ6871', time:'10:40 起飞 → 16:20 到达' },
+      { seg:'武汉 → 乌鲁木齐（直飞）', no:'南方航空 CZ8203', time:'11:10 起飞 → 15:50 到达' },
+      { seg:'深圳 → 乌鲁木齐（直飞）', no:'山东航空 SC2326', time:'12:55 起飞 → 18:35 到达' },
+      { seg:'上海 → 乌鲁木齐（直飞）', no:'南方航空 CZ6996', time:'16:15 起飞 → 21:35 到达' },
+      { seg:'深圳 → 乌鲁木齐（直飞）', no:'南方航空 CZ8924', time:'16:15 起飞 → 21:45 到达' },
     ],
     timeline:[
-      { time:'08:00', text:'武汉CZ8403起飞（直飞乌鲁木齐）' },
-      { time:'09:20', text:'上海MU2501起飞（直飞乌鲁木齐）' },
-      { time:'10:40', text:'深圳CZ6871起飞（直飞乌鲁木齐）' },
-      { time:'12:40', text:'武汉队伍抵达乌鲁木齐（三队中最早到，可先取车办理手续）' },
-      { time:'15:10', text:'上海队伍抵达乌鲁木齐' },
-      { time:'16:20', text:'深圳队伍抵达乌鲁木齐，三队全部集合完毕' },
-      { time:'17:00', text:'机场租车网点取车，全员集结完毕' },
-      { time:'17:30', text:'驱车前往市区入住（25km/0.5h）' },
-      { time:'18:30', text:'入住酒店，检查车况、加满油、规划次日路线' },
-      { time:'19:00', text:'前往新疆国际大巴扎自由活动，逛民族手工艺、干果巴扎（先到队伍可更早前往）' },
-      { time:'20:00', text:'大巴扎美食街晚餐，早点休息，为明天660km长途做准备' },
+      { time:'15:50', text:'武汉队伍抵达乌鲁木齐（最早到）' },
+      { time:'16:30', text:'武汉队在神州门店取1辆别克GL8，办理手续，检查车况，加满油' },
+      { time:'18:35', text:'深圳SC2326抵达乌鲁木齐' },
+      { time:'19:00', text:'武汉CZ8203队和深圳SC2326队一同驾车前往国际大巴扎自由活动' },
+      { time:'21:35', text:'上海CZ6996队和深圳CZ8924队抵达乌鲁木齐，取另一辆GL8进城入住酒店，规划次日660km长途路线，备齐干粮，休息' },
     ],
     hotelDay:1, tickets:'无', ticketsPrice:0, altitude:800, temperature:'20°C ~ 33°C', feel:'温暖干燥，早晚微凉，正常夏装即可' },
 
-  { day:2, title:'乌鲁木齐 → 阿勒泰⚠️长途660km', segment:'north', tight:'⚠️ 全程最长驾驶日之一：660km/8h，沿G3014/G216穿越准噶尔盆地',
+  { day:2, title:'乌鲁木齐 → 阿勒泰⚠️长途660km', segment:'north', tight:'⚠️ 全程最长驾驶日之一：660km/8h，穿越准噶尔盆地',
     image:'images/day2-junggar-gobi-road.png',
     desc:'今天是全程两大长途日之一，沿G3014/G216穿越准噶尔盆地戈壁公路前往阿勒泰，途中服务区较少，务必在克拉玛依/北屯等节点加油、休整，两位司机轮换驾驶，避免疲劳驾驶，傍晚抵达阿勒泰市区。',
     highlight:'准噶尔盆地戈壁公路 | 长途穿越 | 阿勒泰市区休整', playTime:'全天（以驾驶为主）', drive:'乌鲁木齐→阿勒泰 660km/8h',
@@ -509,7 +507,7 @@ const ITINERARY_DATA = [
     highlight:'三湾徒步 | 观鱼台全景 | 五彩滩日落 | 额尔齐斯河', playTime:'全天', drive:'禾木→喀纳斯 70km/1.5h + 喀纳斯→布尔津 130km/3h',
     timeline:[
       { time:'08:30', text:'禾木出发前往喀纳斯（含换乘）' },
-      { time:'10:30-12:30', text:'游览神仙湾、月亮湾、卧龙湾三湾，木栈道徒步（较原方案节奏略紧凑）' },
+      { time:'10:30-12:30', text:'游览神仙湾、月亮湾、卧龙湾三湾，木栈道徒步' },
       { time:'12:30-13:15', text:'游客中心午餐（简餐快吃，为赶日落留出机动）' },
       { time:'13:15-14:15', text:'登观鱼台俯瞰喀纳斯湖全貌' },
       { time:'14:30', text:'驱车前往布尔津县城（130km/3h），赶在日落前抵达' },
@@ -534,7 +532,7 @@ const ITINERARY_DATA = [
     ],
     hotelDay:5, tickets:'魔鬼城¥60+观光车¥30', ticketsPrice:90, altitude:450, temperature:'20°C ~ 34°C', feel:'戈壁干热少雨，正常夏装，注意防晒防风' },
 
-  { day:6, title:'克拉玛依 → 赛里木湖畔⚠️长途450km', segment:'south', tight:'⚠️ 全程另一大长途日：约450km/6-7h，沿G30连霍高速',
+  { day:6, title:'克拉玛依 → 赛里木湖畔⚠️长途450km', segment:'south', tight:'⚠️ 全程另一大长途日：约450km/6-7h',
     image:'images/day6-sayram-lake.png',
     desc:'今天是全程另一大长途驾驶日，沿G30连霍高速一路向西，途经奎屯、精河可加油休整，全程约450km，不用摸黑早起，8点半从容出发、两位司机轮换即可。抵达赛里木湖（大西洋最后一滴眼泪）后，直接入住湖畔，傍晚湖边看日落，日落时间较晚（21:20左右）时间完全充裕，是全程最值得放慢的一晚。',
     highlight:'G30连霍高速 | 赛里木湖畔住宿 | 雪山倒影 | 慢享日落', playTime:'全天', drive:'克拉玛依→赛里木湖 约450km/6-7h',
@@ -553,7 +551,7 @@ const ITINERARY_DATA = [
   { day:7, title:'赛里木湖 → 伊宁（路过）→ 特克斯 → 喀拉峻草原', segment:'south', tight:'⚠️ 合并日：赛湖早退+三段约340km驾驶，伊宁仅午餐路过、下午主玩喀拉峻，晚餐后可登塔看特克斯八卦城夜景',
     image:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/86a1600a-f81c-4eb3-8ee4-0319ef479849/image_1782977875_3_1.jpg',
     desc:'今天把原来分两天的伊犁段压成一天：清晨在赛里木湖畔简单吃口早餐就退房出发，趁早赶路返回伊宁。中午在伊宁吃顿正宗伊犁菜，饭后不进景区、只沿喀赞其蓝色小镇与伊犁河边开车绕看一圈感受河谷烟火气，随后驱车前往世界唯一的八卦城——特克斯，登观景台俯瞰全城如易经八卦布局。下午重头戏是喀拉峻大草原（今日主角），欣赏"人体草原"独特曲线、漫步五花草甸，草原区间车末班20:30、天黑晚，傍晚时间充裕。晚上入住八卦城中心旁的颐爻酒店，晚餐后可步行登50余米高的八卦观光塔，俯瞰64条街巷灯火交织如悬浮罗盘的夜景。',
-    highlight:'赛湖晨光 | 伊宁·喀赞其(车观路过) | 八卦城全景 | 喀拉峻人体草原 | 饭后登塔看八卦城夜景', playTime:'全天（合并日）', drive:'赛里木湖→伊宁 165km/2.5h →特克斯 130km/2h →喀拉峻 45km/1h（全天约340km）',
+    highlight:'赛湖晨光 | 伊宁·喀赞其(车观路过) | 八卦城全景 | 喀拉峻人体草原 | 晚饭后登塔看八卦城夜景', playTime:'全天（合并日）', drive:'赛里木湖→伊宁 165km/2.5h →特克斯 130km/2h →喀拉峻 45km/1h（全天约340km）',
     timeline:[
       { time:'08:30', text:'赛里木湖畔酒店早餐后退房出发，趁早返回伊宁（165km/2.5h）' },
       { time:'11:00', text:'抵达伊宁，午餐（正宗伊犁菜，从容用餐约40min）' },
@@ -584,7 +582,7 @@ const ITINERARY_DATA = [
 
   { day:9, title:'巴音布鲁克 → 独库中段+北段 → 独山子', segment:'south', tight:'⚠️ 全程最累的一天！独库中段+北段320km山路、翻3个达坂，两段均需预约，未预约车辆禁止通行',
     image:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/6e789b6b-6f98-4dde-bb06-991d897c485e/image_1783054701_3_1.jpg',
-    desc:'今天是全程最壮阔也最硬核的一天！清晨先在巴音布鲁克看草原/天鹅湖方向的晨景（错峰避开昨晚日落人潮），随后走独库中段折返那拉提岔口（80km/2h），再从那拉提上独库北段（那拉提-乔尔玛-独山子约230km）。中段+北段两段均实行网上预约制通行，出发前必须已在相应入口预约成功、且车辆为7座以下（2辆普拉多符合要求）。一路穿越天山——雪山达坂、高山草甸、峡谷河流一日历四季，途经乔尔玛烈士陵园，翻哈希勒根达坂，最终抵达独山子大峡谷打卡独库零公里纪念碑，当晚入住独山子。',
+    desc:'今天是全程最壮阔也最硬核的一天！清晨先在巴音布鲁克看草原/天鹅湖方向的晨景（错峰避开昨晚日落人潮），随后走独库中段折返那拉提岔口（80km/2h），再从那拉提上独库北段（那拉提-乔尔玛-独山子约230km）。中段+北段两段均实行网上预约制通行，出发前必须已在相应入口预约成功、且车辆为7座以下（2辆别克GL8符合要求）。一路穿越天山——雪山达坂、高山草甸、峡谷河流一日历四季，途经乔尔玛烈士陵园，翻哈希勒根达坂，最终抵达独山子大峡谷打卡独库零公里纪念碑，当晚入住独山子。',
     highlight:'巴音布鲁克草原晨景 | 独库中段+北段全穿越 | 乔尔玛烈士陵园 | 独山子大峡谷 | 独库零公里纪念碑', playTime:'全天（320km山路）', drive:'巴音布鲁克→那拉提岔口 80km/2h（独库中段）→独山子 230km/5h（独库北段·需预约）',
     timeline:[
       { time:'07:00', text:'巴音布鲁克草原/天鹅湖方向看晨景（约1h，错峰避开昨晚日落人潮）' },
@@ -598,24 +596,25 @@ const ITINERARY_DATA = [
     ],
     hotelDay:9, photoTime:'全天（独库公路光影变化万千）', tickets:'独库公路 免费，独山子大峡谷¥60', ticketsPrice:60, altitude:3300, temperature:'5°C ~ 20°C（达坂更冷）', feel:'达坂路段寒冷需厚外套，下山后转暖' },
 
-  { day:10, title:'独山子 → 乌鲁木齐还车 → 三地分头返程', segment:'south', tight:'⚠️ 还车+三地分批登机：上午务必留足时间，不能拖延',
+  { day:10, title:'独山子 → 乌鲁木齐还车（12:00前）→ 分头返程', segment:'south', tight:'⚠️ 还车+分批登机：上午务必赶在12:00前到门店还车，不能拖延',
     image:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/5d288a37-3388-4376-8f8c-7d46e6569769/image_1783055203_1_1.jpg',
-    desc:'上午从独山子出发前往乌鲁木齐还车，中午在机场附近简单午餐后，武汉/深圳/上海三队伍分别搭乘各自的直飞返程航班，结束这场跨越北疆与伊犁两大地貌的10天旅程。',
-    highlight:'乌鲁木齐还车 | 三地分头返程', playTime:'半天+登机', drive:'独山子→乌鲁木齐 260km/3h',
+    desc:'上午从独山子出发前往乌鲁木齐，按神州订单需在 12:00 前把两辆别克GL8还回机场门店。中午在机场附近简单午餐后，武汉、深圳、上海三地队伍分别搭乘各自的返程航班，结束这场跨越北疆与伊犁两大地貌的10天旅程。',
+    highlight:'乌鲁木齐12:00前还车 | 分头返程', playTime:'半天+登机', drive:'独山子→乌鲁木齐 260km/3h',
     flightInfo:[
-      { seg:'乌鲁木齐 → 武汉', no:'南方航空 CZ3912', time:'16:55 起飞' },
-      { seg:'乌鲁木齐 → 深圳', no:'南方航空 CZ8498', time:'15:45 起飞' },
-      { seg:'乌鲁木齐 → 上海', no:'吉祥航空 9C6496', time:'16:30 起飞' },
+      { seg:'乌鲁木齐 → 深圳', no:'深圳航空 ZH9246', time:'15:55 起飞 → 21:25 到达' },
+      { seg:'乌鲁木齐 → 深圳', no:'南方航空 CZ5796', time:'16:05 起飞 → 21:25 到达' },
+      { seg:'乌鲁木齐 → 武汉', no:'南方航空 CZ8204', time:'18:00 起飞 → 22:20 到达' },
+      { seg:'乌鲁木齐 → 上海', no:'南方航空 CZ6997', time:'16:10 起飞 → 21:15 到达' },
     ],
     timeline:[
       { time:'08:00', text:'独山子出发前往乌鲁木齐（260km/3h）' },
-      { time:'11:00', text:'抵达乌鲁木齐机场附近还车网点' },
-      { time:'11:00-12:00', text:'办理还车验车手续' },
-      { time:'12:00-13:00', text:'机场简单午餐' },
-      { time:'13:30', text:'各队分头前往值机柜台' },
-      { time:'15:45', text:'深圳CZ8498起飞' },
-      { time:'16:30', text:'上海9C6496起飞' },
-      { time:'16:55', text:'武汉CZ3912起飞' },
+      { time:'11:00', text:'抵达乌鲁木齐机场神州还车网点' },
+      { time:'11:00-12:00', text:'加满油、办理还车验车手续（务必12:00前完成）' },
+      { time:'12:00-13:30', text:'机场简单午餐、分头前往值机柜台' },
+      { time:'15:55', text:'深圳ZH9246起飞' },
+      { time:'16:05', text:'深圳CZ5796起飞' },
+      { time:'16:10', text:'上海CZ6997起飞' },
+      { time:'18:00', text:'武汉CZ8204起飞' },
     ],
     hotelDay:0, tickets:'无', ticketsPrice:0, altitude:800, temperature:'22°C ~ 34°C', feel:'平原炎热干燥，正常夏装，注意防晒' },
 ];
@@ -851,7 +850,7 @@ function renderFood() {
 const TIPS_ALERT = {
   items:[
     '预约路段：G217独库公路中段（那拉提↔巴音布鲁克，Day8必经）+ 北段（那拉提↔乔尔玛↔独山子，Day9必经）均实行预约制通行，未预约车辆禁止通行，两段都要确认在预约范围内',
-    '车辆要求：仅限7座及以下小型客车预约通行，2辆普拉多符合条件；7座以上客车、大巴、危化品车、挂车等均不允许通行',
+    '车辆要求：仅限7座及以下小型客车预约通行，2辆别克GL8符合条件；7座以上客车、大巴、危化品车、挂车等均不允许通行',
     '预约方式：提前通过"新疆路网"公众号/小程序或自治区交通运输厅官方渠道网上预约，Day8选那拉提/巴音布鲁克入口、Day9选那拉提/乔尔玛/独山子入口，分别锁定当天名额',
     '预约时机：务必在出发前3-7天完成预约，7-8月旺季名额紧张，建议出行前1周内多刷新几次，Day8、Day9两天名额都要提前锁定',
     '通行时段：独库公路全线早9点开放、晚8点起交通管制禁止通行；那拉提-巴音布鲁克段不限时间',
@@ -872,7 +871,7 @@ const TIPS_DATA = [
     '独库公路弯道多、坠石路段多，保持车距，切勿疲劳驾驶，雨雪天气建议延后出发或改签预约',
     '戈壁路段（G3014/G216/G30）服务区较少，出发前务必加满油，沿途见加油站及时补给',
     '独库公路及唐布拉沿线信号弱，出发前下载好离线地图（高德/百度离线包）',
-    '喀拉峻、特克斯部分观景台路段为土路，普通轿车底盘低易托底，已选普拉多可放心通行',
+    '喀拉峻、特克斯部分观景台路段为土路，GL8底盘偏低，需减速慢行、避让坑洼与凸起，必要时下车探路',
     '全程限速严格，非景区路段有流动测速，独库公路全程限速40-60km/h，切勿超速',
   ] },
   { icon:'fa-tree', title:'喀纳斯禾木森林湖泊专属贴士', items:[
@@ -935,7 +934,7 @@ const TIPS_DATA = [
     '伊宁为合并日午餐+车观路过，不安排喀赞其马车；八卦城夜景需登观光塔俯瞰（约¥30），8月约22:00后亮灯最佳，独库公路本身免费通行（预约不收费）',
     '团队人数较多，建议提前联系餐厅预留桌位（尤其巴音布鲁克镇烤全羊、手抓肉等需预定的团队菜品）',
     '旅游旺季（7-8月）酒店紧张，务必提前锁定房间，本攻略已提供9晚酒店电话可直接确认',
-    '入住前电话确认停车位是否充足，2辆普拉多需提前沟通车位',
+    '入住前电话确认停车位是否充足，2辆别克GL8需提前沟通车位',
   ] },
 ];
 function renderTips() {
@@ -965,30 +964,18 @@ function renderTips() {
 
 // ===== 租车方案数据（详尽版：介绍+四步流程+车型卡+推荐平台+费用保险验车避坑，全程统一油车）=====
 const RENTCAR_DATA = {
-  intro:'伊犁+北疆环线全程自驾，租车是大头也是最容易踩坑的一环。乌鲁木齐天山国际机场有神州、一嗨等连锁门店，本地租车行也很多，车源以油车为主（GL8、普拉多、哈弗、汉兰达等常见），新疆长途路段加油站网络成熟、补能省心，草原/独库/戈壁全程无补能焦虑，统一选油车更稳妥。10大2小团队需 2 辆车同行，具体车型和库存以你下单时 App 或门店实时显示为准。下面把流程拆成"提前订 → 机场取 → 全程开 → 原地还"四步，照着做就行，零经验也不慌。',
+  intro:'戈壁高速与常规景区公路通行无压力；唯独喀拉峻、独库等土路段底盘偏低需减速慢行。',
   steps: [
-    { icon:'fa-mobile-screen-button', title:'出发前 7-10 天网上预订', desc:'在租车 App 上选「乌鲁木齐天山国际机场取车 + 乌鲁木齐天山国际机场还车」，按下方推荐车型下单 2 辆。旺季（7-8月）车少，越早订越便宜，到店没车才是最大的坑。', tips:['取/还车地点都选「乌鲁木齐天山国际机场」最省心','2 辆车尽量同一门店下单，方便统一验车/还车','下单时把「不计免赔」「轮胎挡风险」一起勾上','截图保存两张订单号和门店电话'] },
-    { icon:'fa-plane-arrival', title:'下飞机 → 门店取车 → 拍视频验车', desc:'乌鲁木齐天山国际机场出口就有租车门店班车。带好身份证 + 驾驶证（满1年），刷信用卡冻结押金即可提车。提车前务必两辆车都绕车一圈拍完整视频。', tips:['取车只需「身份证 + 驾驶证」，两位主驾各自到场','绕车拍 360° 视频：车身、轮毂、前后杠、挡风玻璃','确认油量指针位置（满油取就满油还）','三队分批抵达，可先到的队伍先办取车手续'] },
+    { icon:'fa-mobile-screen-button', title:'出发前确认神州订单（已预订）', desc:'本次已在神州租车 App 上订好 2 辆别克GL8，取还车网点均为「乌鲁木齐天山国际机场」，租期 8/1 17:30 ~ 8/10 12:00。出发前再核对一遍订单信息、门店电话和取车凭证即可。', tips:['取/还车地点均为「乌鲁木齐天山国际机场」神州门店','2 辆车同一订单/门店，方便统一验车、还车','确认「不计免赔」「轮胎挡风险」已勾选','截图保存订单号、门店电话和取车码'] },
+    { icon:'fa-plane-arrival', title:'下飞机 → 神州门店取车（8/1 17:30）', desc:'8/1 全员抵达后前往乌鲁木齐天山国际机场神州门店，最迟到齐的深圳队约 21:45 落地——先到的队伍可先办取车手续。带好身份证 + 驾驶证（满1年），刷信用卡冻结押金即可提车。提车前务必两辆车都绕车一圈拍完整视频。', tips:['取车只需「身份证 + 驾驶证」，两位主驾各自到场','绕车拍 360° 视频：车身、轮毂、前后杠、挡风玻璃','确认油量指针位置（满油取就满油还）','三队分批抵达，先到的队伍先办取车手续'] },
     { icon:'fa-binoculars', title:'全程自驾，加油看好里程', desc:'闭环全程约 3,055km（北疆段约 1,730km + 伊犁段约 1,325km），加 92# 汽油即可。新疆加油站需「人车分离」实名登记，进站排队稍久。山区加油站少，城镇见到加油站先加满。', tips:['进城镇见加油站先加满，别赌下一个','加油站需身份证实名登记，司机本人到场','Day2/Day6 两大长途日两辆车结伴同行、司机轮换','独库中段+北段山区无油站，Day8务必在那拉提镇加满再上山，Day9从巴音布鲁克出发前也需备足油'] },
-    { icon:'fa-circle-check', title:'原地满油还车，秒退押金', desc:'Day10 还车前在机场旁加油站把两辆车都加满油，门店验车无新增划痕即可。当面确认无误后，押金一般 1-7 个工作日原路退回。', tips:['还车前 1 公里内加满油，留好加油小票','当面验车，让店员确认「无新增剐蹭」','清空车内私人物品，别落东西','违章押金会在 15-30 天后无违章自动退'] },
+    { icon:'fa-circle-check', title:'原地满油还车（8/10 12:00 前）', desc:'Day10 上午从独山子返回，务必在 12:00 前到机场神州门店还车。还车前在机场旁加油站把两辆车都加满油，门店验车无新增划痕即可。当面确认无误后，押金一般 1-7 个工作日原路退回。', tips:['还车前 1 公里内加满油，留好加油小票','务必 12:00 前抵达门店，避免超时按天计费','当面验车，让店员确认「无新增剐蹭」','清空车内私人物品，违章押金 15-30 天后无违章自动退'] },
   ],
-  car: {
-    badge:'豪华型推荐',
-    model:'丰田普拉多 越野车',
-    priceDay:'约 ¥800/天',
-    priceTotal:'10天×2辆 ≈ ¥16,000（单车约¥8,000）',
-    img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/524836d4-900e-4365-875b-b0c6c50f31fa/image_1783046621_1_1.jpg',
-    seat:'7 座',
-    trunk:'后备厢规整，越野通过性强',
-    quote:'高底盘四驱，喀纳斯林区土路、独库达坂盘山路、喀拉峻草原土路如履平地；戈壁高速稳、烂路猛，颜值在线，拍照出片率高。',
-    oks:['高底盘四驱通过性强','烂路砂石路毫无压力','车身高视野好更安全'],
-    cons:'油耗偏高，7 座单车行李空间相对紧凑（10大2小需 2 辆分装行李），租金较贵',
-  },
   platforms:[
-    { name:'神州租车', tag:'连锁·省心', desc:'乌鲁木齐天山国际机场有直营店，车况新、流程规范，押金退得快，新手首选。' },
+    { name:'神州租车', tag:'✅ 本次已选', desc:'乌鲁木齐天山国际机场有直营店，车况新、流程规范，押金退得快。本次 2 辆别克GL8 即在此预订。' },
     { name:'一嗨租车', tag:'连锁·门店多', desc:'乌鲁木齐市区 + 机场均有取还点，车型选择多，常有早鸟折扣。' },
     { name:'携程/飞猪租车', tag:'聚合·比价', desc:'一键比价多家门店，可看真实评价，认准「闪租」「免押」标签更稳。' },
-    { name:'本地车行', tag:'灵活·性价比', desc:'价格可谈、车型多（普拉多、汉兰达、哈弗等常见），但务必签正规合同、查保险，别图便宜踩坑。' },
+    { name:'本地车行', tag:'灵活·性价比', desc:'价格可谈、车型多（GL8、别克商务、汉兰达等常见），但务必签正规合同、查保险，别图便宜踩坑。' },
   ],
   fees:[
     { icon:'fa-car-side', k:'车辆押金', v:'¥5,000-20,000 / 辆（信用卡预授权冻结，不实扣，2 辆分别冻结）' },
@@ -1022,11 +1009,12 @@ const RENTCAR_DATA = {
 function renderRentcar() {
   const container = document.getElementById('rentcarContainer');
   const D = RENTCAR_DATA;
-  const c = D.car;
   container.innerHTML = `
     <!-- 介绍横幅 -->
     <div class="rc-intro fade-up mb-6">
       <div class="rc-intro-icon"><i class="fa-solid fa-circle-info"></i></div>
+      <p class="rc-intro-sub">乌鲁木齐机场取还 · 全程两辆7座油车 · 含全流程避坑指南</p>
+      <p class="rc-intro-booked">✅ 已在神州租车预订 2 辆别克GL8 · 8/1（周六）17:30 取车 → 8/10（周日）12:00 还车</p>
       <p>${D.intro}</p>
     </div>
     <!-- 四步流程 -->
@@ -1041,24 +1029,6 @@ function renderRentcar() {
           <p class="rc-step-desc">${s.desc}</p>
           <ul>${s.tips.map(t=>`<li><i class="fa-solid fa-check"></i><span>${t}</span></li>`).join('')}</ul>
         </div>`).join('')}
-    </div>
-    <!-- 推荐车型 普拉多 hero 卡 -->
-    <div class="rc-car-card fade-up mb-8">
-      <div class="rc-car-top">
-        <div class="rc-car-img" style="background-image:url('${c.img}')">
-          <span class="rc-car-badge"><i class="fa-solid fa-award"></i>${c.badge}</span>
-        </div>
-        <div class="rc-car-info">
-          <div class="rc-car-title-row">
-            <h3>${c.model}</h3>
-            <div class="rc-car-price"><div class="p1">${c.priceDay}</div><div class="p2">${c.priceTotal}</div></div>
-          </div>
-          <div class="rc-car-meta"><span><i class="fa-solid fa-users mr-1"></i><b>${c.seat}</b></span><span><i class="fa-solid fa-suitcase mr-1"></i>${c.trunk}</span></div>
-          <div class="rc-car-quote"><i class="fa-solid fa-quote-left"></i><span>${c.quote}</span></div>
-          <div class="rc-tags">${c.oks.map(o=>`<span class="rc-tag-ok"><i class="fa-solid fa-circle-check"></i>${o}</span>`).join('')}</div>
-          <div class="rc-car-warn"><i class="fa-solid fa-triangle-exclamation"></i><span>${c.cons}</span></div>
-        </div>
-      </div>
     </div>
     <!-- 推荐平台 -->
     <h3 class="font-serif font-black text-xl text-blue-900 mb-4 flex items-center gap-2"><i class="fa-solid fa-store text-orange-500"></i>去哪儿租：推荐平台</h3>
