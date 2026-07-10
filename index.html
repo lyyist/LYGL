@@ -22,11 +22,12 @@
   body { font-family: 'Noto Sans SC', sans-serif; color: #333; background: #fff; }
   .font-serif { font-family: 'Noto Serif SC', serif; }
   .hero-section {
-    background: linear-gradient(135deg, rgba(20,46,74,0.72) 0%, rgba(30,58,95,0.5) 50%, rgba(0,0,0,0.35) 100%),
-                url('images/hero-xinjiang.png') center/cover no-repeat;
-    min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;
+    background: #16233a;
+    min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
   }
-  .hero-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.3) 100%); }
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+  .hero-section::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(135deg, rgba(20,46,74,0.72) 0%, rgba(30,58,95,0.5) 50%, rgba(0,0,0,0.35) 100%); }
+  .hero-section::before { content: ''; position: absolute; inset: 0; z-index: 1; background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.3) 100%); }
   .tag { display: inline-block; padding: 6px 16px; border-radius: 9999px; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); color: #fff; font-size: 14px; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s; }
   .tag:hover { background: rgba(255,255,255,0.35); transform: translateY(-2px); }
   .section-title { font-family: 'Noto Serif SC', serif; font-size: 2rem; font-weight: 900; text-align: center; background: linear-gradient(135deg, var(--primary), var(--primary-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.4rem; }
@@ -34,7 +35,8 @@
   .card { background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.35s ease; overflow: hidden; }
   .card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.12); }
   /* 逐日行程卡片：整卡渐变遮罩 + 6个纯文档流分区，杜绝任何绝对定位造成的重叠 */
-  .day-card-hero { position: relative; border-radius: 20px; overflow: hidden; min-height: 400px; background-size: cover; background-position: center; transition: all 0.4s ease; }
+  .day-card-hero { position: relative; border-radius: 20px; overflow: hidden; min-height: 400px; background: #16233a; transition: all 0.4s ease; }
+  .day-card-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
   .day-card-hero::before { content:''; position:absolute; inset:0; background: linear-gradient(180deg, rgba(8,16,28,0.60) 0%, rgba(8,16,28,0.18) 26%, rgba(8,16,28,0.30) 55%, rgba(5,10,20,0.90) 100%); z-index:1; }
   .day-card-hero:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
   .day-card-body { position: relative; z-index: 2; padding: 24px 26px; }
@@ -248,6 +250,10 @@
 
 <!-- HERO -->
 <section class="hero-section relative">
+  <picture>
+    <source media="(max-width: 768px)" srcset="images/hero-xinjiang.webp" type="image/webp">
+    <img class="hero-bg" src="images/hero-xinjiang.png" alt="北疆伊犁自驾风光" fetchpriority="high" decoding="async">
+  </picture>
   <div class="relative z-10 text-center px-4 max-w-4xl">
     <div class="fade-up" style="transition-delay:0.1s">
       <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md rounded-full px-5 py-2 mb-6 border border-white/20">
@@ -549,24 +555,22 @@ const ITINERARY_DATA = [
     hotelDay:6, photoTime:'傍晚19:30-21:20湖畔金色光线+日落', tickets:'赛里木湖¥145', ticketsPrice:145, altitude:2073, temperature:'12°C ~ 24°C', feel:'湖畔风大偏凉，需薄外套/防风衣' },
 
   { day:7, title:'赛里木湖 → 伊宁（路过）→ 特克斯 → 喀拉峻草原', segment:'south', tight:'⚠️ 合并日：赛湖早退+三段约340km驾驶，伊宁仅午餐路过、下午主玩喀拉峻，晚餐后可登塔看特克斯八卦城夜景',
-    image:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/86a1600a-f81c-4eb3-8ee4-0319ef479849/image_1782977875_3_1.jpg',
+    image:'images/day7-tekes-bagua-city.png',
     desc:'今天把原来分两天的伊犁段压成一天：清晨在赛里木湖畔简单吃口早餐就退房出发，趁早赶路返回伊宁。中午在伊宁吃顿正宗伊犁菜，饭后不进景区、只沿喀赞其蓝色小镇与伊犁河边开车绕看一圈感受河谷烟火气，随后驱车前往世界唯一的八卦城——特克斯，登观景台俯瞰全城如易经八卦布局。下午重头戏是喀拉峻大草原（今日主角），欣赏"人体草原"独特曲线、漫步五花草甸，草原区间车末班20:30、天黑晚，傍晚时间充裕。晚上入住八卦城中心旁的颐爻酒店，晚餐后可步行登50余米高的八卦观光塔，俯瞰64条街巷灯火交织如悬浮罗盘的夜景。',
     highlight:'赛湖晨光 | 伊宁·喀赞其(车观路过) | 八卦城全景 | 喀拉峻人体草原 | 晚饭后登塔看八卦城夜景', playTime:'全天（合并日）', drive:'赛里木湖→伊宁 165km/2.5h →特克斯 130km/2h →喀拉峻 45km/1h（全天约340km）',
     timeline:[
-      { time:'08:30', text:'赛里木湖畔酒店早餐后退房出发，趁早返回伊宁（165km/2.5h）' },
-      { time:'11:00', text:'抵达伊宁，午餐（正宗伊犁菜，从容用餐约40min）' },
-      { time:'11:40', text:'饭后沿喀赞其蓝色小镇、伊犁河边开车绕看一圈（不进景区、车观路过约20min）' },
-      { time:'12:00', text:'伊宁出发前往特克斯（130km/2h）' },
+      { time:'08:30', text:'酒店早餐后退房回伊宁午餐（165km/2.5h）' },
+      { time:'11:40', text:'饭后沿喀赞其蓝色小镇、伊犁河开车绕看一圈（不进景区、车观路过约20min）后前往特克斯（130km/2h）' },
       { time:'14:00', text:'抵达特克斯，登八卦城观景台俯瞰全城布局（约0.5h）' },
       { time:'14:30', text:'驱车前往喀拉峻草原（45km/1h）' },
       { time:'15:30-19:00', text:'喀拉峻人体草原、五花草甸、猎鹰台游览（今日主角，末班车20:30兜底）' },
-      { time:'19:30', text:'返回特克斯入住颐爻酒店，晚餐' },
-      { time:'21:30-22:30', text:'饭后步行登八卦观光塔，俯瞰八卦城亮灯夜景（8月天黑晚，此时华灯初上·可选加项）' },
+      { time:'19:30', text:'回特克斯入住颐爻酒店，晚餐' },
+      { time:'21:30-22:30', text:'饭后步行登八卦观光塔，俯瞰八卦城亮灯夜景（8月天黑晚，此时华灯初上·更震撼）' },
     ],
     hotelDay:7, photoTime:'傍晚喀拉峻草原光线+夜晚22:00后八卦城亮灯', tickets:'喀拉峻¥275（全域游）+八卦观光塔¥30', ticketsPrice:305, altitude:2000, temperature:'11°C ~ 27°C', feel:'草原早晚清凉，中午日晒强，需薄外套+防晒；夜登观光塔更凉，加件外套' },
 
   { day:8, title:'特克斯 → 途经那拉提 → 巴音布鲁克', segment:'south', tight:'⚠️ 全天355km/7h长途转场，且需确认独库中段（那拉提↔巴音布鲁克）已在预约通行范围内',
-    image:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/88c9c664-230a-4668-ba04-e0714d509b06/image_1783065841_3_1.png',
+    image:'images/day8-bayanbulak-sunset.png',
     desc:'今天从特克斯长途转场至巴音布鲁克。上午先赶275km到那拉提镇，一路车窗即可饱览那拉提空中草原的雪山与绿毯风光（不进景区、不骑马，只经过）；午后从那拉提上独库公路最精华的中段，翻越拉尔墩达坂（约80km/2h）进入海拔约2500m的巴音布鲁克高山湿地草原。傍晚重点是开都河"九曲十八弯"落日——运气好可在蜿蜒河面拍到多个太阳倒影，是与前几日森林湖泊、绿毯草原截然不同的湿地水景。',
     highlight:'途经那拉提草原（车观不进景区）| 独库中段·拉尔墩达坂 | 九曲十八弯日落 | 高山湿地草原', playTime:'长途转场+傍晚看日落', drive:'特克斯→那拉提 275km/5h（途经）→巴音布鲁克 80km/2h',
     timeline:[
@@ -581,7 +585,7 @@ const ITINERARY_DATA = [
     hotelDay:8, photoTime:'傍晚19:00-21:00九曲十八弯落日最佳', tickets:'巴音布鲁克¥65+区间车¥90', ticketsPrice:155, altitude:2500, temperature:'6°C ~ 22°C', feel:'高山湿地海拔高、早晚很冷温差大，务必备厚外套，儿童老人防高反' },
 
   { day:9, title:'巴音布鲁克 → 独库中段+北段 → 独山子', segment:'south', tight:'⚠️ 全程最累的一天！独库中段+北段320km山路、翻3个达坂，两段均需预约，未预约车辆禁止通行',
-    image:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/6e789b6b-6f98-4dde-bb06-991d897c485e/image_1783054701_3_1.jpg',
+    image:'images/day9-nalati-grassland.png',
     desc:'今天是全程最壮阔也最硬核的一天！清晨先在巴音布鲁克看草原/天鹅湖方向的晨景（错峰避开昨晚日落人潮），随后走独库中段折返那拉提岔口（80km/2h），再从那拉提上独库北段（那拉提-乔尔玛-独山子约230km）。中段+北段两段均实行网上预约制通行，出发前必须已在相应入口预约成功、且车辆为7座以下（2辆别克GL8符合要求）。一路穿越天山——雪山达坂、高山草甸、峡谷河流一日历四季，途经乔尔玛烈士陵园，翻哈希勒根达坂，最终抵达独山子大峡谷打卡独库零公里纪念碑，当晚入住独山子。',
     highlight:'巴音布鲁克草原晨景 | 独库中段+北段全穿越 | 乔尔玛烈士陵园 | 独山子大峡谷 | 独库零公里纪念碑', playTime:'全天（320km山路）', drive:'巴音布鲁克→那拉提岔口 80km/2h（独库中段）→独山子 230km/5h（独库北段·需预约）',
     timeline:[
@@ -597,7 +601,7 @@ const ITINERARY_DATA = [
     hotelDay:9, photoTime:'全天（独库公路光影变化万千）', tickets:'独库公路 免费，独山子大峡谷¥60', ticketsPrice:60, altitude:3300, temperature:'5°C ~ 20°C（达坂更冷）', feel:'达坂路段寒冷需厚外套，下山后转暖' },
 
   { day:10, title:'独山子 → 乌鲁木齐还车（12:00前）→ 分头返程', segment:'south', tight:'⚠️ 还车+分批登机：上午务必赶在12:00前到门店还车，不能拖延',
-    image:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/5d288a37-3388-4376-8f8c-7d46e6569769/image_1783055203_1_1.jpg',
+    image:'images/day10-urumqi-return.png',
     desc:'上午从独山子出发前往乌鲁木齐，按神州订单需在 12:00 前把两辆别克GL8还回机场门店。中午在机场附近简单午餐后，武汉、深圳、上海三地队伍分别搭乘各自的返程航班，结束这场跨越北疆与伊犁两大地貌的10天旅程。',
     highlight:'乌鲁木齐12:00前还车 | 分头返程', playTime:'半天+登机', drive:'独山子→乌鲁木齐 260km/3h',
     flightInfo:[
@@ -711,8 +715,13 @@ function renderItinerary() {
     const hotel = HOTEL_DATA.find(h => h.day === d.hotelDay);
     const hotelText = hotel ? `${hotel.name}${hotel.price ? ' ' + hotel.price : ''}` : '无住宿安排（当日已在途中/已返程）';
     const mainHighlight = (d.highlight || '').split('|')[0].trim();
+    const webp = /^images\/.+\.png$/.test(d.image) ? d.image.replace(/\.png$/, '.webp') : '';
     return `
-    <div class="day-card-hero fade-up" style="background-image:url('${d.image}')">
+    <div class="day-card-hero fade-up">
+      <picture>
+        ${webp ? `<source media="(max-width: 768px)" srcset="${webp}" type="image/webp">` : ''}
+        <img class="day-card-bg" src="${d.image}" alt="${d.title}" loading="lazy" decoding="async">
+      </picture>
       <div class="day-card-body">
         <!-- 1. 头部：编号徽章 + 分段/时长标签 + 大标题 + 强调下划线（视觉焦点区） -->
         <div class="day-sec">
@@ -1077,6 +1086,22 @@ safeRender(renderHotel, 'hotelContainer', '住宿甄选');
 safeRender(renderFood, 'foodContainer', '美食图鉴');
 safeRender(renderTips, 'tipsContainer', '出行贴士');
 safeRender(renderRentcar, 'rentcarContainer', '租车方案');
+
+// ===== 图片健壮性兜底：webp 缺失自动回退 png =====
+// 卡片图采用 <picture> 手机端优先加载省流 webp。若某天暂未生成配套 webp（如新增/替换的图），
+// 手机端 <img> 会加载失败——此处捕获该错误并移除其 <picture> 内的 <source>，强制回退到桌面 png，
+// 保证任何情况下都不裂图；之后补上对应 webp 即自动生效，无需改动代码。
+document.addEventListener('error', (e) => {
+  const img = e.target;
+  if (!(img instanceof HTMLImageElement) || !img.classList.contains('day-card-bg')) return;
+  const picture = img.closest('picture');
+  if (!picture) return;
+  const sources = picture.querySelectorAll('source');
+  if (sources.length) {
+    sources.forEach(s => s.remove());
+    img.src = img.getAttribute('src'); // 触发重新加载，回退到 png
+  }
+}, true); // 捕获阶段：img 的 error 事件不冒泡
 
 // 所有动态内容渲染完成后，统一扫描并观察全部 .fade-up 元素（包含刚注入的卡片），
 // 避免因卡片在 observer 初始化时还不存在于 DOM 中而永远停留在 opacity:0 不可见的状态
