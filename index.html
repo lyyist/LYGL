@@ -692,7 +692,7 @@ function renderItinerary() {
     <div class="day-card-hero fade-up">
       <picture>
         ${webp ? `<source media="(max-width: 768px)" srcset="${webp}" type="image/webp">` : ''}
-        <img class="day-card-bg" src="${d.image}" alt="${d.title}" loading="lazy" decoding="async">
+        <img class="day-card-bg" src="${d.image}" alt="${d.title}" decoding="async">
       </picture>
       <div class="day-card-body">
         <!-- 1. 头部：编号徽章 + 分段/时长标签 + 大标题 + 强调下划线（视觉焦点区） -->
