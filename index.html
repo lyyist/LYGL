@@ -179,8 +179,8 @@
         </div>
         <div class="flex items-center gap-3.5 px-5 py-3 hover:bg-blue-50/50 transition-colors">
           <span class="w-9 h-9 rounded-xl bg-amber-100 flex items-center justify-center text-lg shrink-0">⛽</span>
-          <div class="flex-1 min-w-0"><div class="font-semibold text-gray-800 text-sm">油费</div><div class="text-xs text-gray-400 mt-0.5">全程约 3,265km × 1.0 元</div></div>
-          <div class="text-blue-700 font-bold text-base whitespace-nowrap">¥3,265</div>
+          <div class="flex-1 min-w-0"><div class="font-semibold text-gray-800 text-sm">油费</div><div class="text-xs text-gray-400 mt-0.5">全程约 3,095km × 0.8元/km每车 × 2辆</div></div>
+          <div class="text-blue-700 font-bold text-base whitespace-nowrap">¥4,952</div>
         </div>
         <div class="flex items-center gap-3.5 px-5 py-3 hover:bg-blue-50/50 transition-colors">
           <span class="w-9 h-9 rounded-xl bg-indigo-100 flex items-center justify-center text-lg shrink-0">🛣️</span>
@@ -210,7 +210,7 @@
           <div class="text-xs text-gray-400 mt-0.5">不含大交通 · 人均分摊</div>
         </div>
         <div class="text-right">
-          <div class="text-blue-700 font-black text-3xl leading-none">~¥7,280</div>
+          <div class="text-blue-700 font-black text-3xl leading-none">~¥7,451</div>
           <div class="text-[11px] text-gray-400 mt-1">房费/租车已按实际预订</div>
         </div>
       </div>
@@ -245,7 +245,7 @@
 
     <!-- 酒店预订汇总表 -->
     <div class="card p-5 mt-5">
-      <h3 class="font-serif font-bold text-lg text-blue-900 mb-1"><i class="fa-solid fa-clipboard-list mr-2"></i>各晚酒店预订汇总 + 租车：刘 18500041152</h3>
+      <h3 class="font-serif font-bold text-lg text-blue-900 mb-1"><i class="fa-solid fa-clipboard-list mr-2"></i>各晚酒店预订&租车 一览</h3>
       <p class="text-xs text-gray-400 mb-4 leading-relaxed">车已租，两台GL8；<br>取车 2026-08-02 09:00 新疆国际大巴扎服务点<br>还车 2026-08-10 09:00 新疆国际大巴扎服务点<br>¥6247 * 2</p>
       <div id="bookingTableContainer" class="overflow-x-auto"></div>
     </div>
@@ -257,20 +257,20 @@
   <div class="max-w-7xl mx-auto px-4">
     <h2 class="section-title">路线概览</h2>
     <div class="section-divider"></div>
-    <p class="text-center text-gray-500 mb-6">8/1乌鲁木齐集结 → 8/10乌鲁木齐返程 · 全程约 3,265 公里 · 全程两辆别克GL8自驾 · 10大人2小孩</p>
+    <p class="text-center text-gray-500 mb-6">8/1乌鲁木齐集结 → 8/10乌鲁木齐返程 · 全程约 3,095 公里 · 全程两辆别克GL8自驾 · 10大人2小孩</p>
     <!-- Route Flow -->
     <div class="hidden md:flex flex-wrap items-center justify-center gap-2 mb-6 text-xs md:text-sm">
       <span class="bg-slate-700 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🛫 武汉/上海/深圳飞乌鲁木齐</span>
       <span class="flight-badge mx-1"><i class="fa-solid fa-plane"></i> 各地分别抵达入住</span>
       <span class="bg-blue-800 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🏁 D2晨集结取车</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
       <span class="bg-cyan-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">阿勒泰 660km</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
-      <span class="bg-green-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">禾木 290km</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
-      <span class="bg-teal-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">喀纳斯 70km</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
-      <span class="bg-cyan-700 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">布尔津·五彩滩 130km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
+      <span class="bg-green-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">禾木·阿禾公路 209km</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
+      <span class="bg-teal-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">喀纳斯 44km</span><i class="fa-solid fa-arrow-right text-blue-400 text-xs"></i>
+      <span class="bg-cyan-700 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">布尔津·五彩滩 160km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
       <span class="bg-indigo-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">克拉玛依·魔鬼城 320km</span><i class="fa-solid fa-arrow-right text-red-400 text-xs"></i>
       <span class="bg-red-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">⚠️赛里木湖 450km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
-      <span class="bg-purple-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">伊宁·喀赞其 165km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
-      <span class="bg-amber-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">特克斯·喀拉峻 175km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
+      <span class="bg-purple-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">温泉县·泡温泉 61km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
+      <span class="bg-amber-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">特克斯·喀拉峻 220km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
       <span class="bg-orange-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">巴音布鲁克 355km</span><i class="fa-solid fa-arrow-right text-emerald-500 text-xs"></i>
       <span class="bg-emerald-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">⚠️独库·独山子 320km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
       <span class="bg-rose-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🏁 乌鲁木齐还车 260km</span>
@@ -286,13 +286,13 @@
         <span class="text-sm text-gray-400">草原·花海·雪山</span>
       </div>
       <p class="text-sm text-gray-600 leading-relaxed mb-3">
-        <span class="text-blue-700 font-semibold">北疆段：</span>8/1直飞乌鲁木齐后各自办理入住自由活动 → Day2早餐后集结、神州租车·新疆国际大巴扎服务点 取车验车加油，长途660km赶往阿勒泰 → 住喀纳斯门户贾登峪·当天游喀纳斯三湾观鱼台 → 次日下山顺游禾木木屋村+当天赶布尔津看五彩滩日落 → 克拉玛依（途经乌尔禾魔鬼城）→ Day6克拉玛依长途450km游赛里木湖、再北上温泉县泡温泉，全程两辆别克GL8结伴同行，Day2/Day6为两大长途驾驶日；
-        <span class="text-orange-700 font-semibold">伊犁段：</span>温泉县出发经赛里木湖 → 当天串起伊宁（午餐+车观喀赞其蓝色小镇）→ 特克斯八卦城 → 喀拉峻人体草原，晚餐后登八卦观光塔看亮灯夜景 → 途经那拉提草原（不进景区）走独库中段至巴音布鲁克，傍晚看九曲十八弯日落 → 独库中段+北段翻天山至独山子 → 乌鲁木齐还车后分头返程。
+        <span class="text-blue-700 font-semibold">北疆段：</span>8/1直飞乌鲁木齐后各自办理入住自由活动 → Day2早餐后集结、神州租车·新疆国际大巴扎服务点 取车验车加油，长途660km赶往阿勒泰 → Day3走"神级"阿禾公路直插禾木木屋村、傍晚回撤住喀纳斯门户贾登峪 → 次日一早从门口进喀纳斯游三湾观鱼台、当天下山赶布尔津看五彩滩日落 → 克拉玛依（途经乌尔禾魔鬼城）→ Day6克拉玛依长途450km游赛里木湖、再北上温泉县泡温泉，全程两辆别克GL8结伴同行，Day2/Day6为两大长途驾驶日；
+        <span class="text-orange-700 font-semibold">伊犁段：</span>温泉县泡晨汤后重返赛里木湖晨光深度环湖（凭前一日门票24h内再入）→ 南下特克斯八卦城 → 喀拉峻人体草原，晚餐后登八卦观光塔看亮灯夜景 → 途经那拉提草原（不进景区）走独库中段至巴音布鲁克，傍晚看九曲十八弯日落 → 独库中段+北段翻天山至独山子 → 乌鲁木齐还车后分头返程。
       </p>
       <div class="flex flex-wrap items-center gap-4 text-xs font-semibold">
-        <span class="text-blue-700">🚗 北疆段自驾约 1,945km</span>
-        <span class="text-orange-700">🚗 伊犁段自驾约 1,320km</span>
-        <span class="text-gray-500">合计约 3,265km</span>
+        <span class="text-blue-700">🚗 北疆段自驾约 1,905km</span>
+        <span class="text-orange-700">🚗 伊犁段自驾约 1,190km</span>
+        <span class="text-gray-500">合计约 3,095km</span>
         <span class="text-rose-600">🏁 乌鲁木齐还车后分头返程</span>
       </div>
     </div>
@@ -304,12 +304,12 @@
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
       <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">乌鲁木齐→阿勒泰</div><div class="font-bold text-blue-700">660km / 8h</div></div>
-      <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">阿勒泰→贾登峪（经布尔津上山）</div><div class="font-bold text-blue-700">约250km / 4.5h</div></div>
-      <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">贾登峪→禾木→布尔津</div><div class="font-bold text-blue-700">44+160km / 4.5h</div></div>
+      <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">阿勒泰→禾木（阿禾公路G681）<span class="text-red-500 font-bold">需预约·9:30放行</span></div><div class="font-bold text-blue-700">约209km / 3h</div></div>
+      <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">禾木→贾登峪 + 贾登峪→喀纳斯→布尔津</div><div class="font-bold text-blue-700">44+160km / 4h</div></div>
       <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">布尔津→克拉玛依</div><div class="font-bold text-blue-700">320km / 4-5h</div></div>
       <div class="card p-3 text-center border-l-4 border-red-600 bg-red-50/50"><div class="text-xs text-gray-400">克拉玛依→赛里木湖→温泉县⚠️最长</div><div class="font-bold text-red-600">约511km / 7-8h</div></div>
-      <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">温泉县→伊宁（经赛里木湖）</div><div class="font-bold text-orange-700">220km / 3h</div></div>
-      <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">伊宁→特克斯</div><div class="font-bold text-orange-700">130km / 2h</div></div>
+      <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">温泉县→赛里木湖（晨游·凭票再入）</div><div class="font-bold text-orange-700">61km / 1h</div></div>
+      <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">赛里木湖→特克斯（经果子沟）</div><div class="font-bold text-orange-700">160km / 2.5h</div></div>
       <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">特克斯→喀拉峻</div><div class="font-bold text-orange-700">45km / 1h</div></div>
       <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">特克斯→巴音布鲁克（途经那拉提）<span class="text-red-500 font-bold">那拉提后独库中段·需预约</span></div><div class="font-bold text-orange-700">355km / 7h</div></div>
       <div class="card p-3 text-center border-l-4 border-emerald-600 bg-emerald-50/50"><div class="text-xs text-gray-400">巴音布鲁克→独山子（独库中段+北段）<span class="text-red-500 font-bold">需预约</span></div><div class="font-bold text-emerald-700">310km / 7h</div></div>
@@ -398,39 +398,39 @@ const ITINERARY_DATA = [
     ],
     hotelDay:2, tickets:'无', ticketsPrice:0, altitude:735, temperature:'16°C ~ 30°C', feel:'戈壁昼夜温差大，白天暴晒需重防晒，早晚薄外套' },
 
-  { day:3, title:'阿勒泰 → 喀纳斯三湾 → 贾登峪·山舍别墅', segment:'north', tight:'⚠️ 长途后当天游喀纳斯：先游后入住，喀纳斯区间车往返约4h很耗时，三湾走精华段、观鱼台视体力二选一详游，别贪全，并留意末班区间车时间，游览完后办理入住',
-    image:'images/day4-kanas-moonbay.png',
-    desc:'上午早点自驾从阿勒泰前往喀纳斯门户贾登峪（约250km、经布尔津上山）。这段"经布尔津上山"的S232沿线风景在线、不算纯赶路：先过布尔津县城（五彩滩就在城旁，留待明晚D4看日落最美），再顺着额尔齐斯河谷经冲乎尔白桦林、阿贡盖提草原石人一路上行，车窗即景、可择机停车拍照。私家车停在贾登峪换乘中心停车场（6-7月旺季景区禁止私家车驶入）。由于车停在换乘中心不动、别墅又紧邻换乘中心，抵达后不必先办入住——行李直接留在车上，简单午餐后轻装换乘区间车进喀纳斯核心。要留意喀纳斯很大、区间车往返就要约4h，下午游玩重在"精"：三湾走神仙湾—月亮湾—卧龙湾精华木栈道段，观鱼台视体力与时间决定是否登顶，不必强求全部走遍。傍晚游玩结束返回贾登峪，再到旁边的喀纳斯贾登峪山与山舍别墅办理入住、从车上取行李，别墅依山而建、独立卫浴；晚餐后在几乎无光污染的阿尔泰山夜空下静享山谷星空，中午省去办入住的折腾、游玩时间更从容。',
-    highlight:'喀纳斯三湾 | 观鱼台全景 | 贾登峪山舍别墅 | 山谷星空', playTime:'全天', drive:'阿勒泰→贾登峪 约250km/4.5h（经布尔津上山）',
+  { day:3, title:'阿勒泰 →〔阿禾公路〕禾木·童话木屋村 → 贾登峪·山舍别墅', segment:'north', tight:'⚠️ 阿禾公路需预约：仅限7座及以下（两台GL8符合），旺季约9:30才放行、山区窄路弯多临崖需慢行；下午从容玩禾木，傍晚回撤44km住贾登峪，为D4进喀纳斯卡位',
+    image:'images/day3-hemu-village.png',
+    desc:'上午从阿勒泰经"神级自驾公路"阿禾公路（G681，全长约209km/3h）直插喀纳斯景区最北的禾木村——这条2024年才通车的生态公路，让阿勒泰到禾木无需再绕行布尔津，一路雪山草甸、临水临崖，公路本身就是风景。需提前在"新疆路网/原行网"小程序预约，仅限7座及以下车辆（两台别克GL8符合），旺季约9:30放行、分时段单向管控，山区窄路请两车结伴慢行。私家车停禾木门票站换乘区间车进村（约1h），下午从容漫步禾木桥、河畔白桦林与图瓦人木屋村落，登观景台俯瞰童话木屋村。傍晚换乘出村、取车往南回撤44km到贾登峪，入住喀纳斯贾登峪山与山舍别墅——别墅依山而建、独立卫浴，晚餐后在几乎无光污染的阿尔泰山夜空下静享山谷星空；今晚住门户贾登峪，正是为明早从门口第一时间进喀纳斯提前卡位。',
+    highlight:'阿禾公路自驾 | 禾木村漫步 | 图瓦人木屋 | 贾登峪山舍别墅', playTime:'全天', drive:'阿勒泰→禾木 阿禾公路约209km/3h + 禾木→贾登峪 44km/1h',
     timeline:[
-      { time:'07:30', text:'阿勒泰早点出发，自驾前往喀纳斯门户贾登峪（约250km/4.5h，经布尔津上山、服务区休整）' },
-      { time:'12:00', text:'抵达贾登峪，私家车停入换乘中心停车场（行李暂留车上、暂不办入住）' },
-      { time:'12:00-12:40', text:'换乘中心简单午餐/备干粮，轻装准备进山（早到多留出下午游玩余量）' },
-      { time:'12:40', text:'换乘景区区间车进喀纳斯核心（进山单程约1h，票价含在门票内）' },
-      { time:'13:40-16:30', text:'游览三湾精华段：神仙湾、月亮湾、卧龙湾木栈道徒步' },
-      { time:'16:30-18:30', text:'登观鱼台俯瞰喀纳斯湖全貌（视体力决定是否登顶，傍晚光线柔和）' },
-      { time:'18:30', text:'留意末班区间车，坐车返回贾登峪（旺季末班通常20:00后，仍留足缓冲）' },
-      { time:'19:30', text:'到山与山舍别墅办理入住、从车上取行李，别墅晚餐、品尝当地菜' },
+      { time:'08:30', text:'阿勒泰早点出发，前往阿禾公路小东沟检查站（提前备好预约码）' },
+      { time:'09:30', text:'阿禾公路放行进入（旺季约9:30开闸，两车结伴、山路弯多慢行）' },
+      { time:'12:30', text:'抵达禾木门票站，私家车停游客中心停车场' },
+      { time:'12:30-13:00', text:'门票站简餐/备干粮，换乘景区区间车进禾木村（约1h，票价含门票内）' },
+      { time:'13:30-16:30', text:'禾木村从容游览：禾木桥、白桦林徒步、图瓦人木屋村落、观景台俯瞰' },
+      { time:'16:30', text:'换乘区间车出村、取车，往南回撤前往贾登峪（44km/1h）' },
+      { time:'18:00', text:'抵达贾登峪，到山与山舍别墅办理入住、别墅晚餐、品尝当地菜' },
       { time:'21:00', text:'贾登峪山谷观星，阿尔泰山无光污染夜空（别墅旁步行可达，无需接驳）' },
     ],
-    hotelDay:3, tickets:'喀纳斯¥160+区间车¥70+观鱼台¥20', ticketsPrice:250, altitude:1390, temperature:'8°C ~ 24°C', feel:'山间清凉舒适，早晚需薄外套，白天短袖足够' },
+    hotelDay:3, tickets:'禾木¥50+区间车¥52', ticketsPrice:102, altitude:1390, temperature:'8°C ~ 24°C', feel:'山间清凉舒适，早晚需薄外套，白天短袖足够' },
 
-  { day:4, title:'贾登峪 → 禾木·童话木屋村 → 布尔津·五彩滩日落', segment:'north', tight:'⚠️ 一天串两景：上午游禾木、午后赶到布尔津看五彩滩日落',
-    image:'images/day3-hemu-village.png',
-    desc:'早上从贾登峪出发，一路下山顺道游禾木——私家车停禾木门票站换乘区间车进村，漫步禾木桥、白桦林与图瓦人木屋村落，登观景台俯瞰晨雾中的童话木屋村。午后驱车前往布尔津县城，赶在日落前抵达五彩滩——额尔齐斯河畔的彩色丘陵在夕阳下如打翻的调色盘。',
-    highlight:'禾木村漫步 | 图瓦人木屋 | 禾木桥 | 五彩滩日落', playTime:'全天', drive:'贾登峪→禾木 44km/1h + 禾木→布尔津 160km/3.5h（山路限速押车）',
+  { day:4, title:'贾登峪 → 喀纳斯三湾观鱼台 → 布尔津·五彩滩日落', segment:'north', tight:'⚠️ 一天串两景：一早从门口进喀纳斯玩透三湾观鱼台，下午下山160km赶布尔津看五彩滩日落；喀纳斯区间车往返约4h较耗时，建议15:00前下山发车',
+    image:'images/day4-kanas-moonbay.png',
+    desc:'今晚要赶到布尔津看五彩滩日落，好在昨晚就住在门户贾登峪，一早从门口第一时间进喀纳斯、拿到最佳游玩时段。私家车停贾登峪换乘中心停车场（旺季景区禁止私家车驶入），轻装换乘区间车进核心（进山单程约1h）。上午重点玩透三湾——神仙湾、月亮湾、卧龙湾精华木栈道段，再登观鱼台俯瞰喀纳斯湖全貌。喀纳斯很大、区间车往返就要约4h，玩到下午取车下山，沿额尔齐斯河谷经冲乎尔白桦林一路南下160km到布尔津县城，赶在日落前抵达五彩滩——额尔齐斯河畔的彩色丘陵在夕阳下如打翻的调色盘，晚上回县城河堤夜市晚餐。',
+    highlight:'喀纳斯三湾 | 观鱼台全景 | 五彩滩日落 | 额河夜市', playTime:'全天', drive:'贾登峪→喀纳斯换乘 + 喀纳斯→布尔津 160km/3h（山路限速押车）',
     timeline:[
-      { time:'08:00', text:'贾登峪出发前往禾木门票站（44km/1h），私家车停游客中心停车场' },
-      { time:'09:00', text:'换乘景区区间车进禾木村（约1h，票价含在门票内）' },
-      { time:'10:00-12:30', text:'禾木村游览：禾木桥、白桦林徒步、图瓦人木屋村落、观景台俯瞰' },
-      { time:'12:30-13:30', text:'换乘出村、村口午餐（品尝图瓦人家常菜）' },
-      { time:'13:30', text:'驱车前往布尔津县城（160km/3.5h，山路限速押车），赶在日落前抵达' },
+      { time:'07:30', text:'贾登峪早餐后，私家车停换乘中心停车场，轻装准备进山（早进多留下山余量）' },
+      { time:'08:00', text:'换乘景区区间车进喀纳斯核心（进山单程约1h，票价含在门票内）' },
+      { time:'09:00-11:30', text:'游览三湾精华段：神仙湾、月亮湾、卧龙湾木栈道徒步' },
+      { time:'11:30-13:30', text:'登观鱼台俯瞰喀纳斯湖全貌（视体力决定是否登顶，光线通透）' },
+      { time:'14:00', text:'坐区间车返回贾登峪、取车下山（尽量15:00前发车，日落前留足缓冲）' },
+      { time:'14:30', text:'驱车前往布尔津县城（160km/3h，山路限速押车），赶在日落前抵达' },
       { time:'17:30', text:'抵达布尔津，入住+简单洗漱' },
       { time:'20:30', text:'驱车前往五彩滩景区' },
       { time:'21:00-21:30', text:'五彩滩日落观赏（当日日落约21:30）' },
       { time:'22:00', text:'返回县城河堤夜市晚餐、休息' },
     ],
-    hotelDay:4, photoTime:'日落前1小时（五彩滩光线最佳）', tickets:'禾木¥50+区间车¥52+五彩滩¥50', ticketsPrice:152, altitude:480, temperature:'15°C ~ 30°C', feel:'河谷午后炎热，傍晚看日落风大需薄外套' },
+    hotelDay:4, photoTime:'日落前1小时（五彩滩光线最佳）', tickets:'喀纳斯¥160+区间车¥70+观鱼台¥20+五彩滩¥50', ticketsPrice:300, altitude:480, temperature:'8°C ~ 30°C', feel:'喀纳斯山间清凉需薄外套，布尔津河谷傍晚看日落风大' },
 
   { day:5, title:'布尔津 → 克拉玛依·世界魔鬼城', segment:'north',
     image:'images/day5-devil-city.png',
@@ -462,20 +462,22 @@ const ITINERARY_DATA = [
     ],
     hotelDay:6, photoTime:'午后16:00-18:00赛里木湖湖畔金色光线', tickets:'赛里木湖¥145', ticketsPrice:145, altitude:1350, temperature:'12°C ~ 26°C', feel:'赛湖畔风大偏凉需薄外套；温泉县海拔较低夜间较舒适' },
 
-  { day:7, title:'温泉县 → 伊宁（路过）→ 特克斯 → 喀拉峻草原', segment:'south', tight:'⚠️ 合并日：温泉县早退+约230km驾驶到特克斯，伊宁仅午餐路过、下午主玩喀拉峻，晚餐后可登塔看特克斯八卦城夜景',
+  { day:7, title:'温泉县 → 赛里木湖晨游 → 特克斯 → 喀拉峻草原', segment:'south', tight:'⚠️ 抓早高效日：清晨泡汤后回赛湖趁人少、湖静、光线好深度环湖，中午再启程赶特克斯，下午玩喀拉峻、晚饭后登塔看八卦城夜景',
     image:'images/day7-tekes-bagua-city.png',
-    desc:'今天把原来分两天的伊犁段压成一天：清晨在温泉县隆泉圣缘山酒店吃口早餐、泡个晨汤就退房，经温赛快速通道过赛里木湖趁早赶路返回伊宁。中午在伊宁吃顿正宗伊犁菜，饭后不进景区、只沿喀赞其蓝色小镇与伊犁河边开车绕看一圈感受河谷烟火气，随后驱车前往世界唯一的八卦城——特克斯，登观景台俯瞰全城如易经八卦布局。下午重头戏是喀拉峻大草原（今日主角），欣赏"人体草原"独特曲线、漫步五花草甸，草原区间车末班20:30、天黑晚，傍晚时间充裕。晚上入住八卦城中心旁的颐爻酒店，晚餐后可步行登50余米高的八卦观光塔，俯瞰64条街巷灯火交织如悬浮罗盘的夜景。',
-    highlight:'温泉县晨汤 | 伊宁·喀赞其(车观路过) | 八卦城全景 | 喀拉峻人体草原 | 晚饭后登塔看八卦城夜景', playTime:'全天（合并日）', drive:'温泉县→伊宁 220km/3h →特克斯 130km/2h →喀拉峻 45km/1h（全天约395km）',
+    desc:'昨晚特意住温泉县，正是为了今早能睡饱、泡个晨汤后，赶在旅行团抵达前重返赛里木湖——清晨湖面平静如镜、光线通透，雪山倒影与湛蓝湖水远胜D6傍晚长途后的匆匆一瞥，是全程拍赛湖的黄金时段。经温赛快速通道约1h回到湖区（凭D6门票24h内可再次进入、无需重复购票），从容自驾环湖精华段：月亮湾、点将台、天鹅小镇观蓝湖雪山、湖畔草甸拍照。午后从南门方向出景区、赶往世界唯一的八卦城——特克斯（约160km/2.5h），登观景台俯瞰全城如易经八卦布局。傍晚游今日另一主角喀拉峻大草原，欣赏"人体草原"独特曲线、漫步五花草甸，草原天黑晚、区间车末班20:30兜底。晚上入住八卦城中心旁的颐爻酒店，晚餐后步行登50余米高的八卦观光塔，俯瞰64条街巷灯火交织如悬浮罗盘的夜景。',
+    highlight:'温泉县晨汤 | 赛里木湖晨光深度环湖 | 八卦城全景 | 喀拉峻人体草原 | 晚饭后登塔看八卦城夜景', playTime:'全天', drive:'温泉县→赛里木湖 61km/1h →特克斯 160km/2.5h →喀拉峻 45km/1h（全天约265km）',
     timeline:[
-      { time:'08:30', text:'温泉县酒店早餐/泡晨汤后退房，经温赛通道过赛里木湖回伊宁午餐（220km/3h）' },
-      { time:'11:40', text:'饭后沿喀赞其蓝色小镇、伊犁河开车绕看一圈（不进景区、车观路过约20min）后前往特克斯（130km/2h）' },
-      { time:'14:00', text:'抵达特克斯，登八卦城观景台俯瞰全城布局（约0.5h）' },
-      { time:'14:30', text:'驱车前往喀拉峻草原（45km/1h）' },
-      { time:'15:30-19:00', text:'喀拉峻人体草原、五花草甸、猎鹰台游览（今日主角，末班车20:30兜底）' },
-      { time:'19:30', text:'回特克斯入住颐爻酒店，晚餐' },
+      { time:'07:30', text:'温泉县酒店泡晨汤、早餐后退房，经温赛快速通道重返赛里木湖（61km/1h）' },
+      { time:'08:30-11:30', text:'赛里木湖晨光深度环湖：月亮湾、点将台、湖畔草甸，拍雪山倒影（凭D6门票可再入）' },
+      { time:'11:30-12:30', text:'湖畔简餐/备干粮，从南门方向出景区（错峰避开午后环湖车流）' },
+      { time:'12:30', text:'驱车前往世界唯一八卦城特克斯（约160km/2.5h，途经果子沟大桥车观）' },
+      { time:'15:00', text:'抵达特克斯，登八卦城观景台俯瞰全城布局（约0.5h）' },
+      { time:'15:30', text:'驱车前往喀拉峻草原（45km/1h）' },
+      { time:'16:30-19:30', text:'喀拉峻人体草原、五花草甸、猎鹰台游览（末班车20:30兜底，天黑晚不赶）' },
+      { time:'20:00', text:'回特克斯入住颐爻酒店，晚餐' },
       { time:'21:30-22:30', text:'饭后步行登八卦观光塔，俯瞰八卦城亮灯夜景（8月天黑晚，此时华灯初上·更震撼）' },
     ],
-    hotelDay:7, photoTime:'傍晚喀拉峻草原光线+夜晚22:00后八卦城亮灯', tickets:'喀拉峻¥275（全域游）+八卦观光塔¥30', ticketsPrice:305, altitude:2000, temperature:'11°C ~ 27°C', feel:'草原早晚清凉，中午日晒强，需薄外套+防晒；夜登观光塔更凉，加件外套' },
+    hotelDay:7, photoTime:'清晨08:30-11:00赛里木湖雪山倒影+夜晚22:00后八卦城亮灯', tickets:'赛里木湖凭D6票再入¥0+喀拉峻¥275（全域游）+八卦观光塔¥30', ticketsPrice:305, altitude:2071, temperature:'10°C ~ 27°C', feel:'赛湖清晨湖畔风大偏凉需外套；喀拉峻中午日晒强、夜登观光塔更凉需加外套' },
 
   { day:8, title:'特克斯 → 途经那拉提 → 巴音布鲁克', segment:'south', tight:'⚠️ 全天355km/7h长途转场，且需确认独库中段（那拉提↔巴音布鲁克）已在预约通行范围内',
     image:'images/day8-bayanbulak-sunset.png',
@@ -509,7 +511,7 @@ const ITINERARY_DATA = [
     hotelDay:9, photoTime:'全天（独库公路光影变化万千）', tickets:'独库公路 免费，独山子大峡谷¥60', ticketsPrice:60, altitude:3300, temperature:'5°C ~ 20°C（达坂更冷）', feel:'达坂路段寒冷需厚外套，下山后转暖' },
 
   { day:10, title:'独山子 → 乌鲁木齐大巴扎还车 → 打车转机场分头返程', segment:'south', tight:'⚠️ 还车+转场机场+分批登机：上午务必赶在12:00前到大巴扎服务点还车，还车后需打车约25km转机场',
-    image:'images/day10-urumqi-return.png',
+    image:'images/day10-urumqi-return.webp',
     desc:'上午从独山子出发前往乌鲁木齐，按神州订单需在 12:00 前把两辆别克GL8还回·新疆国际大巴扎服务点（与出发日取车同一网点、位于天山区市中心）。还车后打车约25km前往乌鲁木齐机场，机场附近简单午餐后，武汉、深圳、上海三地队伍分别搭乘各自的返程航班，结束这场跨越北疆与伊犁两大地貌的10天旅程。',
     highlight:'大巴扎12:00前还车 | 打车转机场约25km | 分头返程', playTime:'半天+登机', drive:'独山子→乌鲁木齐大巴扎 260km/3h + 大巴扎→机场约25km',
     flightInfo:[
@@ -556,10 +558,10 @@ const HOTEL_DATA = [
     img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/6da45bae-bcbd-4e88-a2c6-3001199ed97a/image_1783518984_1_1.jpg',
     rating:{ hygiene:4.6, service:4.6, location:4.8, feature:4.7 },
     standard:'贾登峪是进出喀纳斯核心景区的门户与换乘基地，山与山舍别墅依山而建、原木山居风格，客房配独立卫浴+24h热水，是贾登峪片区口碑与卫生较稳定的度假别墅，比景区内公共卫浴的家庭客栈更适合带老人小孩的10大2小团队；本次预订2间套房+1间大床房+2间双床房共5间。',
-    reason:'就住喀纳斯换乘中心旁，当天下午即可换乘区间车进核心景区游三湾观鱼台，傍晚返回别墅静享山谷星空，无需像住禾木/布尔津那样每天长途接驳；紧邻换乘中心、行李搬运方便，是"上山到底、进出最便利"的选择。',
+    reason:'紧邻喀纳斯换乘中心，D3走阿禾公路玩完禾木后回撤44km到此落脚，第二天一早就能从门口第一时间进核心景区游三湾观鱼台、拿到最佳游玩时段，无需像住布尔津那样清早长途赶路；行李搬运方便，是"进出喀纳斯最便利、承上启下"的门户选择。',
     compare:[
-      { name:'禾木村内民宿', desc:'村内体验好但离喀纳斯核心还有44km，串喀纳斯+禾木两景需多绕路，行李接驳更折腾' },
-      { name:'布尔津县城酒店', desc:'县城补给足但离喀纳斯130km，当天难从容游三湾观鱼台，赶景区区间车末班压力大' },
+      { name:'禾木村内民宿', desc:'村内能看清晨河谷晨雾，但离喀纳斯核心还有44km，次日进喀纳斯要多绕路、行李接驳更折腾' },
+      { name:'布尔津县城酒店', desc:'县城补给足但离喀纳斯130km，次日清早长途赶路才能进景区，从容游三湾观鱼台压力大' },
     ] },
   { day:4, city:'布尔津', name:'布尔津叁旬·观景酒店(额尔齐斯河店)', brand:'当地精品·额河观景酒店', phone:'以携程/官方平台预订为准', addr:'新疆阿勒泰地区布尔津县额尔齐斯河畔（近河堤景观带）', price:'¥600-900/晚（河景房）',
     img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/1c6da8c0-9ff7-4598-a440-184ea5d05c22/image_1783519557_1_1.jpg',
@@ -568,7 +570,7 @@ const HOTEL_DATA = [
     reason:'紧邻额尔齐斯河，河景房推窗即是河堤景观带；看完五彩滩日落返程车程最短，前台熟悉五彩滩最佳观景机位与日落时间，是当前布尔津县城内主打河景、能核实到的较好选择。',
     compare:[
       { name:'河堤附近经济型酒店', desc:'价格便宜但房间陈旧、隔音效果差，10人团休息质量一般' },
-      { name:'禾木村内过夜', desc:'村内体验好但从禾木赶到五彩滩仍需160km，且D3已住贾登峪门户，D4顺路下山看日落更从容' },
+      { name:'禾木村内过夜', desc:'村内体验好但D3已在禾木游玩、当晚住贾登峪门户，D4玩完喀纳斯顺势下山160km看五彩滩日落更从容' },
     ] },
   { day:5, city:'克拉玛依', name:'克拉玛依一号井汇源路亚朵酒店(V3.6)', brand:'亚朵·全国连锁舒适型', phone:'以携程/官方平台预订为准', addr:'新疆克拉玛依市克拉玛依区汇源路（近克一号井·黑油山地标）', price:'¥450-650/晚',
     img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/2f41a9d0-75be-47a6-91a5-41ed48bb1d45/image_1783519773_2_3.jpg',
@@ -583,7 +585,7 @@ const HOTEL_DATA = [
     img:'https://zhiyan-ai-agent-with-1258344702.cos.ap-guangzhou.tencentcos.cn/with/457c0233-04d9-4446-a798-e7187b1ddafa/image_1783520725_1_1.jpg',
     rating:{ hygiene:4.7, service:4.7, location:4.6, feature:4.8 },
     standard:'温泉县是"中国温泉之乡"，全县上百处天山雪水地热泉眼。隆泉圣缘山酒店坐落于温泉县山势高处、依山而建，落地窗可揽山体林茂，自带温泉洗浴，是当地口碑靠前的温泉度假酒店；本次预订5间豪华大床房、含早，长途与草原之后泡一泡温泉正好放松。',
-    reason:'游完赛里木湖后经温赛快速通道北上约61km即到，比在湖畔风口硬扛一夜更舒适；酒店温泉可舒缓连日长途与草原徒步的疲惫，含早、房型规整，次日经赛里木湖返伊宁也顺路，是这一晚"泡温泉放松"的选择。',
+    reason:'游完赛里木湖后经温赛快速通道北上约61km即到，比在湖畔风口硬扛一夜更舒适；酒店温泉可舒缓连日长途疲惫，含早、房型规整。最妙的是次日睡饱、泡个晨汤就能重返赛湖，赶在旅行团抵达前拍清晨雪山倒影，是这一晚"泡温泉放松+次日晨游赛湖"的最佳落脚点。',
     compare:[
       { name:'赛里木湖畔住宿', desc:'湖景近但海拔2071m、湖畔风大夜里冷，且房价偏高，长途后休息与泡汤体验不如温泉县' },
       { name:'博乐市区高星酒店', desc:'补给足但无温泉主题，且离赛里木湖比温泉县线路更绕，温赛通道到温泉县更省时' },
@@ -619,7 +621,7 @@ const HOTEL_DATA = [
 
 // ===== 酒店预订汇总表：仅记录已确认的预订详情，其余天数视为「待预订」 =====
 const BOOKING_STATUS = {
-  1: { checkin:'8月1日', room:'5间行政大床房', price:'¥583 x 5', breakfast:'含10大2小早餐', roomcode:'李翔557723 | 黄玉杰 668022 | 刘雨一 936651 | 程龙 344674 | 陈鹏远 631154', note:'已全款支付' },
+  1: { checkin:'8月1日', room:'5间行政大床房', price:'¥583 x 5', breakfast:'含10大2小早餐', note:'已全款支付' },
   2: { checkin:'8月2日', room:'5间高级大床房', price:'¥428 x5', breakfast:'含10大2小早餐', note:'已付¥500定金，余款前台现付；提前7天取消定金可退' },
   3: { name:'喀纳斯贾登峪山与山舍别墅', phone:'以携程/官方平台预订为准', checkin:'8月3日', room:'2间套房 + 1间大床房 + 2间双床房', price:'¥680 x5 · 已付¥500定金|余款前台现付|提前10天免费退定 · 不含早' },
   4: { checkin:'8月4日', room:'2间河景圆床房 + 1楼3间大床房', price:'¥2,500（5间总房费）', note:'已付定金¥500；提前3天免费退改退定金；入住当天退改扣80%' },
@@ -654,7 +656,6 @@ function renderBookingTable() {
              ? `<span class="text-gray-700">${b.summary}</span>`
              : `<span class="text-gray-700">${b.checkin}入住 · ${b.room}</span>
            <span class="text-gray-500 text-xs">${b.price}${b.breakfast ? ' · ' + b.breakfast : ''}</span>
-           ${b.roomcode ? `<span class="text-gray-500 text-xs"><span class="text-gray-400">同住码 </span>${b.roomcode}</span>` : ''}
            ${b.note ? `<span class="text-gray-400 text-xs">${b.note}</span>` : ''}
            ${Array.isArray(b.details) && b.details.length ? `<div class="mt-1 flex flex-col gap-0.5 border-t border-gray-100 pt-1.5">${b.details.map(d => `<span class="text-gray-500 text-xs"><span class="text-gray-400">${d.label}：</span>${d.value}</span>`).join('')}</div>` : ''}`}
          </div>`
@@ -758,7 +759,17 @@ function renderFood() {
     </div>`).join('');
 }
 
-// ===== 出行贴士数据（独库预约红色警示 + 11大详细分类，成人/儿童双重覆盖）=====
+// ===== 出行贴士数据（阿禾公路 + 独库公路 双红色警示 + 11大详细分类，成人/儿童双重覆盖）=====
+const TIPS_ALERT_HEMU = {
+  items:[
+    '预约路段：G681阿禾公路（禾木公路，阿勒泰↔禾木，Day3必经）2024年通车，旺季实行预约制/分时段管控通行，未预约或不在放行时段进入可能被劝返，需提前锁定当日名额',
+    '车辆要求：仅限7座及以下小型客车通行，2辆别克GL8符合条件；7座以上客车、大巴、危化品车、挂车等均不允许驶入，与独库公路口径一致',
+    '预约方式：提前通过"新疆路网"公众号/小程序或"原行网"（阿勒泰当地预约平台）网上预约，选择阿勒泰→禾木方向与出行日期，锁定当天名额',
+    '预约时机：务必在出发前1-3天完成预约，7-8月旺季名额紧张，建议出行前多刷新几次，避免当天到检查站才发现无名额、耽误全天行程',
+    '通行时段：旺季约9:30才放行、分时段单向管控（上午以进山为主），务必据此安排出发时间，别太早到检查站空等，也别太晚错过放行窗口',
+    '路况安全：全程山区三/四级路、弯多坡陡临水临崖，GL8底盘偏低需减速慢行、两车结伴；出发前加满油（沿途几乎无加油站），遇暴雨/塌方等临时管制以现场交管为准',
+  ]
+};
 const TIPS_ALERT = {
   items:[
     '预约路段：G217独库公路中段（那拉提↔巴音布鲁克，Day8必经）+ 北段（那拉提↔乔尔玛↔独山子，Day9必经）均实行预约制通行，未预约车辆禁止通行，两段都要确认在预约范围内',
@@ -843,7 +854,7 @@ const TIPS_DATA = [
   ] },
   { icon:'fa-ticket', title:'门票、餐饮与住宿建议', items:[
     '喀纳斯、禾木、喀拉峻等景区门票+区间车需分开购买，建议提前在官方渠道或携程等平台预订',
-    '伊宁为合并日午餐+车观路过，不安排喀赞其马车；八卦城夜景需登观光塔俯瞰（约¥30），8月约22:00后亮灯最佳，独库公路本身免费通行（预约不收费）',
+    'D7早上重返赛里木湖晨游（凭D6门票24h内可再入、无需重复购票），为保赛湖+喀拉峻不再绕行伊宁市区；八卦城夜景需登观光塔俯瞰（约¥30），8月约22:00后亮灯最佳，独库公路本身免费通行（预约不收费）',
     '团队人数较多，建议提前联系餐厅预留桌位（尤其巴音布鲁克镇烤全羊、手抓肉等需预定的团队菜品）',
     '旅游旺季（7-8月）酒店紧张，务必提前锁定房间，本攻略已提供9晚酒店电话可直接确认',
     '入住前电话确认停车位是否充足，2辆别克GL8需提前沟通车位',
@@ -853,6 +864,13 @@ function renderTips() {
   const alertEl = document.getElementById('tipsAlertContainer');
   if (alertEl) {
     alertEl.innerHTML = `
+      <div class="tips-alert-banner fade-up" style="margin-bottom:16px;">
+        <span class="badge"><i class="fa-solid fa-triangle-exclamation"></i>Day3 阿禾公路（禾木公路）必读</span>
+        <h4><i class="fa-solid fa-road mr-1"></i>阿禾公路（禾木公路）旺季实行预约/分时段管控通行，务必提前预约！</h4>
+        <ul>
+          ${TIPS_ALERT_HEMU.items.map(i => `<li><i class="fa-solid fa-circle-exclamation"></i><span>${i}</span></li>`).join('')}
+        </ul>
+      </div>
       <div class="tips-alert-banner fade-up">
         <span class="badge"><i class="fa-solid fa-triangle-exclamation"></i>Day9-10 独库中段+北段必读</span>
         <h4><i class="fa-solid fa-road mr-1"></i>独库公路中段+北段现已实行预约制通行，未预约车辆禁止通行！</h4>
