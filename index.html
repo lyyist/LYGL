@@ -100,7 +100,7 @@
   .tip-card.critical { border:2px solid #fca5a5; background:linear-gradient(180deg,#fef2f2,#ffffff); }
   .tip-card.critical .tip-icon-box { background:#fee2e2; color:#dc2626; }
   .tip-icon-box { width:44px; height:44px; border-radius:12px; background:#eef4fb; color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
-  @media (max-width: 768px) { .section-title { font-size: 1.5rem; } }
+  @media (max-width: 768px) { .section-title { font-size: 1.5rem; } .hero-section { min-height: 65vh; } }
 </style>
 </head>
 <body>
@@ -135,7 +135,8 @@
 <!-- HERO -->
 <section class="hero-section relative">
   <picture>
-    <source media="(max-width: 768px)" srcset="images/hero-xinjiang.webp" type="image/webp">
+    <source media="(max-width: 768px)" srcset="images/hero-m.webp" type="image/webp">
+    <source srcset="images/hero.webp" type="image/webp">
     <img class="hero-bg" src="images/hero-xinjiang.png" alt="北疆伊犁自驾风光" fetchpriority="high" decoding="async">
   </picture>
   <div class="relative z-10 text-center px-4 max-w-4xl">
