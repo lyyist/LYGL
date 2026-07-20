@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高清母版下载 · 北疆伊犁自驾</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+<style>
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  .card-img { aspect-ratio: 16 / 9; object-fit: cover; }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <header class="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-10 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h1 class="text-2xl md:text-3xl font-bold mb-3">
+        <i class="fa-solid fa-images text-orange-400 mr-2"></i>高清母版下载
+      </h1>
+      <p class="text-slate-300 text-sm md:text-base">超分辨率原图 · 共 <span class="text-orange-300 font-semibold">11</span> 张 · 约 <span class="text-orange-300 font-semibold">334 MB</span></p>
+      <div class="mt-6">
+        <button id="downloadAll" class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 active:scale-95 transition px-7 py-3 rounded-full font-medium shadow-lg shadow-orange-500/30">
+          <i class="fa-solid fa-download"></i> 一键全部下载
+        </button>
+        <p class="text-xs text-slate-400 mt-3 max-w-md mx-auto">若浏览器拦截多文件下载，请在弹窗中选择"允许"；也可逐张点击下方卡片的下载按钮。</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 w-full flex-1">
+    <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </main>
+
+  <footer class="text-center text-slate-400 text-sm py-8">
+    <p>由 <a href="https://with.woa.com/" style="color: #8A2BE2;" target="_blank">With</a> 通过自然语言生成</p>
+  </footer>
+
+  <script>
+    const files = [
+      { name: 'hero-xinjiang_hd.png',        thumb: 'hero-xinjiang.webp',        title: '首图 · 北疆伊犁风光',   size: '31.0 MB' },
+      { name: 'day2-junggar-gobi-road_hd.png', thumb: 'day2-junggar-gobi-road.webp', title: 'Day2 · 准噶尔戈壁公路', size: '28.3 MB' },
+      { name: 'day3-hemu-village_hd.png',    thumb: 'day3-hemu-village.webp',    title: 'Day3 · 禾木村',        size: '35.4 MB' },
+      { name: 'day4-kanas-moonbay_hd.png',   thumb: 'day4-kanas-moonbay.webp',   title: 'Day4 · 喀纳斯月亮湾',   size: '33.6 MB' },
+      { name: 'day5-devil-city_hd.png',      thumb: 'day5-devil-city.webp',      title: 'Day5 · 乌尔禾魔鬼城',   size: '29.9 MB' },
+      { name: 'day6-sayram-lake_hd.png',     thumb: 'day6-sayram-lake.webp',     title: 'Day6 · 赛里木湖',      size: '29.7 MB' },
+      { name: 'day7-tekes-bagua-city_hd.png', thumb: 'day7-tekes-bagua-city.webp', title: 'Day7 · 特克斯八卦城', size: '33.3 MB' },
+      { name: 'day8-bayanbulak-sunset_hd.png', thumb: 'day8-bayanbulak-sunset.webp', title: 'Day8 · 巴音布鲁克日落', size: '24.5 MB' },
+      { name: 'day9-nalati-grassland_hd.png', thumb: 'day9-nalati-grassland.webp', title: 'Day9 · 那拉提草原',    size: '32.3 MB' },
+      { name: 'day10-urumqi-return_hd.png',  thumb: 'day10-urumqi-return.webp',  title: 'Day10 · 返程乌鲁木齐',  size: '24.4 MB' },
+      { name: 'day11-urumqi-bazaar_hd.png',  thumb: 'day11-urumqi-bazaar.webp',  title: 'Day11 · 乌鲁木齐大巴扎', size: '31.9 MB' }
+    ];
+
+    const grid = document.getElementById('grid');
+    grid.innerHTML = files.map(f => `
+      <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300 overflow-hidden border border-slate-100">
+        <img class="card-img w-full" src="images/${f.thumb}" alt="${f.title}" loading="lazy">
+        <div class="p-4">
+          <h3 class="font-semibold text-slate-800">${f.title}</h3>
+          <p class="text-xs text-slate-400 mt-1 break-all">${f.name}</p>
+          <div class="flex items-center justify-between mt-3">
+            <span class="text-xs text-slate-500"><i class="fa-solid fa-hard-drive mr-1"></i>${f.size}</span>
+            <a href="images/${f.name}" download="${f.name}" class="inline-flex items-center gap-1.5 bg-slate-800 hover:bg-slate-900 text-white text-sm px-4 py-2 rounded-lg transition">
+              <i class="fa-solid fa-download"></i> 下载
+            </a>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    document.getElementById('downloadAll').addEventListener('click', () => {
+      files.forEach((f, i) => {
+        setTimeout(() => {
+          const a = document.createElement('a');
+          a.href = 'images/' + f.name;
+          a.download = f.name;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        }, i * 900);
+      });
+    });
+  </script>
+</body>
+</html>

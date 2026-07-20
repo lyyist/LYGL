@@ -76,6 +76,14 @@
   .day-infobar-row .sep { color: rgba(255,255,255,0.28); }
   /* 分区6：体感提示 */
   .day-sec-feel { display:flex; align-items:center; gap:7px; font-size: 12px; color: rgba(255,255,255,0.75); text-shadow:0 1px 4px rgba(0,0,0,0.5); }
+  /* 分区：堵点错峰技巧（红字小节） */
+  .day-jam-box { background: rgba(220,38,38,0.16); border: 1px solid rgba(248,113,113,0.55); border-left: 4px solid #f87171; border-radius: 12px; padding: 13px 16px; }
+  .day-jam-title { display:flex; align-items:center; gap:7px; font-size: 12.5px; font-weight: 800; color: #fca5a5; margin-bottom: 10px; text-shadow: 0 1px 5px rgba(0,0,0,0.6); letter-spacing:0.3px; }
+  .day-jam-title i { color: #f87171; }
+  .day-jam-list { display:flex; flex-direction:column; gap:8px; }
+  .day-jam-item { display:flex; gap:9px; font-size: 12.5px; line-height:1.65; color: #fecaca; text-shadow: 0 1px 5px rgba(0,0,0,0.75); font-weight:600; }
+  .day-jam-item i { color:#fca5a5; margin-top:3px; flex-shrink:0; font-size:11px; }
+  .day-jam-item b { color:#fff; font-weight:800; }
   @media (max-width: 768px) { .day-card-hero { min-height: 360px; } .day-card-body { padding: 20px 18px; } .day-title-hero { font-size: 1.2rem; } .day-num-badge { width:42px; height:42px; font-size:1.05rem; border-radius:12px; } }
   .budget-card { border: 2px solid transparent; transition: all 0.4s ease; }
   .plan-badge { display: inline-block; padding: 4px 14px; border-radius: 9999px; font-size: 13px; font-weight: 500; background: #e9ecef; color: #666; transition: all 0.3s; }
@@ -175,8 +183,8 @@
       <div class="divide-y divide-gray-100">
         <div class="flex items-center gap-3.5 px-5 py-3 hover:bg-blue-50/50 transition-colors">
           <span class="w-9 h-9 rounded-xl bg-blue-100 flex items-center justify-center text-lg shrink-0">🚗</span>
-          <div class="flex-1 min-w-0"><div class="font-semibold text-gray-800 text-sm">租车（8天，大巴扎取还）</div><div class="text-xs text-gray-400 mt-0.5">2×别克GL8（神州）¥6,247×2</div></div>
-          <div class="text-blue-700 font-bold text-base whitespace-nowrap">¥12,494</div>
+          <div class="flex-1 min-w-0"><div class="font-semibold text-gray-800 text-sm">租车（8.5天，大巴扎取·机场还）</div><div class="text-xs text-gray-400 mt-0.5">2×理想L8 max（2026款6座新车）下单价合计</div></div>
+          <div class="text-blue-700 font-bold text-base whitespace-nowrap">¥8,970</div>
         </div>
         <div class="flex items-center gap-3.5 px-5 py-3 hover:bg-blue-50/50 transition-colors">
           <span class="w-9 h-9 rounded-xl bg-amber-100 flex items-center justify-center text-lg shrink-0">⛽</span>
@@ -211,12 +219,12 @@
           <div class="text-xs text-gray-400 mt-0.5">不含大交通 · 人均分摊</div>
         </div>
         <div class="text-right">
-          <div class="text-blue-700 font-black text-3xl leading-none">~¥7,451</div>
+          <div class="text-blue-700 font-black text-3xl leading-none">~¥7,098</div>
           <div class="text-[11px] text-gray-400 mt-1">房费/租车已按实际预订</div>
         </div>
       </div>
       <!-- 脚注 -->
-      <div class="px-6 py-3 bg-gray-50 border-t border-gray-100 text-xs text-gray-400 leading-relaxed"><span class="font-semibold text-gray-500">10大2小，为5夫妻+2儿童</span><br>* 住宿按家庭核算，9晚实际预订房费合计¥23,605，每户¥4,721；<br>* 租车 | 油费 | 高速费 可按人均分摊，也可按实际使用分摊，具体看实际情况；<br>* 餐饮按人数均摊为估算值。</div>
+      <div class="px-6 py-3 bg-gray-50 border-t border-gray-100 text-xs text-gray-400 leading-relaxed"><span class="font-semibold text-gray-500">10大2小，为5夫妻+2儿童</span><br>* 住宿按家庭核算，9晚实际预订房费合计¥23,605，每户¥4,721；<br>* 租车（已换为2台理想L8 max·下单价合计¥8,970） | 油费 | 高速费 可按人均分摊，也可按实际使用分摊，具体看实际情况；<br>* 餐饮按人数均摊为估算值。</div>
     </div>
 
     <!-- Flight Info -->
@@ -247,7 +255,7 @@
     <!-- 酒店预订汇总表 -->
     <div class="card p-5 mt-5">
       <h3 class="font-serif font-bold text-lg text-blue-900 mb-1"><i class="fa-solid fa-clipboard-list mr-2"></i>各晚酒店预订&租车 一览</h3>
-      <p class="text-xs text-gray-400 mb-4 leading-relaxed">车已租，两台GL8；<br>取车 2026-08-02 09:00 新疆国际大巴扎服务点<br>还车 2026-08-10 09:00 新疆国际大巴扎服务点<br>¥6247 * 2</p>
+      <p class="text-xs text-gray-400 mb-4 leading-relaxed">车已换：两台<b class="text-gray-600">理想L8 max（2026款6座·新车）</b>；<br>取车 2026-08-02 10:00 乌鲁木齐大巴扎<br>还车 2026-08-10 14:00 乌鲁木齐天山国际机场<br>下单金额合计 ¥8,970（2台）<br>用车人：陈鹏远 / 程龙 · 联系电话：18038395611 / 15572726851</p>
       <div id="bookingTableContainer" class="overflow-x-auto"></div>
     </div>
   </div>
@@ -258,7 +266,7 @@
   <div class="max-w-7xl mx-auto px-4">
     <h2 class="section-title">路线概览</h2>
     <div class="section-divider"></div>
-    <p class="text-center text-gray-500 mb-6">8/1乌鲁木齐集结 → 8/10乌鲁木齐返程 · 全程约 3,095 公里 · 全程两辆别克GL8自驾 · 10大人2小孩</p>
+    <p class="text-center text-gray-500 mb-6">8/1乌鲁木齐集结 → 8/10乌鲁木齐返程 · 全程约 3,095 公里 · 全程两辆理想L8 max自驾 · 10大人2小孩</p>
     <!-- Route Flow -->
     <div class="hidden md:flex flex-wrap items-center justify-center gap-2 mb-6 text-xs md:text-sm">
       <span class="bg-slate-700 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🛫 武汉/上海/深圳飞乌鲁木齐</span>
@@ -274,7 +282,7 @@
       <span class="bg-amber-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">特克斯·喀拉峻 220km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
       <span class="bg-orange-500 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">巴音布鲁克 355km</span><i class="fa-solid fa-arrow-right text-emerald-500 text-xs"></i>
       <span class="bg-emerald-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">⚠️独库·独山子 320km</span><i class="fa-solid fa-arrow-right text-orange-400 text-xs"></i>
-      <span class="bg-rose-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🏁 乌鲁木齐还车 260km</span>
+      <span class="bg-rose-600 text-white px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">🏁 天山机场还车 280km</span>
       <span class="flight-badge mx-1"><i class="fa-solid fa-plane"></i> 分头返程</span>
     </div>
     <!-- 自驾行程简要文字介绍（北疆段+伊犁段合并为一段完整叙述） -->
@@ -287,8 +295,8 @@
         <span class="text-sm text-gray-400">草原·花海·雪山</span>
       </div>
       <p class="text-sm text-gray-600 leading-relaxed mb-3">
-        <span class="text-blue-700 font-semibold">北疆段：</span>8/1直飞乌鲁木齐后各自办理入住自由活动 → Day2早餐后集结、神州租车·新疆国际大巴扎服务点 取车验车加油，长途660km赶往阿勒泰 → Day3走"神级"阿禾公路直插禾木木屋村、傍晚回撤住喀纳斯门户贾登峪 → 次日一早从门口进喀纳斯游三湾观鱼台、当天下山赶布尔津看五彩滩日落 → 克拉玛依（途经乌尔禾魔鬼城）→ Day6克拉玛依长途450km游赛里木湖、再北上温泉县泡温泉，全程两辆别克GL8结伴同行，Day2/Day6为两大长途驾驶日；
-        <span class="text-orange-700 font-semibold">伊犁段：</span>温泉县泡晨汤后重返赛里木湖晨光深度环湖（凭前一日门票24h内再入）→ 南下特克斯八卦城 → 喀拉峻人体草原，晚餐后登八卦观光塔看亮灯夜景 → 途经那拉提草原（不进景区）走独库中段至巴音布鲁克，傍晚看九曲十八弯日落 → 独库中段+北段翻天山至独山子 → 乌鲁木齐还车后分头返程。
+        <span class="text-blue-700 font-semibold">北疆段：</span>8/1直飞乌鲁木齐后各自办理入住自由活动 → Day2早餐后集结、乌鲁木齐大巴扎取车点 取车验车、加油充电，长途660km赶往阿勒泰 → Day3走"神级"阿禾公路直插禾木木屋村、傍晚回撤住喀纳斯门户贾登峪 → 次日一早从门口进喀纳斯游三湾观鱼台、当天下山赶布尔津看五彩滩日落 → 克拉玛依（途经乌尔禾魔鬼城）→ Day6克拉玛依长途450km游赛里木湖、再北上温泉县泡温泉，全程两辆理想L8 max结伴同行，Day2/Day6为两大长途驾驶日；
+        <span class="text-orange-700 font-semibold">伊犁段：</span>温泉县泡晨汤后重返赛里木湖晨光深度环湖（凭前一日门票24h内再入）→ 南下特克斯八卦城 → 喀拉峻人体草原，晚餐后登八卦观光塔看亮灯夜景 → 途经那拉提草原（不进景区）走独库中段至巴音布鲁克，傍晚看九曲十八弯日落 → 独库中段+北段翻天山至独山子 → 乌鲁木齐天山国际机场还车后分头返程。
       </p>
       <div class="flex flex-wrap items-center gap-4 text-xs font-semibold">
         <span class="text-blue-700">🚗 北疆段自驾约 1,905km</span>
@@ -314,7 +322,7 @@
       <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">特克斯→喀拉峻</div><div class="font-bold text-orange-700">45km / 1h</div></div>
       <div class="card p-3 text-center border-l-4 border-orange-500 bg-orange-50/50"><div class="text-xs text-gray-400">特克斯→巴音布鲁克（途经那拉提）<span class="text-red-500 font-bold">那拉提后独库中段·需预约</span></div><div class="font-bold text-orange-700">355km / 7h</div></div>
       <div class="card p-3 text-center border-l-4 border-emerald-600 bg-emerald-50/50"><div class="text-xs text-gray-400">巴音布鲁克→独山子（独库中段+北段）<span class="text-red-500 font-bold">需预约</span></div><div class="font-bold text-emerald-700">310km / 7h</div></div>
-      <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">独山子→乌鲁木齐（走G30高速·当天还车）<span class="text-emerald-600 font-bold">无需预约</span></div><div class="font-bold text-blue-700">260km / 3h</div></div>
+      <div class="card p-3 text-center border-l-4 border-blue-600 bg-blue-50/50"><div class="text-xs text-gray-400">独山子→乌鲁木齐天山机场还车（走G30高速）<span class="text-emerald-600 font-bold">无需预约</span></div><div class="font-bold text-blue-700">约280km / 3.5h</div></div>
     </div>
   </div>
 </section>
@@ -381,27 +389,38 @@ const ITINERARY_DATA = [
       { time:'21:35', text:'上海CZ6996队、深圳CZ8924队陆续抵达并自行入住酒店' },
       { time:'22:30', text:'各队备齐次日干粮、早点休息（次日早上集结、取车后出发）' },
     ],
+    jam:[
+      '落地高峰：三队集中在15:50-21:45陆续到，行李转盘与出租/网约车上客区最堵，<b>先到的队伍别等人，各自打车进城</b>，到酒店群里报到即可',
+      '大巴扎人流：国际大巴扎晚间与周末最挤，<b>逛店挑19:00前或临近打烊时段</b>，把停车/打车点约在人民广场一侧更好上下客',
+      '错峰关键：今晚不取车、不排队，<b>把取车压力全部让给D2上午</b>，今晚重点是备齐干粮、早睡，反而是最省心的一天',
+    ],
     hotelDay:1, tickets:'无', ticketsPrice:0, altitude:800, temperature:'20°C ~ 33°C', feel:'温暖干燥，早晚微凉，正常夏装即可' },
 
   { day:2, title:'乌鲁木齐 → 大巴扎取车 → 阿勒泰⚠️长途660km', segment:'north', tight:'⚠️ 全程最长驾驶日之一：660km/8h，穿越准噶尔盆地',
     image:'images/day2-junggar-gobi-road.png',
-    desc:'今天是全程两大长途日之一。早餐后全队集结，前往神州租车·新疆国际大巴扎服务点提取2辆别克GL8（与D1住地同在天山区、就近取车更省时），验车、加满油后正式出发，沿G3014/G216穿越准噶尔盆地戈壁公路前往阿勒泰，途中服务区较少，务必在克拉玛依/北屯等节点加油、休整，两位司机轮换驾驶，避免疲劳驾驶，傍晚抵达阿勒泰市区。',
-    highlight:'早餐后集结取车 | 神州大巴扎取车 | 准噶尔盆地戈壁公路 | 长途穿越 | 阿勒泰市区休整', playTime:'全天（以驾驶为主）', drive:'乌鲁木齐→阿勒泰 660km/8h',
+    desc:'今天是全程两大长途日之一。早餐后全队集结，按10:00用车时间前往乌鲁木齐大巴扎取车点提取2辆理想L8 max（2026款6座新车，与D1住地同在天山区、就近取车更省时），验车、加满油/充满电后正式出发，沿G3014/G216穿越准噶尔盆地戈壁公路前往阿勒泰，途中服务区较少，务必在克拉玛依/北屯等节点加油、休整，两位司机轮换驾驶，避免疲劳驾驶，傍晚抵达阿勒泰市区。',
+    highlight:'早餐后集结取车 | 大巴扎10点取车 | 准噶尔盆地戈壁公路 | 长途穿越 | 阿勒泰市区休整', playTime:'全天（以驾驶为主）', drive:'乌鲁木齐→阿勒泰 660km/8h',
     timeline:[
-      { time:'08:30', text:'各队酒店吃完早餐、退房，就近前往神州·新疆国际大巴扎服务点集结' },
-      { time:'09:00', text:'大巴扎服务点提取2辆别克GL8，绕车拍视频验车、加满油' },
-      { time:'09:30', text:'两车结伴正式出发，沿G3014/G216穿越准噶尔盆地戈壁公路' },
-      { time:'12:00', text:'途经克拉玛依方向服务区，第一次休整加油' },
+      { time:'09:00', text:'各队酒店吃完早餐、退房，就近前往乌鲁木齐大巴扎取车点集结' },
+      { time:'10:00', text:'取车点提取2辆理想L8 max（2026款6座新车），绕车拍视频验车、加满油/充满电' },
+      { time:'10:30', text:'两车结伴正式出发，沿G3014/G216穿越准噶尔盆地戈壁公路' },
+      { time:'12:30', text:'途经克拉玛依方向服务区，第一次休整加油' },
       { time:'13:30', text:'沿途服务区午餐（自带干粮更灵活）' },
-      { time:'16:00', text:'途经北屯服务区，第二次休整' },
-      { time:'19:00', text:'抵达阿勒泰市区，入住酒店' },
-      { time:'20:00', text:'市区晚餐，早点休息' },
+      { time:'16:30', text:'途经北屯服务区，第二次休整' },
+      { time:'19:30', text:'抵达阿勒泰市区，入住酒店' },
+      { time:'20:30', text:'市区晚餐，早点休息' },
+    ],
+    jam:[
+      '取车排队：大巴扎取车点10:00是旺季提车高峰，<b>提前在App办好线上取车、备齐驾照/订单</b>，两车分头验车拍视频，能省下柜台排队时间',
+      '出城时段：乌鲁木齐早高峰约8:00-9:30，<b>9:00退房、10:00取车正好错开</b>，走G3014/G216出城避开市区主干道',
+      '加油排队：北屯/克拉玛依方向服务区暑期排队加油常见，<b>见油量过半即补、不等到亮灯</b>，增程车可油电兼顾、错开加油站高峰',
+      '错峰关键：这天纯赶路，<b>堵点全在服务区，宁可多停几次少停久</b>，两司机轮换、把午餐放在人少的服务区解决',
     ],
     hotelDay:2, tickets:'无', ticketsPrice:0, altitude:735, temperature:'16°C ~ 30°C', feel:'戈壁昼夜温差大，白天暴晒需重防晒，早晚薄外套' },
 
-  { day:3, title:'阿勒泰 →〔阿禾公路〕禾木·童话木屋村 → 贾登峪·山舍别墅', segment:'north', tight:'⚠️ 阿禾公路需预约：仅限7座及以下（两台GL8符合），旺季约9:30才放行、山区窄路弯多临崖需慢行；下午从容玩禾木，傍晚回撤44km住贾登峪，为D4进喀纳斯卡位',
+  { day:3, title:'阿勒泰 →〔阿禾公路〕禾木·童话木屋村 → 贾登峪·山舍别墅', segment:'north', tight:'⚠️ 阿禾公路需预约：仅限7座及以下（两台理想L8 max·6座符合），旺季约9:30才放行、山区窄路弯多临崖需慢行；下午从容玩禾木，傍晚回撤44km住贾登峪，为D4进喀纳斯卡位',
     image:'images/day3-hemu-village.png',
-    desc:'上午从阿勒泰经"神级自驾公路"阿禾公路（G681，全长约209km/3h）直插喀纳斯景区最北的禾木村——这条2024年才通车的生态公路，让阿勒泰到禾木无需再绕行布尔津，一路雪山草甸、临水临崖，公路本身就是风景。需提前在"新疆路网/原行网"小程序预约，仅限7座及以下车辆（两台别克GL8符合），旺季约9:30放行、分时段单向管控，山区窄路请两车结伴慢行。私家车停禾木门票站换乘区间车进村（约1h），下午从容漫步禾木桥、河畔白桦林与图瓦人木屋村落，登观景台俯瞰童话木屋村。傍晚换乘出村、取车往南回撤44km到贾登峪，入住喀纳斯贾登峪山与山舍别墅——别墅依山而建、独立卫浴，晚餐后在几乎无光污染的阿尔泰山夜空下静享山谷星空；今晚住门户贾登峪，正是为明早从门口第一时间进喀纳斯提前卡位。',
+    desc:'上午从阿勒泰经"神级自驾公路"阿禾公路（G681，全长约209km/3h）直插喀纳斯景区最北的禾木村——这条2024年才通车的生态公路，让阿勒泰到禾木无需再绕行布尔津，一路雪山草甸、临水临崖，公路本身就是风景。需提前在"新疆路网/原行网"小程序预约，仅限7座及以下车辆（两台理想L8 max·6座符合），旺季约9:30放行、分时段单向管控，山区窄路请两车结伴慢行。私家车停禾木门票站换乘区间车进村（约1h），下午从容漫步禾木桥、河畔白桦林与图瓦人木屋村落，登观景台俯瞰童话木屋村。傍晚换乘出村、取车往南回撤44km到贾登峪，入住喀纳斯贾登峪山与山舍别墅——别墅依山而建、独立卫浴，晚餐后在几乎无光污染的阿尔泰山夜空下静享山谷星空；今晚住门户贾登峪，正是为明早从门口第一时间进喀纳斯提前卡位。',
     highlight:'阿禾公路自驾 | 禾木村漫步 | 图瓦人木屋 | 贾登峪山舍别墅', playTime:'全天', drive:'阿勒泰→禾木 阿禾公路约209km/3h + 禾木→贾登峪 44km/1h',
     timeline:[
       { time:'08:30', text:'阿勒泰早点出发，前往阿禾公路小东沟检查站（提前备好预约码）' },
@@ -412,6 +431,12 @@ const ITINERARY_DATA = [
       { time:'16:30', text:'换乘区间车出村、取车，往南回撤前往贾登峪（44km/1h）' },
       { time:'18:00', text:'抵达贾登峪，到山与山舍别墅办理入住、别墅晚餐、品尝当地菜' },
       { time:'21:00', text:'贾登峪山谷观星，阿尔泰山无光污染夜空（别墅旁步行可达，无需接驳）' },
+    ],
+    jam:[
+      '检查站放行：阿禾公路旺季约9:30集中放行，<b>早到会空等、晚到易错过窗口</b>，建议8:30从阿勒泰出发、9:15前到检查站排在前段，一放行即先入、避开车龙',
+      '区间车换乘：禾木门票站换乘区间车进村是最大排队点，旺季常排30-60分钟，<b>12:30前到站换乘，趁午后旅行团高峰前进村</b>',
+      '出村错峰：傍晚出村车与你同向回撤，<b>16:30前坐上返程区间车</b>，避开日落散场人流，取到车再从容开44km去贾登峪',
+      '错峰关键：<b>今晚住贾登峪就是为D4卡位</b>，宁可下午早点撤出禾木，也别贪晚拍照挤在末班车高峰里',
     ],
     hotelDay:3, tickets:'禾木¥50+区间车¥52', ticketsPrice:102, altitude:1390, temperature:'8°C ~ 24°C', feel:'山间清凉舒适，早晚需薄外套，白天短袖足够' },
 
@@ -431,6 +456,12 @@ const ITINERARY_DATA = [
       { time:'21:00-21:30', text:'五彩滩日落观赏（当日日落约21:30）' },
       { time:'22:00', text:'返回县城河堤夜市晚餐、休息' },
     ],
+    jam:[
+      '换乘趁早：喀纳斯核心区禁行私家车，全靠区间车，旺季换乘中心排队常超1小时，<b>8:00前从贾登峪门口第一班进山</b>，把最堵的换乘挪到人流之前',
+      '观鱼台限流：观鱼台日承载仅约8000人、旺季易售罄或暂停，<b>进山后优先锁定观鱼台时段/预约</b>，别拖到午后没名额',
+      '下山卡点：喀纳斯区间车往返约4h，<b>务必15:00前坐区间车回贾登峪取车</b>，否则160km山路押车会赶不上五彩滩日落',
+      '日落停车：五彩滩日落前1小时停车场最挤，<b>提前到、把车停在外围好出场的位置</b>，散场时逆着人流先撤，避免堵在景区门口',
+    ],
     hotelDay:4, photoTime:'日落前1小时（五彩滩光线最佳）', tickets:'喀纳斯¥160+区间车¥70+观鱼台¥20+五彩滩¥50', ticketsPrice:300, altitude:480, temperature:'8°C ~ 30°C', feel:'喀纳斯山间清凉需薄外套，布尔津河谷傍晚看日落风大' },
 
   { day:5, title:'布尔津 → 克拉玛依·世界魔鬼城', segment:'north',
@@ -444,6 +475,12 @@ const ITINERARY_DATA = [
       { time:'16:00', text:'驱车前往克拉玛依市区（约106km/1.5h）' },
       { time:'17:30', text:'抵达克拉玛依，入住酒店' },
       { time:'18:30', text:'市区晚餐（可尝试大盘鸡、椒麻鸡），早点休息' },
+    ],
+    jam:[
+      '观光车排队：魔鬼城须坐区间观光车游览，正午12:30-14:00是团队与散客叠加高峰，<b>到景区先买票直接上车、把慢逛留到车上下来后</b>',
+      '错峰时段：<b>可先在12:30入园顶着人流坐首程车深入，14:00后人流回落再从容拍雅丹</b>，午后光影也更立体',
+      '出发提前：布尔津8:30早半小时上路，<b>把G217沿途的观光车高峰错开</b>，全天节奏更松，抵克拉玛依也不赶',
+      '这天相对轻松：<b>全程无预约、无长途，堵点只在观光车一处</b>，是给D6长途储备体力的缓冲日',
     ],
     hotelDay:5, tickets:'魔鬼城¥60+观光车¥30', ticketsPrice:90, altitude:450, temperature:'20°C ~ 34°C', feel:'戈壁干热少雨，正常夏装，注意防晒防风' },
 
@@ -460,6 +497,12 @@ const ITINERARY_DATA = [
       { time:'18:00', text:'经温赛快速通道北上温泉县（约61km/1h）' },
       { time:'19:00', text:'抵达温泉县，入住隆泉圣缘山酒店、晚餐' },
       { time:'20:30', text:'酒店泡温泉（天山雪水地热温泉），舒缓长途疲惫、早点休息' },
+    ],
+    jam:[
+      '自驾要预约：赛里木湖旺季自驾限流约3000辆/日、常提前3-7天约满，<b>务必提前抢自驾入园票</b>，未约到只能停外围换乘',
+      '认准东门进：环湖为单向，<b>东门进、南门出（南门通常只出不进）</b>，下午16:00到正好避开东门10:00-12:00的入园高峰',
+      '长途服务区：G30奎屯、精河服务区午间排队明显，<b>把加油/午餐拆成两次短停</b>，别都挤在精河一处',
+      '错峰关键：<b>今天先赶路、赛湖只做傍晚环湖，重头戏留给D7清晨</b>，避开午后环湖车流，傍晚经温赛通道北上温泉县住',
     ],
     hotelDay:6, photoTime:'午后16:00-18:00赛里木湖湖畔金色光线', tickets:'赛里木湖¥145', ticketsPrice:145, altitude:1350, temperature:'12°C ~ 26°C', feel:'赛湖畔风大偏凉需薄外套；温泉县海拔较低夜间较舒适' },
 
@@ -478,6 +521,13 @@ const ITINERARY_DATA = [
       { time:'20:00', text:'回特克斯入住颐爻酒店，晚餐' },
       { time:'21:30-22:30', text:'饭后步行登八卦观光塔，俯瞰八卦城亮灯夜景（8月天黑晚，此时华灯初上·更震撼）' },
     ],
+    jam:[
+      '清晨再入：<b>凭D6门票24h内再入、无需排队重购</b>，08:30前趁旅行团抵达前进湖区，人少、湖静、光线最好',
+      '南门错峰出：环湖后<b>从南门方向出、别原路折返东门</b>，避开午后10:00后涌入的环湖车流',
+      '果子沟只车观：果子沟大桥是热门拍照点、易临停堵车，<b>车上观景不停车</b>，赶往特克斯更顺',
+      '喀拉峻区间车：进草原须换乘区间车，<b>末班20:30兜底、天黑晚不用赶</b>，可待16:30后团队高峰散去再上山，人少景更好',
+      '夜景登塔：八卦观光塔约22:00亮灯最佳，<b>饭后步行前往、避开自驾找车位</b>，华灯初上时段登塔人也未满',
+    ],
     hotelDay:7, photoTime:'清晨08:30-11:00赛里木湖雪山倒影+夜晚22:00后八卦城亮灯', tickets:'赛里木湖凭D6票再入¥0+喀拉峻¥275（全域游）+八卦观光塔¥30', ticketsPrice:305, altitude:2071, temperature:'10°C ~ 27°C', feel:'赛湖清晨湖畔风大偏凉需外套；喀拉峻中午日晒强、夜登观光塔更凉需加外套' },
 
   { day:8, title:'特克斯 → 途经那拉提 → 巴音布鲁克', segment:'south', tight:'⚠️ 全天355km/7h长途转场，且需确认独库中段（那拉提↔巴音布鲁克）已在预约通行范围内',
@@ -493,11 +543,17 @@ const ITINERARY_DATA = [
       { time:'19:00-21:30', text:'九曲十八弯观落日（8月中旬日落约21:00，可拍河面多个太阳）' },
       { time:'22:00', text:'返镇晚餐，注意保暖早点休息' },
     ],
+    jam:[
+      '周六提醒：8/8是周六，<b>那拉提↔巴音布鲁克独库中段车流更大</b>，务必提前锁定当日预约、赶早通行',
+      '中段错峰：独库中段11:00-16:00是车流最高峰，<b>上午先赶那拉提、午后14:30再上达坂</b>，避开正午最堵时段',
+      '先入住再进景区：<b>16:30先到镇上办入住卸行李</b>，18:00再进景区看日落，避免拖着行李挤景区换乘',
+      '九曲区间车：景区大、看九曲十八弯须换乘区间车，日落时段最挤，<b>18:00早班车进、拍完趁天没全黑先撤</b>，错开散场人潮',
+    ],
     hotelDay:8, photoTime:'傍晚19:00-21:00九曲十八弯落日最佳', tickets:'巴音布鲁克¥65+区间车¥90', ticketsPrice:155, altitude:2500, temperature:'6°C ~ 22°C', feel:'高山湿地海拔高、早晚很冷温差大，务必备厚外套，儿童老人防高反' },
 
   { day:9, title:'巴音布鲁克 → 独库中段+北段 → 独山子', segment:'south', tight:'⚠️ 全程最累的一天！独库中段+北段320km山路、翻3个达坂，两段均需预约，未预约车辆禁止通行',
     image:'images/day9-nalati-grassland.png',
-    desc:'今天是全程最壮阔也最硬核的一天！清晨先在巴音布鲁克看草原/天鹅湖方向的晨景（错峰避开昨晚日落人潮），随后走独库中段折返那拉提岔口（80km/2h），再从那拉提上独库北段（那拉提-乔尔玛-独山子约230km）。中段+北段两段均实行网上预约制通行，出发前必须已在相应入口预约成功、且车辆为7座以下（2辆别克GL8符合要求）。一路穿越天山——雪山达坂、高山草甸、峡谷河流一日历四季，途经乔尔玛烈士陵园，翻哈希勒根达坂，最终抵达独山子大峡谷打卡独库零公里纪念碑，当晚入住独山子。',
+    desc:'今天是全程最壮阔也最硬核的一天！清晨先在巴音布鲁克看草原/天鹅湖方向的晨景（错峰避开昨晚日落人潮），随后走独库中段折返那拉提岔口（80km/2h），再从那拉提上独库北段（那拉提-乔尔玛-独山子约230km）。中段+北段两段均实行网上预约制通行，出发前必须已在相应入口预约成功、且车辆为7座以下（2辆理想L8 max·6座符合要求）。一路穿越天山——雪山达坂、高山草甸、峡谷河流一日历四季，途经乔尔玛烈士陵园，翻哈希勒根达坂，最终抵达独山子大峡谷打卡独库零公里纪念碑，当晚入住独山子。',
     highlight:'巴音布鲁克草原晨景 | 独库中段+北段全穿越 | 乔尔玛烈士陵园 | 独山子大峡谷 | 独库零公里纪念碑', playTime:'全天（320km山路）', drive:'巴音布鲁克→那拉提岔口 80km/2h（独库中段）→独山子 230km/5h（独库北段·需预约）',
     timeline:[
       { time:'07:00', text:'巴音布鲁克草原/天鹅湖方向看晨景（约1h，错峰避开昨晚日落人潮）' },
@@ -509,12 +565,18 @@ const ITINERARY_DATA = [
       { time:'16:30', text:'入住独山子，休整' },
       { time:'18:00', text:'晚餐，早点休息' },
     ],
+    jam:[
+      '全程最险一天：8/9是周日，<b>独库北段限流约3000辆/日、周末+暑期最堵</b>，务必提前3-7天锁定预约，早出才不堵',
+      '错峰早出：北段11:00-16:00车流最高峰，<b>07:00先看晨景、08:00即出发抢在高峰前上路</b>，把乔尔玛、达坂节点甩在人流之前',
+      '单车道路况：北段多为双向单车道盘山路，<b>一处事故/落石/临时管制就全线排长龙</b>，全程保持车距、不占道超车、耐心跟队',
+      '预留弹性：<b>下午早点到独山子、别把还车压到D9晚上</b>，一旦遇管制堵车，D9提前抵达才有缓冲，不影响D10还车登机',
+    ],
     hotelDay:9, photoTime:'全天（独库公路光影变化万千）', tickets:'独库公路 免费，独山子大峡谷¥60', ticketsPrice:60, altitude:3300, temperature:'5°C ~ 20°C（达坂更冷）', feel:'达坂路段寒冷需厚外套，下山后转暖' },
 
-  { day:10, title:'独山子 → 乌鲁木齐大巴扎还车 → 打车转机场分头返程', segment:'south', tight:'⚠️ 还车+转场机场+分批登机：上午务必赶在12:00前到大巴扎服务点还车，还车后需打车约25km转机场',
+  { day:10, title:'独山子 → 乌鲁木齐天山机场还车 → 分头返程', segment:'south', tight:'⚠️ 还车+分批登机：按14:00用车截止，务必赶在14:00前到天山国际机场还车点还车，就近值机免去市区转场',
     image:'images/day10-urumqi-return.webp',
-    desc:'上午从独山子出发前往乌鲁木齐，按神州订单需在 12:00 前把两辆别克GL8还回·新疆国际大巴扎服务点（与出发日取车同一网点、位于天山区市中心）。还车后打车约25km前往乌鲁木齐机场，机场附近简单午餐后，武汉、深圳、上海三地队伍分别搭乘各自的返程航班，结束这场跨越北疆与伊犁两大地貌的10天旅程。',
-    highlight:'大巴扎12:00前还车 | 打车转机场约25km | 分头返程', playTime:'半天+登机', drive:'独山子→乌鲁木齐大巴扎 260km/3h + 大巴扎→机场约25km',
+    desc:'上午从独山子出发直奔乌鲁木齐天山国际机场，按订单需在 14:00 前把两辆理想L8 max还回·天山国际机场还车点（本次为异地还车：D2大巴扎取、D10机场还）。还车点就在机场附近，还车后步行/摆渡即可进航站楼，省去了从市区打车转场的环节，机场简单午餐后，武汉、深圳、上海三地队伍分别搭乘各自的返程航班，结束这场跨越北疆与伊犁两大地貌的10天旅程。',
+    highlight:'机场14:00前还车 | 异地还车免市区转场 | 分头返程', playTime:'半天+登机', drive:'独山子→乌鲁木齐天山国际机场 约280km/3.5h',
     flightInfo:[
       { seg:'乌鲁木齐 → 深圳', no:'深圳航空 ZH9246', time:'15:55 起飞 → 21:25 到达' },
       { seg:'乌鲁木齐 → 深圳', no:'南方航空 CZ5796', time:'16:05 起飞 → 21:25 到达' },
@@ -522,15 +584,20 @@ const ITINERARY_DATA = [
       { seg:'乌鲁木齐 → 上海', no:'南方航空 CZ6997', time:'16:10 起飞 → 21:15 到达' },
     ],
     timeline:[
-      { time:'08:00', text:'独山子出发前往乌鲁木齐（260km/3h，直奔天山区大巴扎服务点）' },
-      { time:'11:00', text:'抵达乌鲁木齐·新疆国际大巴扎服务点（神州还车网点）' },
-      { time:'11:00-12:00', text:'加满油、办理还车验车手续（务必12:00前完成）' },
-      { time:'12:00-12:40', text:'打车/网约车从大巴扎前往乌鲁木齐机场（约25km/40min）' },
-      { time:'12:40-14:00', text:'机场值机、简单午餐、分头前往值机柜台' },
+      { time:'09:00', text:'独山子出发直奔乌鲁木齐天山国际机场（约280km/3.5h）' },
+      { time:'12:30', text:'抵达天山国际机场还车点（异地还车网点）' },
+      { time:'12:30-14:00', text:'加满油/充电、办理还车验车手续（务必14:00前完成）' },
+      { time:'14:00-15:00', text:'就近步行/摆渡进航站楼，值机、简单午餐、分头前往值机柜台' },
       { time:'15:55', text:'深圳ZH9246起飞' },
       { time:'16:05', text:'深圳CZ5796起飞' },
       { time:'16:10', text:'上海CZ6997起飞' },
       { time:'18:00', text:'武汉CZ8204起飞' },
+    ],
+    jam:[
+      '避开还车高峰：机场还车点午间是集中还车高峰，<b>12:30前到、加满油充好电再排队验车</b>，务必14:00前完成，别卡点',
+      'G30错峰：独山子→机场走G30，临近乌鲁木齐段午间车流增大，<b>09:00早出、把车流甩在身后</b>，3.5h从容抵达留足余量',
+      '安检值机：暑期天山机场安检排队明显，<b>还完车即进航站楼、提前2-2.5h值机</b>，四个航班分头走、各自盯紧登机口',
+      '错峰关键：<b>还车—值机—登机是今天唯一的连环堵点</b>，宁可早到机场用餐等候，也不要压着截止时间还车赶飞机',
     ],
     hotelDay:0, tickets:'无', ticketsPrice:0, altitude:800, temperature:'22°C ~ 34°C', feel:'平原炎热干燥，正常夏装，注意防晒' },
 ];
@@ -689,10 +756,12 @@ function renderItinerary() {
     const hotelText = hotel ? hotel.name : '无住宿安排（当日已在途中/已返程）';
     const mainHighlight = (d.highlight || '').split('|')[0].trim();
     const webp = /^images\/.+\.png$/.test(d.image) ? d.image.replace(/\.png$/, '.webp') : '';
+    const webpM = webp ? webp.replace(/\.webp$/, '-m.webp') : '';
     return `
     <div class="day-card-hero fade-up">
       <picture>
-        ${webp ? `<source media="(max-width: 768px)" srcset="${webp}" type="image/webp">` : ''}
+        ${webpM ? `<source media="(max-width: 768px)" srcset="${webpM}" type="image/webp">` : ''}
+        ${webp ? `<source srcset="${webp}" type="image/webp">` : ''}
         <img class="day-card-bg" src="${d.image}" alt="${d.title}" decoding="async">
       </picture>
       <div class="day-card-body">
@@ -721,6 +790,13 @@ function renderItinerary() {
             <div class="day-timeline-list">${(d.timeline||[]).map(t => `<div class="day-timeline-item"><span class="t">${t.time}</span><span class="x">${t.text}</span></div>`).join('')}</div>
           </div>
         </div>
+        <!-- 4.5 堵点错峰技巧（红字小节） -->
+        ${Array.isArray(d.jam) && d.jam.length ? `<div class="day-sec">
+          <div class="day-jam-box">
+            <div class="day-jam-title"><i class="fa-solid fa-traffic-light"></i> 堵点错峰技巧</div>
+            <div class="day-jam-list">${d.jam.map(j => `<div class="day-jam-item"><i class="fa-solid fa-triangle-exclamation"></i><span>${j}</span></div>`).join('')}</div>
+          </div>
+        </div>` : ''}
         <!-- 5. 关键信息栏：路段住宿 / 亮点门票 / 海拔气温 -->
         <div class="day-sec day-sec-infobar">
           <div class="day-infobar-row"><i class="fa-solid fa-car"></i>${d.drive}<span class="sep">|</span><i class="fa-solid fa-hotel"></i>${hotelText}</div>
@@ -764,17 +840,17 @@ function renderFood() {
 const TIPS_ALERT_HEMU = {
   items:[
     '预约路段：G681阿禾公路（禾木公路，阿勒泰↔禾木，Day3必经）2024年通车，旺季实行预约制/分时段管控通行，未预约或不在放行时段进入可能被劝返，需提前锁定当日名额',
-    '车辆要求：仅限7座及以下小型客车通行，2辆别克GL8符合条件；7座以上客车、大巴、危化品车、挂车等均不允许驶入，与独库公路口径一致',
+    '车辆要求：仅限7座及以下小型客车通行，2辆理想L8 max（6座）符合条件；7座以上客车、大巴、危化品车、挂车等均不允许驶入，与独库公路口径一致',
     '预约方式：提前通过"新疆路网"公众号/小程序或"原行网"（阿勒泰当地预约平台）网上预约，选择阿勒泰→禾木方向与出行日期，锁定当天名额',
     '预约时机：务必在出发前1-3天完成预约，7-8月旺季名额紧张，建议出行前多刷新几次，避免当天到检查站才发现无名额、耽误全天行程',
     '通行时段：旺季约9:30才放行、分时段单向管控（上午以进山为主），务必据此安排出发时间，别太早到检查站空等，也别太晚错过放行窗口',
-    '路况安全：全程山区三/四级路、弯多坡陡临水临崖，GL8底盘偏低需减速慢行、两车结伴；出发前加满油（沿途几乎无加油站），遇暴雨/塌方等临时管制以现场交管为准',
+    '路况安全：全程山区三/四级路、弯多坡陡临水临崖，需减速慢行、两车结伴；出发前加满油/充满电（沿途几乎无加油站与充电桩，增程车可油电兼顾更从容），遇暴雨/塌方等临时管制以现场交管为准',
   ]
 };
 const TIPS_ALERT = {
   items:[
     '预约路段：G217独库公路中段（那拉提↔巴音布鲁克，Day8必经）+ 北段（那拉提↔乔尔玛↔独山子，Day9必经）均实行预约制通行，未预约车辆禁止通行，两段都要确认在预约范围内',
-    '车辆要求：仅限7座及以下小型客车预约通行，2辆别克GL8符合条件；7座以上客车、大巴、危化品车、挂车等均不允许通行',
+    '车辆要求：仅限7座及以下小型客车预约通行，2辆理想L8 max（6座）符合条件；7座以上客车、大巴、危化品车、挂车等均不允许通行',
     '预约方式：提前通过"新疆路网"公众号/小程序或自治区交通运输厅官方渠道网上预约，Day8选那拉提/巴音布鲁克入口、Day9选那拉提/乔尔玛/独山子入口，分别锁定当天名额',
     '预约时机：务必在出发前3-7天完成预约，7-8月旺季名额紧张，建议出行前1周内多刷新几次，Day8、Day9两天名额都要提前锁定',
     '通行时段：独库公路全线早9点开放、晚8点起交通管制禁止通行；那拉提-巴音布鲁克段不限时间',
@@ -795,7 +871,7 @@ const TIPS_DATA = [
     '独库公路弯道多、坠石路段多，保持车距，切勿疲劳驾驶，雨雪天气建议延后出发或改签预约',
     '戈壁路段（G3014/G216/G30）服务区较少，出发前务必加满油，沿途见加油站及时补给',
     '独库公路及唐布拉沿线信号弱，出发前下载好离线地图（高德/百度离线包）',
-    '喀拉峻、特克斯部分观景台路段为土路，GL8底盘偏低，需减速慢行、避让坑洼与凸起，必要时下车探路',
+    '喀拉峻、特克斯部分观景台路段为土路，理想L8 max为大型SUV车身较宽，需减速慢行、避让坑洼与凸起，会车注意留足空间，必要时下车探路',
     '全程限速严格，非景区路段有流动测速，独库公路全程限速40-60km/h，切勿超速',
   ] },
   { icon:'fa-tree', title:'喀纳斯禾木森林湖泊专属贴士', items:[
@@ -858,7 +934,7 @@ const TIPS_DATA = [
     'D7早上重返赛里木湖晨游（凭D6门票24h内可再入、无需重复购票），为保赛湖+喀拉峻不再绕行伊宁市区；八卦城夜景需登观光塔俯瞰（约¥30），8月约22:00后亮灯最佳，独库公路本身免费通行（预约不收费）',
     '团队人数较多，建议提前联系餐厅预留桌位（尤其巴音布鲁克镇烤全羊、手抓肉等需预定的团队菜品）',
     '旅游旺季（7-8月）酒店紧张，务必提前锁定房间，本攻略已提供9晚酒店电话可直接确认',
-    '入住前电话确认停车位是否充足，2辆别克GL8需提前沟通车位',
+    '入住前电话确认停车位是否充足，2辆理想L8 max（大型SUV）需提前沟通车位',
   ] },
 ];
 function renderTips() {
